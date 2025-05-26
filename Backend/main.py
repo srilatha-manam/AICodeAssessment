@@ -1,7 +1,10 @@
 from fastapi import FastAPI
 from .routers import interview
 
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
 # This module initializes the FastAPI application and includes the interview router.
 
 app = FastAPI(
@@ -10,3 +13,5 @@ app = FastAPI(
 )
 # Include the interview router to handle code assessment related endpoints
 app.include_router(interview.router)
+# Exception handlers for the app
+add_exception_handlers(app)
