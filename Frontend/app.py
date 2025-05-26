@@ -8,7 +8,7 @@ API_URL = "http://localhost:8000/code-assessment"
 # Page Config
 st.set_page_config(page_title="AI Code Assessment App", layout="wide")
 
-st.title("🧠 AI Code Assessment App")
+st.title("AI Code Assessment App")
 
 # 1. Load a random question
 if "question" not in st.session_state:
