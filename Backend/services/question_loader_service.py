@@ -31,7 +31,7 @@ def load_random_question() -> Question:
                         id=int(row['id']),
                         problem_name=row['problem name'],
                         description=row['description'],
-                        constraints=row['constraints'],
+                        #constraints=row['constraints'],
                         examples=parsed_examples,
                         difficulty_level=row['difficulty level']
                     )

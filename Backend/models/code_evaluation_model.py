@@ -14,7 +14,7 @@ class Question(BaseModel):
     id: int
     problem_name: str
     description: str
-    constraints: str
+    #constraints: str
     examples: List[Example]
     difficulty_level: str
     
