@@ -1,12 +1,23 @@
 from pydantic import BaseModel
+from typing import List
 # This module defines the data models used for code evaluation and submission.
 
+class Example(BaseModel):
+    # This class represents an example input/output pair for a question
+    input: str
+    output: str
+
+    def __str__(self):
+        return f"Input: {self.input}, Output: {self.output}"
+
 class Question(BaseModel):
-    # Define a class called Question that inherits from BaseModel
     id: int
-    question: str
-    test_input: str
-    expected_output: str
+    problem_name: str
+    description: str
+    constraints: str
+    examples: List[Example]
+    difficulty_level: str
+    
 
 class CodeSubmission(BaseModel):
     # The code submitted by the user

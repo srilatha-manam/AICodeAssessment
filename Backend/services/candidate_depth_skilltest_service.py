@@ -1,15 +1,13 @@
 import random
-from ..models/code_evaluation_model import CodeSubmission, EvaluationResult
-from ..services.question_loader_service import load_questions
-from ..services.solution_evaluation_service import evaluate_code
-from logging_config import logger
+from ..models.code_evaluation_model import CodeSubmission, EvaluationResult
+from .question_loader_service import load_random_question 
+from ..logging_config import logger
 
 # This module provides functionality to evaluate code submissions against predefined questions.
-questions = load_questions()
 
 #Define a function called get_random_question that returns a random question from the questions list
 def get_random_question():
-    return random.choice(questions)
+    return load_random_question()
 
 # Define an asynchronous function to evaluate a code submission
 async def evaluate_submission(submission: CodeSubmission) -> EvaluationResult:

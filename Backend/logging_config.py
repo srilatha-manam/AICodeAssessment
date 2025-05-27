@@ -1,11 +1,11 @@
-import logging
+
 from pathlib import Path
 
-# Create logs directory if it doesn't exist
+# Create logs directory if it doesn't exist 
 LOG_DIR = Path(__file__).resolve().parent / "logs"
 LOG_DIR.mkdir(parents=True, exist_ok=True)
-
 LOG_FILE = LOG_DIR / "app.log"
+import logging
 
 logging.basicConfig(
     level=logging.ERROR,  # Only log ERROR and CRITICAL

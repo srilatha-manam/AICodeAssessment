@@ -1,7 +1,6 @@
 from fastapi import APIRouter, HTTPException
-from ..models import CodeSubmission
-from ..services.candidate_depth_skilltest_service import interview_service
-
+from ..models.code_evaluation_model import CodeSubmission
+from ..services import candidate_depth_skilltest_service as interview_service
 # This module defines the API endpoints for automatic code assessment related operations.
 
 router = APIRouter(

@@ -1,5 +1,6 @@
 import httpx
-from logging_config import logger
+from ..logging_config import logger
+import os
 # This module provides functionality to evaluate code solutions using the Judge0 API.
 # It sends the code, language ID, and input to the API and returns the evaluation result.
 
@@ -20,7 +21,7 @@ async def evaluate_code(code: str, language_id: int, stdin: str) -> dict:
     }
 
     # Use an asynchronous with statement to create an httpx.AsyncClient object
-     try:
+    try:
         async with httpx.AsyncClient() as client:
             # Send a POST request to the Judge0 API with the payload and headers
             response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
