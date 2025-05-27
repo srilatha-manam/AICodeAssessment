@@ -1,0 +1,173 @@
+2025-05-26 18:27:53,366 - CRITICAL - ai-code-assessment - CSV file not found: C:\AICodeAssessment\AICodeAssessment\Backend\coding_questions.csv
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\question_loader_service.py", line 16, in load_questions
+    with open(DATA_FILE, newline='', encoding='utf-8') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\AICodeAssessment\\AICodeAssessment\\Backend\\coding_questions.csv'
+2025-05-26 18:28:36,583 - CRITICAL - ai-code-assessment - CSV file not found: C:\AICodeAssessment\AICodeAssessment\Backend\models\coding_questions.csv
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\question_loader_service.py", line 16, in load_questions
+    with open(DATA_FILE, newline='', encoding='utf-8') as file:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\AICodeAssessment\\AICodeAssessment\\Backend\\models\\coding_questions.csv'
+2025-05-26 18:28:53,834 - ERROR - ai-code-assessment - Missing expected column in CSV: 'question_id'
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\question_loader_service.py", line 18, in load_questions
+    questions = [
+                ^
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\question_loader_service.py", line 20, in <listcomp>
+    id=int(row['question_id']),
+           ~~~^^^^^^^^^^^^^^^
+KeyError: 'question_id'
+2025-05-26 18:28:59,215 - ERROR - ai-code-assessment - Missing expected column in CSV: 'question_id'
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\question_loader_service.py", line 18, in load_questions
+    questions = [
+                ^
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\question_loader_service.py", line 20, in <listcomp>
+    id=int(row['question_id']),
+           ~~~^^^^^^^^^^^^^^^
+KeyError: 'question_id'
+2025-05-26 18:30:25,230 - ERROR - ai-code-assessment - Missing expected column in CSV: 'input'
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\question_loader_service.py", line 18, in load_questions
+    questions = [
+                ^
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\question_loader_service.py", line 22, in <listcomp>
+    test_input=row['input'],
+               ~~~^^^^^^^^^
+KeyError: 'input'
+2025-05-26 18:30:26,422 - ERROR - ai-code-assessment - Missing expected column in CSV: 'input'
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\question_loader_service.py", line 18, in load_questions
+    questions = [
+                ^
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\question_loader_service.py", line 22, in <listcomp>
+    test_input=row['input'],
+               ~~~^^^^^^^^^
+KeyError: 'input'
+2025-05-26 18:54:39,671 - CRITICAL - ai-code-assessment - Unexpected error while loading questions: name 'random' is not defined
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\question_loader_service.py", line 41, in load_random_question
+    return random.choice(questions)
+           ^^^^^^
+NameError: name 'random' is not defined
+2025-05-27 10:42:07,983 - CRITICAL - ai-code-assessment - Unexpected error while loading questions: name 'random' is not defined
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\question_loader_service.py", line 41, in load_random_question
+    return random.choice(questions)
+           ^^^^^^
+NameError: name 'random' is not defined
+2025-05-27 10:42:10,368 - CRITICAL - ai-code-assessment - Unexpected error while loading questions: name 'random' is not defined
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\question_loader_service.py", line 41, in load_random_question
+    return random.choice(questions)
+           ^^^^^^
+NameError: name 'random' is not defined
+2025-05-27 10:42:36,144 - CRITICAL - ai-code-assessment - Unexpected error while loading questions: Cannot choose from an empty sequence
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\question_loader_service.py", line 42, in load_random_question
+    return random.choice(questions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\random.py", line 370, in choice
+    raise IndexError('Cannot choose from an empty sequence')
+IndexError: Cannot choose from an empty sequence
+2025-05-27 10:42:44,914 - CRITICAL - ai-code-assessment - Unexpected error while loading questions: Cannot choose from an empty sequence
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\question_loader_service.py", line 42, in load_random_question
+    return random.choice(questions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\random.py", line 370, in choice
+    raise IndexError('Cannot choose from an empty sequence')
+IndexError: Cannot choose from an empty sequence
+2025-05-27 10:49:20,761 - CRITICAL - ai-code-assessment - Unexpected error while loading questions: Cannot choose from an empty sequence
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\question_loader_service.py", line 44, in load_random_question
+    return random.choice(questions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\random.py", line 370, in choice
+    raise IndexError('Cannot choose from an empty sequence')
+IndexError: Cannot choose from an empty sequence
+2025-05-27 10:49:23,277 - CRITICAL - ai-code-assessment - Unexpected error while loading questions: Cannot choose from an empty sequence
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\question_loader_service.py", line 44, in load_random_question
+    return random.choice(questions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\random.py", line 370, in choice
+    raise IndexError('Cannot choose from an empty sequence')
+IndexError: Cannot choose from an empty sequence
+2025-05-27 11:23:53,727 - CRITICAL - ai-code-assessment - Unexpected error while loading questions: 'utf-8' codec can't decode byte 0x92 in position 724: invalid start byte
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\question_loader_service.py", line 22, in load_random_question
+    for row in reader:
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\csv.py", line 110, in __next__
+    self.fieldnames
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\csv.py", line 97, in fieldnames
+    self._fieldnames = next(self.reader)
+                       ^^^^^^^^^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x92 in position 724: invalid start byte
+2025-05-27 11:24:07,643 - CRITICAL - ai-code-assessment - Unexpected error while loading questions: 'utf-8' codec can't decode byte 0x92 in position 724: invalid start byte
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\question_loader_service.py", line 22, in load_random_question
+    for row in reader:
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\csv.py", line 110, in __next__
+    self.fieldnames
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\csv.py", line 97, in fieldnames
+    self._fieldnames = next(self.reader)
+                       ^^^^^^^^^^^^^^^^^
+  File "<frozen codecs>", line 322, in decode
+UnicodeDecodeError: 'utf-8' codec can't decode byte 0x92 in position 724: invalid start byte
+2025-05-27 11:54:34,826 - ERROR - ai-code-assessment - Unhandled Exception: object of type 'Question' has no len()
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\concurrency.py", line 37, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\_backends\_asyncio.py", line 2470, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\_backends\_asyncio.py", line 967, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\routers\ai_code_assessment_routers.py", line 15, in get_question
+    return interview_service.get_random_question()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\candidate_depth_skilltest_service.py", line 11, in get_random_question
+    return random.choice(questions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\random.py", line 371, in choice
+    return seq[self._randbelow(len(seq))]
+                               ^^^^^^^^
+TypeError: object of type 'Question' has no len()

@@ -1,12 +1,14 @@
 import httpx
+from ..logging_config import logger
+import os
 # This module provides functionality to evaluate code solutions using the Judge0 API.
 # It sends the code, language ID, and input to the API and returns the evaluation result.
 
 # Judge0 API URL and headers for authentication
 JUDGE0_URL = "https://judge0-ce.p.rapidapi.com/submissions?base64_encoded=false&wait=true"
 HEADERS = {
-    "X-RapidAPI-Host": "judge0-ce.p.rapidapi.com",
-    "X-RapidAPI-Key": "<e4cfe2c982msh0c0641fd6f48054p19a36ajsn8f073aa0610e>"  # 🔐 Replace with your actual key
+    "X-RapidAPI-Host": os.getenv("JUDGE0_API_HOST"),
+    "X-RapidAPI-Key": os.getenv("JUDGE0_API_KEY")
 }
 
 # Define an asynchronous function called evaluate_code that takes the language_id, and a string representing the stdin
@@ -19,10 +21,17 @@ async def evaluate_code(code: str, language_id: int, stdin: str) -> dict:
     }
 
     # Use an asynchronous with statement to create an httpx.AsyncClient object
-    async with httpx.AsyncClient() as client:
-        # Send a POST request to the JUDGE0_URL with the payload and HEADERS
-        response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
-        # Raise an exception if the response status code is not 200
-        # Return the response as a json object
-        response.raise_for_status()
-        return response.json()
+    try:
+        async with httpx.AsyncClient() as client:
+            # Send a POST request to the Judge0 API with the payload and headers
+            response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+            response.raise_for_status()
+            return response.json()
+    except httpx.HTTPStatusError as e:
+        # Log an error message if an HTTP error occurs
+        logger.error(f"HTTP error while evaluating code: {e.response.status_code} - {e.response.text}")
+        raise
+    except Exception as e:
+        # Log a critical error message if an unexpected error occurs
+        logger.critical(f"Unexpected error in evaluate_code: {e}", exc_info=True)
+        raise
