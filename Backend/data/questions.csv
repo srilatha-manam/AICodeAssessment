@@ -1,4 +1,4 @@
-id,problem name,description,constraints,examples,difficulty level,date-time
+id,title,description,constraints,examples,difficultylevel,date-time
 1,Lucky Ticket Number,"In a bus ticketing system, a ticket is considered lucky if the sum of its first three digits equals the sum of its last three digits. Determine if a six-digit ticket number is lucky.",Input is a six-digit positive integer (100000 ? N ? 999999).,"[
   {
     ""input"": ""123420"",
@@ -11,16 +11,16 @@ id,problem name,description,constraints,examples,difficulty level,date-time
     ""explanation"": ""Sum of first three digits (1+2+3=6) ? sum of last three digits (4+5+6=15).""
   }
 ]",Easy,
-2,Traffic Light Scheduler,"A city’s traffic light system cycles through green, yellow, and red phases with fixed durations (in seconds). Given a time t (in seconds) since the cycle started, determine the light’s color. The cycle is: green for g seconds, yellow for y seconds, red for r seconds, repeating indefinitely.","1 ? g, y, r ? 100; 0 ? t ? 10^9","[
+2,Traffic Light Scheduler,"A cityï¿½s traffic light system cycles through green, yellow, and red phases with fixed durations (in seconds). Given a time t (in seconds) since the cycle started, determine the lightï¿½s color. The cycle is: green for g seconds, yellow for y seconds, red for r seconds, repeating indefinitely.","1 ? g, y, r ? 100; 0 ? t ? 10^9","[
   {
     ""input"": ""g = 5, y = 2, r = 3, t = 8"",
     ""output"": ""Yellow"",
-    ""explanation"": ""One cycle is 10 seconds (5 + 2 + 3). At t = 8, we’re in the first cycle (8 mod 10 = 8). From 0-5 is green, 5-7 is yellow, 7-10 is red. At t = 8, it’s yellow.""
+    ""explanation"": ""One cycle is 10 seconds (5 + 2 + 3). At t = 8, weï¿½re in the first cycle (8 mod 10 = 8). From 0-5 is green, 5-7 is yellow, 7-10 is red. At t = 8, itï¿½s yellow.""
   },
   {
     ""input"": ""g = 4, y = 1, r = 5, t = 15"",
     ""output"": ""Green"",
-    ""explanation"": ""Cycle length is 10 seconds. At t = 15, 15 mod 10 = 5. From 0-4 is green, 4-5 is yellow, 5-10 is red. At t = 5, it’s green (just after yellow).""
+    ""explanation"": ""Cycle length is 10 seconds. At t = 15, 15 mod 10 = 5. From 0-4 is green, 4-5 is yellow, 5-10 is red. At t = 5, itï¿½s green (just after yellow).""
   }
 ]",Easy,
 3,Festival Game Points,"In a festival game, players earn points based on their moves, where each move has a score. If the score is even, they double it; if odd, they add 1. The game ends after k moves or if the total points reach a target m. Given a starting score s, number of moves k, and target m, determine if the target can be reached within k moves.",1 ? s ? 1000; 1 ? k ? 100; 1 ? m ? 10^6,"[
@@ -39,12 +39,12 @@ id,problem name,description,constraints,examples,difficulty level,date-time
   {
     ""input"": ""24"",
     ""output"": ""Stops"",
-    ""explanation"": ""Product of digits (2 × 4 = 8) is even.""
+    ""explanation"": ""Product of digits (2 ï¿½ 4 = 8) is even.""
   },
   {
     ""input"": ""11"",
     ""output"": ""Does Not Stop"",
-    ""explanation"": ""Product of digits (1 × 1 = 1) is odd.""
+    ""explanation"": ""Product of digits (1 ï¿½ 1 = 1) is odd.""
   }
 ]",Easy,
 5,Festival Light Pattern,"During a festival, lights are lit at positions where the position number is only divisible by 1 and itself. Count how many lights are lit in a given range of positions.",1 ? Start ? End ? 100,"[
@@ -63,19 +63,19 @@ id,problem name,description,constraints,examples,difficulty level,date-time
   {
     ""input"": ""153"",
     ""output"": ""Valid"",
-    ""explanation"": ""1³ + 5³ + 3³ = 1 + 125 + 27 = 153.""
+    ""explanation"": ""1ï¿½ + 5ï¿½ + 3ï¿½ = 1 + 125 + 27 = 153.""
   },
   {
     ""input"": ""123"",
     ""output"": ""Invalid"",
-    ""explanation"": ""1³ + 2³ + 3³ = 1 + 8 + 27 = 36 ? 123.""
+    ""explanation"": ""1ï¿½ + 2ï¿½ + 3ï¿½ = 1 + 8 + 27 = 36 ? 123.""
   }
 ]",Easy,
 7,Bus Route Planner,A bus ticket price is valid if the distance is part of a sequence where each number is the sum of the two previous ones (starting with 0 and 1). Check if a given distance is a valid ticket price.,1 ? N ? 1000,"[
   {
     ""input"": ""5"",
     ""output"": ""Valid"",
-    ""explanation"": ""Sequence is 0, 1, 1, 2, 3, 5, 8, …; 5 is in the sequence.""
+    ""explanation"": ""Sequence is 0, 1, 1, 2, 3, 5, 8, ï¿½; 5 is in the sequence.""
   },
   {
     ""input"": ""6"",
@@ -95,7 +95,7 @@ id,problem name,description,constraints,examples,difficulty level,date-time
     ""explanation"": ""Sum of digits (1+2+4=7) is not divisible by 3.""
   }
 ]",Easy,
-9,Parking Lot Counter,"A parking lot assigns open slot numbers that are triangular numbers — numbers that can be represented as the sum of the first k positive integers (i.e., 1 + 2 + 3 + ... + k). You are given a slot number N. Determine whether this slot number is open or not open.",1 ? N ? 1000,"[
+9,Parking Lot Counter,"A parking lot assigns open slot numbers that are triangular numbers ï¿½ numbers that can be represented as the sum of the first k positive integers (i.e., 1 + 2 + 3 + ... + k). You are given a slot number N. Determine whether this slot number is open or not open.",1 ? N ? 1000,"[
   {
     ""input"": ""10"",
     ""output"": ""Open"",
@@ -123,7 +123,7 @@ id,problem name,description,constraints,examples,difficulty level,date-time
   {
     ""input"": ""4"",
     ""output"": ""Valid"",
-    ""explanation"": ""Sequence is 1, 2, 4, 8, …; 4 is valid.""
+    ""explanation"": ""Sequence is 1, 2, 4, 8, ï¿½; 4 is valid.""
   },
   {
     ""input"": ""5"",
@@ -140,7 +140,7 @@ id,problem name,description,constraints,examples,difficulty level,date-time
   {
     ""input"": ""123"",
     ""output"": ""Invalid"",
-    ""explanation"": ""Product (1 × 2 × 3 = 6), Sum (1 + 2 + 3 = 6), 6 + 6 = 12 ? 123.""
+    ""explanation"": ""Product (1 ï¿½ 2 ï¿½ 3 = 6), Sum (1 + 2 + 3 = 6), 6 + 6 = 12 ? 123.""
   }
 ]",Easy,
 13,Library Book Code,A library assigns book codes that are valid if the code equals the sum of the factorials of its digits. Check if a given code is valid.,1 ? N ? 1000,"[
@@ -195,7 +195,7 @@ id,problem name,description,constraints,examples,difficulty level,date-time
   {
     ""input"": ""10"",
     ""output"": ""Special"",
-    ""explanation"": ""Sequence: 0, 1, 1, 2, 3, 5, 8, …; 10 = 2 + 8.""
+    ""explanation"": ""Sequence: 0, 1, 1, 2, 3, 5, 8, ï¿½; 10 = 2 + 8.""
   },
   {
     ""input"": ""14"",
@@ -243,12 +243,12 @@ id,problem name,description,constraints,examples,difficulty level,date-time
   {
     ""input"": ""153"",
     ""output"": ""Valid"",
-    ""explanation"": ""Sum of cubes: 1³ + 5³ + 3³ = 153.""
+    ""explanation"": ""Sum of cubes: 1ï¿½ + 5ï¿½ + 3ï¿½ = 153.""
   },
   {
     ""input"": ""123"",
     ""output"": ""Invalid"",
-    ""explanation"": ""1³ + 2³ + 3³ = 36 ? 123.""
+    ""explanation"": ""1ï¿½ + 2ï¿½ + 3ï¿½ = 36 ? 123.""
   }
 ]",Moderate,
 22,Voting System Check,A voting system assigns voter IDs that are valid if the ID is divisible of the least common multiple (LCM) of its non-zero digits. Check if a given ID is valid.,1 ? N ? 1000,"[
@@ -267,7 +267,7 @@ id,problem name,description,constraints,examples,difficulty level,date-time
   {
     ""input"": ""8"",
     ""output"": ""Valid"",
-    ""explanation"": ""Sequence: 1, 2, 4, 8, 16, …; 8 is in the sequence.""
+    ""explanation"": ""Sequence: 1, 2, 4, 8, 16, ï¿½; 8 is in the sequence.""
   },
   {
     ""input"": ""10"",
@@ -291,7 +291,7 @@ id,problem name,description,constraints,examples,difficulty level,date-time
   {
     ""input"": ""6"",
     ""output"": ""Valid"",
-    ""explanation"": ""6 = 2 × 3; 2 and 3 both have 2 divisors (1, 2) and (1, 3).""
+    ""explanation"": ""6 = 2 ï¿½ 3; 2 and 3 both have 2 divisors (1, 2) and (1, 3).""
   },
   {
     ""input"": ""7"",
@@ -351,12 +351,12 @@ Given a production code N, check if it is valid.",1 ? N ? 1000,"[
   {
     ""input"": ""12"",
     ""output"": ""Valid"",
-    ""explanation"": ""Sum of digits = 1 + 2 = 3; Divisors excluding 1 and 12: 2, 3, 4, 6, ? count = 4; Product = 3 × 4 = 12 = 12 ? Invalid""
+    ""explanation"": ""Sum of digits = 1 + 2 = 3; Divisors excluding 1 and 12: 2, 3, 4, 6, ? count = 4; Product = 3 ï¿½ 4 = 12 = 12 ? Invalid""
   },
   {
     ""input"": ""15"",
     ""output"": ""Invalid"",
-    ""explanation"": ""Sum of digits = 1 + 5 = 6; Divisors excluding 1 and 15: 3, 5 ? count = 2; Product = 6 × 2 = 12 ? 15.""
+    ""explanation"": ""Sum of digits = 1 + 5 = 6; Divisors excluding 1 and 15: 3, 5 ? count = 2; Product = 6 ï¿½ 2 = 12 ? 15.""
   }
 ]",Moderate,
 31,Event Attendance Tracker,"A small community organizes daily events, and they track attendance using a list of attendee IDs. To ensure fairness, they want to find out if any attendee has attended more than one event on the same day. Determine if there are any duplicate IDs in the attendance list.",Number of attendees: 1 ? n ? 10^5; Attendee IDs: 0 ? ID ? 10^6,"[
@@ -527,7 +527,7 @@ Given a production code N, check if it is valid.",1 ? N ? 1000,"[
     ""explanation"": ""The highest score is 30.""
   }
 ]",Easy,
-45,Treasure Map Decoding,"An adventurer finds a treasure map represented as a grid of numbers, where each number indicates a clue’s value. To decode it, they need to find the sum of all clue values in a specific row. Given the grid and a row number, compute the sum.","Grid size: 1 ? rows, cols ? 100; Clue values: 0 ? value ? 10^4; Row number: 1 ? row ? rows","[
+45,Treasure Map Decoding,"An adventurer finds a treasure map represented as a grid of numbers, where each number indicates a clueï¿½s value. To decode it, they need to find the sum of all clue values in a specific row. Given the grid and a row number, compute the sum.","Grid size: 1 ? rows, cols ? 100; Clue values: 0 ? value ? 10^4; Row number: 1 ? row ? rows","[
   {
     ""input"": ""Grid = [[1, 2], [3, 4]], Row = 2"",
     ""output"": ""7"",
@@ -551,7 +551,7 @@ Given a production code N, check if it is valid.",1 ? N ? 1000,"[
     ""explanation"": ""After serving john, doe is served next.""
   }
 ]",Easy,
-47,Library Book Finder,"A librarian organizes books on a shelf in increasing order of their unique ID numbers. To help a reader locate a specific book, the librarian needs to find the position of a book with a given ID. Given a list of book IDs in increasing order and a target ID, return the position of the book (or -1 if it’s not on the shelf).",Number of books: 1 ? n ? 10^4; Book IDs: -10^9 ? ID ? 10^9; Book IDs are in strictly increasing order; Target ID: -10^9 ? target ? 10^9,"[
+47,Library Book Finder,"A librarian organizes books on a shelf in increasing order of their unique ID numbers. To help a reader locate a specific book, the librarian needs to find the position of a book with a given ID. Given a list of book IDs in increasing order and a target ID, return the position of the book (or -1 if itï¿½s not on the shelf).",Number of books: 1 ? n ? 10^4; Book IDs: -10^9 ? ID ? 10^9; Book IDs are in strictly increasing order; Target ID: -10^9 ? target ? 10^9,"[
   {
     ""input"": ""Book IDs = [100, 200, 300, 400], Target ID = 300"",
     ""output"": ""2"",
@@ -830,7 +830,7 @@ Given the list of seat numbers assigned to students, determine if the seating ar
     ""explanation"": ""The talks do not overlap (1-5 ends before 6-10 starts).""
   }
 ]",Easy,
-70,Alien Language Translator,"An interstellar linguist decodes messages between two alien languages, where each word in one language maps to a word in the other. For the translation to be valid, each letter in the first language’s word must map to a unique letter in the second language’s word, and vice versa, while preserving the order. Given two words from the two languages, determine if they form a valid translation pair.",Word length: 1 ? n ? 10^5; Both words have the same length; Words contain only lowercase letters (a-z).,"[
+70,Alien Language Translator,"An interstellar linguist decodes messages between two alien languages, where each word in one language maps to a word in the other. For the translation to be valid, each letter in the first languageï¿½s word must map to a unique letter in the second languageï¿½s word, and vice versa, while preserving the order. Given two words from the two languages, determine if they form a valid translation pair.",Word length: 1 ? n ? 10^5; Both words have the same length; Words contain only lowercase letters (a-z).,"[
   {
     ""input"": ""Word1 = egg, Word2 = add"",
     ""output"": ""Yes"",
@@ -842,7 +842,7 @@ Given the list of seat numbers assigned to students, determine if the seating ar
     ""explanation"": ""The mapping would be: f ? b, o ? a, o ? r. The letter o in foo maps to both a and r in bar, which violates the one-to-one mapping rule. Thus, the translation is invalid.""
   }
 ]",Easy,
-71,Water Reservoir Design,"A city planner designs a series of reservoirs along a river, where each reservoir’s depth is recorded. To maximize water storage, they need to find the longest consecutive stretch of reservoirs with a total depth of at least a given threshold. Given a list of reservoir depths and a threshold, compute the length of the longest such stretch.",Number of reservoirs: 1 ? n ? 10^5; Depths: 0 ? depth ? 10^4; Threshold: 1 ? k ? 10^9,"[
+71,Water Reservoir Design,"A city planner designs a series of reservoirs along a river, where each reservoirï¿½s depth is recorded. To maximize water storage, they need to find the longest consecutive stretch of reservoirs with a total depth of at least a given threshold. Given a list of reservoir depths and a threshold, compute the length of the longest such stretch.",Number of reservoirs: 1 ? n ? 10^5; Depths: 0 ? depth ? 10^4; Threshold: 1 ? k ? 10^9,"[
   {
     ""input"": ""Depths = [1, 2, 3, 4, 5], Threshold = 12"",
     ""output"": ""3"",
@@ -854,7 +854,7 @@ Given the list of seat numbers assigned to students, determine if the seating ar
     ""explanation"": ""No consecutive stretch has a sum ? 5, so the output is 0.""
   }
 ]",Moderate,
-72,Bridge Support Beams,"An engineer is designing a bridge and needs to use two support beams whose combined strength exactly matches a target load to ensure structural stability. The engineer has a list of available beam strengths. Your task is to determine whether there are two distinct beams that sum up to the given target value. Return the indices of the two beams if such a pair exists. If no such pair exists, return [-1, -1].",Number of beams: 2 ? n ? 10?; Strength of each beam: 1 ? strength ? 10?; Target sum: 2 ? target ? 2 × 10?,"[
+72,Bridge Support Beams,"An engineer is designing a bridge and needs to use two support beams whose combined strength exactly matches a target load to ensure structural stability. The engineer has a list of available beam strengths. Your task is to determine whether there are two distinct beams that sum up to the given target value. Return the indices of the two beams if such a pair exists. If no such pair exists, return [-1, -1].",Number of beams: 2 ? n ? 10?; Strength of each beam: 1 ? strength ? 10?; Target sum: 2 ? target ? 2 ï¿½ 10?,"[
   {
     ""input"": ""Strengths = [2, 7, 11, 15], Target = 9"",
     ""output"": ""[0, 1]"",
@@ -998,7 +998,7 @@ Given the list of seat numbers assigned to students, determine if the seating ar
     ""explanation"": ""No words are anagrams of each other, so each forms its own group.""
   }
 ]",Moderate,
-84,Magic Spell Expansion,"A sorcerer casts spells using words that can be extended into palindromes by adding letters. Given a word, find the longest palindromic substring within it to determine the spell’s core.",Word length: 1 ? n ? 1000; Word contains only lowercase letters (a-z).,"[
+84,Magic Spell Expansion,"A sorcerer casts spells using words that can be extended into palindromes by adding letters. Given a word, find the longest palindromic substring within it to determine the spellï¿½s core.",Word length: 1 ? n ? 1000; Word contains only lowercase letters (a-z).,"[
   {
     ""input"": ""babad"",
     ""output"": ""bab"",
@@ -1080,7 +1080,7 @@ Given the list of seat numbers assigned to students, determine if the seating ar
     ""explanation"": ""The character 'a' appears more than once in any segment longer than length 1. So the longest valid segment with 'a' appearing at most once is either 'a' (at index 0, 1, or 2) ? length 1.""
   }
 ]",Moderate,
-91,Customer Discount Eligibility Checker,"For a customer purchasing items: If total bill ? ?2000 and the customer is a member, apply 20% discount. If the bill is between ?1000–1999 and it’s the customer’s birthday, give 15% off. Else, no discount. Also print which condition was applied.",1 ? bill ? 10^6; Membership and birthday inputs are 'yes' or 'no' only.,"[
+91,Customer Discount Eligibility Checker,"For a customer purchasing items: If total bill ? ?2000 and the customer is a member, apply 20% discount. If the bill is between ?1000ï¿½1999 and itï¿½s the customerï¿½s birthday, give 15% off. Else, no discount. Also print which condition was applied.",1 ? bill ? 10^6; Membership and birthday inputs are 'yes' or 'no' only.,"[
   {
     ""input"": ""Enter total bill amount: 900\nIs the customer a member? (yes/no): no\nIs it the customer's birthday? (yes/no): no"",
     ""output"": ""Discount Applied: No Discount\nFinal Amount: ?900"",
@@ -1137,21 +1137,21 @@ Given the list of seat numbers assigned to students, determine if the seating ar
     ""explanation"": ""Matches ? 10 and average score ? 40 ? eligible for selection.""
   }
 ]",Easy,
-100,Candidate Shortlisting,"A candidate can be shortlisted if: He/she has experience ? 3 years in relevant field and has completed a technical test with score ? 60. If test score ? 90, shortlist directly, regardless of experience. If score is < 60 but experience is ? 5 years and holds a certification, add to hold list.",Experience in years ? 0; test score 0–100; certification yes/no,"[
+100,Candidate Shortlisting,"A candidate can be shortlisted if: He/she has experience ? 3 years in relevant field and has completed a technical test with score ? 60. If test score ? 90, shortlist directly, regardless of experience. If score is < 60 but experience is ? 5 years and holds a certification, add to hold list.",Experience in years ? 0; test score 0ï¿½100; certification yes/no,"[
   {
     ""input"": ""Enter experience (in years), test score, and certification status (yes/no): 4 65 yes"",
     ""output"": ""Status: Shortlisted"",
     ""explanation"": ""Experience ? 3 and test score ? 60 ? eligible.""
   }
 ]",Easy,
-101,3-Digit Code Lock Mechanism,"You’re given a 3-digit code. If the digits are in ascending order, the box opens. If any two digits are the same digits and all digits are in descending order, the box will be locked.","3-digit code, digits 0-9","[
+101,3-Digit Code Lock Mechanism,"Youï¿½re given a 3-digit code. If the digits are in ascending order, the box opens. If any two digits are the same digits and all digits are in descending order, the box will be locked.","3-digit code, digits 0-9","[
   {
     ""input"": ""Enter a 3-digit code: 123"",
     ""output"": ""Status: Box Opens"",
     ""explanation"": ""Digits in ascending order ? opens.""
   }
 ]",Easy,
-102,Number Guess,"Given a guessed number (1–100): If it’s a prime and even, print 'Rare Guess'. If divisible by 5 and odd ? 'Close Guess'. If multiple of 10 ? 'Hot Guess'. Else ? 'Try again'.",1 ? guessed number ? 100,"[
+102,Number Guess,"Given a guessed number (1ï¿½100): If itï¿½s a prime and even, print 'Rare Guess'. If divisible by 5 and odd ? 'Close Guess'. If multiple of 10 ? 'Hot Guess'. Else ? 'Try again'.",1 ? guessed number ? 100,"[
   {
     ""input"": ""Enter a guessed number between 1 and 100: 2"",
     ""output"": ""Rare Guess"",
@@ -1165,13 +1165,13 @@ Given the list of seat numbers assigned to students, determine if the seating ar
     ""explanation"": ""Coordinates are in ascending order ? auto-launch.""
   }
 ]",Easy,
-104,Temperature Evaluation,"Input today’s temperature. If it’s below 0°C, print 'Freezing Conditions'. If it’s between 0 and 30: If temperature is divisible by 2 and 3, print 'Pleasant Day'. If it’s an odd number, print 'Mild but Odd'. Else print 'Too Hot!'.","Temperature in °C, integer","[
+104,Temperature Evaluation,"Input todayï¿½s temperature. If itï¿½s below 0ï¿½C, print 'Freezing Conditions'. If itï¿½s between 0 and 30: If temperature is divisible by 2 and 3, print 'Pleasant Day'. If itï¿½s an odd number, print 'Mild but Odd'. Else print 'Too Hot!'.","Temperature in ï¿½C, integer","[
   {
-    ""input"": ""Enter today's temperature (in °C): -5"",
+    ""input"": ""Enter today's temperature (in ï¿½C): -5"",
     ""output"": ""Freezing Conditions""
   }
 ]",Easy,
-105,Player Score,"Input the player’s score. If score is divisible by both 4 and 6, print 'Combo Bonus'. If divisible by 4 only, and greater than 100, print 'Quad Master'; else print 'Regular Quad'. If divisible by 6 only and < 50, print 'Lucky Six'.",Player score integer ? 0,"[
+105,Player Score,"Input the playerï¿½s score. If score is divisible by both 4 and 6, print 'Combo Bonus'. If divisible by 4 only, and greater than 100, print 'Quad Master'; else print 'Regular Quad'. If divisible by 6 only and < 50, print 'Lucky Six'.",Player score integer ? 0,"[
   {
     ""input"": ""Enter the player's score: 24"",
     ""output"": ""Combo Bonus"",
@@ -1199,10 +1199,10 @@ Given the list of seat numbers assigned to students, determine if the seating ar
     ""explanation"": ""The longest consecutive win streak is 2 (from the second and third games). ""
   }
 ]",Easy,
-109,Temperature Readings Analysis,"Input temperature readings for 7 days. Count how many days had temperatures: Above 35°C ? 'Hot Days', Below 10°C ? 'Cold Days', The rest ? 'Normal Days'. Calculate the average temperature of the week. If more than 3 days were Hot Days and average temp is over 33°C, print 'Heatwave Warning'.",7 temperature readings in °C,"[
+109,Temperature Readings Analysis,"Input temperature readings for 7 days. Count how many days had temperatures: Above 35ï¿½C ? 'Hot Days', Below 10ï¿½C ? 'Cold Days', The rest ? 'Normal Days'. Calculate the average temperature of the week. If more than 3 days were Hot Days and average temp is over 33ï¿½C, print 'Heatwave Warning'.",7 temperature readings in ï¿½C,"[
   {
     ""input"": ""Enter temperature readings for 7 days: 38 5 20 28 36 33 9"",
-    ""output"": ""Hot Days: 3\nCold Days: 2\nNormal Days: 2\nAverage Temperature: 26.71°C\nHeatwave Warning""
+    ""output"": ""Hot Days: 3\nCold Days: 2\nNormal Days: 2\nAverage Temperature: 26.71ï¿½C\nHeatwave Warning""
   }
 ]",Easy,
 110,Bus Stop Boarding,"A bus stops at N stops. At each stop, a certain number of people get on. If number is 0, no one boarded. Count how many stops had no boarders. At the end, print total number of people boarded and how many stops were empty.",Number of stops N and boarders per stop,"[
@@ -1225,7 +1225,7 @@ Given the list of seat numbers assigned to students, determine if the seating ar
     ""explanation"": ""These names start and end with vowels.""
   }
 ]",Easy,
-113,Top 3 Scores,You’re given scores of students in a test. Print the top 3 highest unique scores in descending order.,List of scores,"[
+113,Top 3 Scores,Youï¿½re given scores of students in a test. Print the top 3 highest unique scores in descending order.,List of scores,"[
   {
     ""input"": ""Enter Scores: [78, 91, 84, 91, 95, 84, 88]"",
     ""output"": ""Top scorers: 95, 91, 88"",
@@ -1334,10 +1334,10 @@ Given the list of seat numbers assigned to students, determine if the seating ar
     ""output"": ""Top hashtags: #fun (2), #code (2)""
   }
 ]",Easy,
-130,Currency Symbol Extractor," Given a list of product prices as strings (e.g., ""$12"", ""€8"", ""?99""), extract all the unique currency",List of price strings with currency symbols,"[
+130,Currency Symbol Extractor," Given a list of product prices as strings (e.g., ""$12"", ""ï¿½8"", ""?99""), extract all the unique currency",List of price strings with currency symbols,"[
   {
-    ""input"": ""Enter prices: [\""$12\"", \""€8\"", \""?99\"", \""$5\"", \""€12\""]"",
-    ""output"": ""Unique symbols: [\""$\"", \""€\"", \""?\""]""
+    ""input"": ""Enter prices: [\""$12\"", \""ï¿½8\"", \""?99\"", \""$5\"", \""ï¿½12\""]"",
+    ""output"": ""Unique symbols: [\""$\"", \""ï¿½\"", \""?\""]""
   }
 ]",Easy,
 131,Cinema Seat Tracker,"A theatre sells tickets and logs seat numbers as they are booked. Sometimes, the same seat is mistakenly booked twice. Identify all duplicate seat numbers. ",List of booked seat numbers,"[
@@ -1346,7 +1346,7 @@ Given the list of seat numbers assigned to students, determine if the seating ar
     ""output"": ""Duplicate seat bookings: [101, 102]""
   }
 ]",Easy,
-132,Leaderboard Position Finder,"Given a sorted list of scores (descending) and a player’s score, find the correct rank they should take. ","Sorted scores list, new player score","[
+132,Leaderboard Position Finder,"Given a sorted list of scores (descending) and a playerï¿½s score, find the correct rank they should take. ","Sorted scores list, new player score","[
   {
     ""input"": ""Enter Scores: [100, 98, 92, 88], New score: 95"",
     ""output"": ""Player should be ranked at position: 3""
@@ -1461,19 +1461,19 @@ Given the list of seat numbers assigned to students, determine if the seating ar
     ""output"": ""He is very fast and intelligent""
   }
 ]",Easy,
-151,Balanced Fruit Counter,"N fruits are weighed (integer grams). If a fruit’s weight is less than the previous one but more than the next, it’s a ""balanced fruit."" Count balanced fruits ",Number of fruits and list of weights,"[
+151,Balanced Fruit Counter,"N fruits are weighed (integer grams). If a fruitï¿½s weight is less than the previous one but more than the next, itï¿½s a ""balanced fruit."" Count balanced fruits ",Number of fruits and list of weights,"[
   {
     ""input"": ""Enter number of fruits: 7\nEnter weights of 7 fruits: 100 90 80 85 70 95 60"",
     ""output"": ""Number of balanced fruits: 2""
   }
 ]",Moderate,
-152,Memory Guess Scoring,"Users are shown N numbers one after another. Each number is to be memorized, and the user guesses the number (simulated). If guessed correctly ? +2 points If off by ±1 ? +1 point Otherwise ? 0 Give total score and number of exact matches. ","Number of values, original numbers list, guessed numbers list","[
+152,Memory Guess Scoring,"Users are shown N numbers one after another. Each number is to be memorized, and the user guesses the number (simulated). If guessed correctly ? +2 points If off by ï¿½1 ? +1 point Otherwise ? 0 Give total score and number of exact matches. ","Number of values, original numbers list, guessed numbers list","[
   {
     ""input"": ""Give value for N: 5\nEnter original numbers: 5 7 3 9 6\nEnter guessed numbers: 5 8 2 9 5"",
     ""output"": ""Total Score: 8\nExact Matches: 2""
   }
 ]",Moderate,
-153,Runner Speed Monitor,"A runner’s speed is recorded every minute for N minutes: If speed increases consecutively minimum 3 times ? ""Sprint Detected"" If speed drops below 4 ? ""Slow Down Alert"" Track the number of sprints and slowdowns. ",Number of minutes and speed list,"[
+153,Runner Speed Monitor,"A runnerï¿½s speed is recorded every minute for N minutes: If speed increases consecutively minimum 3 times ? ""Sprint Detected"" If speed drops below 4 ? ""Slow Down Alert"" Track the number of sprints and slowdowns. ",Number of minutes and speed list,"[
     {
       ""input"": ""11\n3 4 5 6 3 2 5 6 7 2 1"",
       ""output"": ""Sprints Detected: 2\nSlow Down Alerts: 4"",
@@ -1507,7 +1507,7 @@ Given the list of seat numbers assigned to students, determine if the seating ar
       ""explanation"": ""Position 0: 'A' ? no left neighbor ? keep\nPosition 1: 'A' ? left='A', right='B' ? not different on both sides ? keep\nPosition 2: 'B' ? left='A', right='A' ? both neighbors different ? burst\nPosition 3: 'A' ? left='B', right='C' ? both different ? burst\nPosition 4: 'C' ? left='A', right='D' ? both different ? burst\nPosition 5: 'D' ? left='C', right='A' ? both different ? burst\nPosition 6: 'A' ? no right neighbor ? keep""
     }
   ]",Moderate,
-158,Warehouse Temperature Alert,"A sensor records the temperature inside a warehouse every minute. A cooling system triggers an alert if there are 3 or more consecutive readings above 70°C. Given the series of temperature readings, determine if an alert should be triggered. ",Number of readings and list of temperatures,"[
+158,Warehouse Temperature Alert,"A sensor records the temperature inside a warehouse every minute. A cooling system triggers an alert if there are 3 or more consecutive readings above 70ï¿½C. Given the series of temperature readings, determine if an alert should be triggered. ",Number of readings and list of temperatures,"[
   {
     ""input"": ""Enter number of readings: 10\nEnter temperature readings: 68 72 74 75 69 71 72 73 74 65"",
     ""output"": ""Alert Triggered!""
@@ -1526,7 +1526,7 @@ Given the list of seat numbers assigned to students, determine if the seating ar
     ""output"": ""15 14 13 12 10 9 8 7 6 5 4 3 2 1 0""
   }
 ]",Moderate,
-161,Valid Digital Capsule Unlock Codes,"A digital capsule can only be unlocked with a 4-digit code where the sum of digits is even, the digits are all unique, and the number doesn’t contain 0. How many valid unlock codes exist between 1000 and 9999 that meet these conditions? ",Range 1000 to 9999,"[
+161,Valid Digital Capsule Unlock Codes,"A digital capsule can only be unlocked with a 4-digit code where the sum of digits is even, the digits are all unique, and the number doesnï¿½t contain 0. How many valid unlock codes exist between 1000 and 9999 that meet these conditions? ",Range 1000 to 9999,"[
   {
     ""input"": ""Calculate count of valid 4-digit unlock codes with no zero digits, all unique digits, and even sum of digits"",
     ""output"": ""Number of valid unlock codes: <calculated_count>""
@@ -1563,7 +1563,7 @@ Given the list of seat numbers assigned to students, determine if the seating ar
     ""explanation"": ""Use a map or dictionary with the first letter as key.""
   }
 ]",Moderate,
-167,Reverse Sentences in Paragraph, You’re given a paragraph with multiple sentences. Reverse the order of words in each sentence. ,Paragraph text,"[
+167,Reverse Sentences in Paragraph, Youï¿½re given a paragraph with multiple sentences. Reverse the order of words in each sentence. ,Paragraph text,"[
   {
     ""input"": ""Give text in Paragraph: \""Hello world. AI is amazing.\"""",
     ""output"": ""world Hello. amazing is AI.""
@@ -1607,7 +1607,7 @@ Given the list of seat numbers assigned to students, determine if the seating ar
     ""output"": "" Pass@123""
   }
 ]",Moderate,
-172,Palindromic Timestamp Checker,"You’re building a digital clock feature. Count how many timestamps (in HH:MM format) between 00:00 and 23:59 are palindromes (e.g., 12:21, 21:12). ",No input,"[
+172,Palindromic Timestamp Checker,"Youï¿½re building a digital clock feature. Count how many timestamps (in HH:MM format) between 00:00 and 23:59 are palindromes (e.g., 12:21, 21:12). ",No input,"[
   {
     ""input"": ""No input required"",
     ""output"": ""Count of palindromic timestamps: 16""
@@ -1631,7 +1631,7 @@ Given the list of seat numbers assigned to students, determine if the seating ar
     ""output"": ""2""
   }
 ]",Moderate,
-176,Sparse Element Finder,An element is called sparse if no neighboring index (±1) contains the same value. Count sparse elements.,Array of integers,"[
+176,Sparse Element Finder,An element is called sparse if no neighboring index (ï¿½1) contains the same value. Count sparse elements.,Array of integers,"[
   {
     ""input"": ""Enter array: [1, 2, 2, 3, 4, 4, 5]"",
     ""output"": ""3 (1, 3, 5 are sparse)""
@@ -1649,7 +1649,7 @@ Given the list of seat numbers assigned to students, determine if the seating ar
     ""output"": ""Seat allocated: 1 (since it's not next to 3, 5, or 8) ""
   }
 ]",Moderate,
-179,Calendar Event Clasher,You have a list of meeting time slots (start–end). Identify if any two meetings overlap and return the conflicting pair.,"List of meeting time slots (start, end)","[
+179,Calendar Event Clasher,You have a list of meeting time slots (startï¿½end). Identify if any two meetings overlap and return the conflicting pair.,"List of meeting time slots (start, end)","[
   {
     ""input"": ""Enter Meeting slots in pair like a sample (2,4): [(9,11), (10,12), (1,3)]"",
     ""output"": ""Conflict between (9,11) and (10,12)""
@@ -1706,7 +1706,7 @@ Print:
   {
     ""input"": ""5"",
     ""output"": ""120"",
-    ""explanation"": ""The number of arrangements is 5! = 5 × 4 × 3 × 2 × 1 = 120.""
+    ""explanation"": ""The number of arrangements is 5! = 5 ï¿½ 4 ï¿½ 3 ï¿½ 2 ï¿½ 1 = 120.""
   }
 ]",Easy,
 184,Comet Calendar,"In the royal kitchen of Numerica, a master chef was challenged to arrange N unique magical spices on a shelf.
@@ -1758,7 +1758,7 @@ Print:
   }
 ]",Easy,
 187,Chest of Weight,"In the dungeons beneath Numerica's capital lies a sealed chest. A number carved on the outside hints at the total weight of its contents.
- A legend claims that the chest’s true weight equals the sum of its digits. Solve the mystery by computing the total weight based on this rule.
+ A legend claims that the chestï¿½s true weight equals the sum of its digits. Solve the mystery by computing the total weight based on this rule.
 
 Function Description:
  Complete the function chestWeight with the following parameter(s):
@@ -1778,14 +1778,14 @@ Print:
 
 Function Description:
  Complete the function knightMoves with the following parameter(s):
- k: A positive integer representing the knight’s identifier.
+ k: A positive integer representing the knightï¿½s identifier.
 
 Print:
- Print the knight’s identifier multiplied by each round number from 1 to 10, each on a new line.",1 ? k ? 100,"[
+ Print the knightï¿½s identifier multiplied by each round number from 1 to 10, each on a new line.",1 ? k ? 100,"[
   {
     ""input"": ""3"",
     ""output"": ""3\n6\n9\n12\n15\n18\n21\n24\n27\n30"",
-    ""explanation"": ""The knight performs moves in multiples of their identifier: 3×1, 3×2, ..., 3×10.""
+    ""explanation"": ""The knight performs moves in multiples of their identifier: 3ï¿½1, 3ï¿½2, ..., 3ï¿½10.""
   }
 ]",Easy,
 189,Royal Number Test,"A magical scroll claims that a number with exactly two positive divisors is royal.
@@ -1847,7 +1847,7 @@ Print:
   {
     ""input"": ""10"",
     ""output"": ""3"",
-    ""explanation"": ""Candles at positions 3, 6, and 9 will glow — total 3 glowing candles.""
+    ""explanation"": ""Candles at positions 3, 6, and 9 will glow ï¿½ total 3 glowing candles.""
   }
 ]",Easy,
 193,Pirate's Looting Route,"A pirate ship sails along a coastline with N islands, each marked by a number. The pirate captain orders his crew to plunder loot from all islands.
@@ -1911,10 +1911,10 @@ Print:
   {
     ""input"": ""15"",
     ""output"": ""8"",
-    ""explanation"": ""Odd days in the month from 1 to 15 are: 1, 3, 5, 7, 9, 11, 13, 15 — 8 days in total.""
+    ""explanation"": ""Odd days in the month from 1 to 15 are: 1, 3, 5, 7, 9, 11, 13, 15 ï¿½ 8 days in total.""
   }
 ]",Medium,
-197,Dragon's Treasure Vault,"The legendary dragon of Aldoria guards a treasure vault containing N gems. Each gem is numbered sequentially, and the dragon’s rule for claiming a gem is strict:
+197,Dragon's Treasure Vault,"The legendary dragon of Aldoria guards a treasure vault containing N gems. Each gem is numbered sequentially, and the dragonï¿½s rule for claiming a gem is strict:
  Only gems located at positions divisible by 3 can be taken. Help the adventurer calculate how many gems can be claimed from the vault.
 
 Function Description:
@@ -1961,16 +1961,16 @@ Print:
   {
     ""input"": ""16"",
     ""output"": ""YES"",
-    ""explanation"": ""The number 16 is a perfect square (4×4 = 16), so the gates open.""
+    ""explanation"": ""The number 16 is a perfect square (4ï¿½4 = 16), so the gates open.""
   }
 ]",Medium,
 200,Royal Tournament Odds,"The King has arranged a grand tournament where knights fight in a sequence.
- To determine the odds of a knight’s victory, the tournament follows a rule: a knight wins only if his identifier is divisible by 2 and 3.
- Given a knight’s identifier n, determine if he has a chance of winning based on this rule.
+ To determine the odds of a knightï¿½s victory, the tournament follows a rule: a knight wins only if his identifier is divisible by 2 and 3.
+ Given a knightï¿½s identifier n, determine if he has a chance of winning based on this rule.
 
 Function Description:
  Complete the function isWinningKnight with the following parameter(s):
- n: A positive integer representing the knight’s identifier.
+ n: A positive integer representing the knightï¿½s identifier.
 
 Print:
  Print ""YES"" if n is divisible by both 2 and 3, otherwise print ""NO"".",1 ? n ? 10^6,"[
@@ -1993,7 +1993,7 @@ Print:
   {
     ""input"": ""10"",
     ""output"": ""5"",
-    ""explanation"": ""The odd-numbered books are: 1, 3, 5, 7, 9 — so there are 5 such books.""
+    ""explanation"": ""The odd-numbered books are: 1, 3, 5, 7, 9 ï¿½ so there are 5 such books.""
   }
 ]",Medium,
 202,Potion Brewing Cycle,"In the Kingdom of Alchemia, brewers follow a specific brewing cycle where a potion takes x minutes to brew. The brewers work in shifts, with each shift being y minutes long.
@@ -2009,10 +2009,10 @@ Print:
   {
     ""input"": ""4 17"",
     ""output"": ""4"",
-    ""explanation"": ""With a brewing time of 4 minutes and a shift length of 17 minutes, four full cycles can be completed (4 × 4 = 16 minutes), with 1 minute left over.""
+    ""explanation"": ""With a brewing time of 4 minutes and a shift length of 17 minutes, four full cycles can be completed (4 ï¿½ 4 = 16 minutes), with 1 minute left over.""
   }
 ]",Medium,
-203,Castle’s Banners,"The Kingdom of Stormhold has a tradition where banners are raised on the castle walls every multiple of k days.
+203,Castleï¿½s Banners,"The Kingdom of Stormhold has a tradition where banners are raised on the castle walls every multiple of k days.
  Given a total number of days n, help the Royal Banner Keeper calculate how many banners are raised during this period.
 
 Function Description:
@@ -2029,7 +2029,7 @@ Print:
     ""explanation"": ""Banners are raised on days 3, 6, 9, and 12, so there are 4 banners raised.""
   }
 ]",Medium,
-204,The Wizard’s Spellcasting Power,"In the enchanted realm, wizards perform a specific spellcasting ritual during each hour of the night. The ritual’s power is determined by how many times the spellcasting occurs in the given number of hours n.
+204,The Wizardï¿½s Spellcasting Power,"In the enchanted realm, wizards perform a specific spellcasting ritual during each hour of the night. The ritualï¿½s power is determined by how many times the spellcasting occurs in the given number of hours n.
  However, only every 4th hour is considered a full spellcasting cycle.
 
 Function Description:
@@ -2145,7 +2145,7 @@ Print:
     ""explanation"": ""The goblin visits treasure spots at positions 5, 10, 15, and 20. Thus, he visits 4 spots.""
   }
 ]",Medium,
-211,The Treasure Chest Weighing," In the Kingdom of Goldwyn, pirates have stolen a chest filled with golden coins of varying weights. Captain Ironbeard wants to know the total weight of the loot. Each coin’s weight is listed in a magical scroll. Can you help the Captain calculate the total weight?
+211,The Treasure Chest Weighing," In the Kingdom of Goldwyn, pirates have stolen a chest filled with golden coins of varying weights. Captain Ironbeard wants to know the total weight of the loot. Each coinï¿½s weight is listed in a magical scroll. Can you help the Captain calculate the total weight?
 
 Function Description:
  Complete the function calculateTotalWeight with the following parameter(s):
@@ -2191,7 +2191,7 @@ Print:
     ""explanation"": ""The even-numbered gems are 6, 8, 12, and 2. Total count = 4.""
   }
 ]",Easy,
-214,The Oracle’s Vision Mirror," The Oracle of Orbis has visions stored in a crystal array. To reveal the true prophecy, she needs you to reverse the order of these visions.
+214,The Oracleï¿½s Vision Mirror," The Oracle of Orbis has visions stored in a crystal array. To reveal the true prophecy, she needs you to reverse the order of these visions.
 
 Function Description:
  Complete the function revealProphecy with the following parameter(s):
@@ -2222,7 +2222,7 @@ Print:
     ""explanation"": ""The rune number 5 exists in the list.""
   }
 ]",Easy,
-216,The Scribe’s Secret Message," In the ancient library of Lexiconia, a scribe encoded a secret message by writing it backwards. To unveil the message, the Grand Archivist needs your help to reverse the given text string.
+216,The Scribeï¿½s Secret Message," In the ancient library of Lexiconia, a scribe encoded a secret message by writing it backwards. To unveil the message, the Grand Archivist needs your help to reverse the given text string.
 
 Function Description:
  Complete the function decodeMessage with the following parameter(s):
@@ -2281,7 +2281,7 @@ Print:
     ""explanation"": ""The entire text is converted to uppercase for presentation.""
   }
 ]",Easy,
-220,The Bard's Unique Melody," A bard is composing a melody with unique notes. To ensure his melody has no repeating characters, he needs to count the number of distinct characters in his song’s lyrics.
+220,The Bard's Unique Melody," A bard is composing a melody with unique notes. To ensure his melody has no repeating characters, he needs to count the number of distinct characters in his songï¿½s lyrics.
 
 Function Description:
  Complete the function countUniqueNotes with the following parameter(s):
@@ -2327,7 +2327,7 @@ Print:
     ""explanation"": ""The price of 'shield' is 100.""
   }
 ]",Easy,
-223,The Village Census," The village of Numoria is conducting a census. For each villager’s name recorded, the census officer needs to count how many times each name appears.
+223,The Village Census," The village of Numoria is conducting a census. For each villagerï¿½s name recorded, the census officer needs to count how many times each name appears.
 
 Function Description:
  Complete the function countVillagers with the following parameter(s):
@@ -2448,7 +2448,7 @@ Print:
     ""explanation"": ""Knights challenge in the order they entered the queue: Arthur, Lancelot, Gawain.""
   }
 ]",Easy,
-231,The Ranger’s Lost Amulet," Deep in the Whispering Woods, a ranger has lost his enchanted amulet. Among a scattered collection of relics, he needs to check if the amulet is present. Help him search through the list.
+231,The Rangerï¿½s Lost Amulet," Deep in the Whispering Woods, a ranger has lost his enchanted amulet. Among a scattered collection of relics, he needs to check if the amulet is present. Help him search through the list.
 
 Function Description:
  Complete the function findAmulet with the following parameter(s):
@@ -2464,7 +2464,7 @@ Print:
     ""explanation"": ""The amulet exists in the collection, so 'Found' is printed.""
   }
 ]",Easy,
-232,The Royal Library's Scroll Locator," In the grand Royal Library, scrolls are arranged in alphabetical order. Given a scroll’s title, the librarian wants to quickly locate its position using an efficient search.
+232,The Royal Library's Scroll Locator," In the grand Royal Library, scrolls are arranged in alphabetical order. Given a scrollï¿½s title, the librarian wants to quickly locate its position using an efficient search.
 
 Function Description:
  Complete the function locateScroll with the following parameter(s):
@@ -2558,7 +2558,7 @@ Print:
     ""explanation"": ""The ingredients are ordered from weakest to strongest: 1, 2, 3, 5, 8.""
   }
 ]",Easy,
-238,The Royal Archers’ Accuracy Test,"The King’s archery contest records the scores of each participant. To declare the winner, scores must be arranged in descending order. Help the King sort the scores accordingly.
+238,The Royal Archersï¿½ Accuracy Test,"The Kingï¿½s archery contest records the scores of each participant. To declare the winner, scores must be arranged in descending order. Help the King sort the scores accordingly.
 
 Function Description:
  Complete the function sortScores with the following parameter(s):
@@ -2587,7 +2587,7 @@ Print:
     ""explanation"": ""Scrolls are now in correct historical order: 1200, 1300, 1400, 1450, 1500.""
   }
 ]",Easy,
-240,The Treasure Hunter’s Gold Sorting," In the ancient Archives of Time, scrolls are scattered out of chronological order. The historian wishes to arrange them by year to understand the timeline. Sort the scrolls based on their year of origin.
+240,The Treasure Hunterï¿½s Gold Sorting," In the ancient Archives of Time, scrolls are scattered out of chronological order. The historian wishes to arrange them by year to understand the timeline. Sort the scrolls based on their year of origin.
 
 Function Description:
  Complete the function sortScrollsByYear with the following parameter(s):
@@ -2633,7 +2633,7 @@ Print the number of continuous subarrays whose sum equals k.
     ""explanation"": ""There are two continuous subarrays whose sum equals 3: [1, 2] ? 1 + 2 = 3, [3] ? 3.\nNo other continuous subarray in the list sums to exactly 3.\nThe hero reports this to the dragon, passing the challenge with wit and precision.""
   }
 ]",Medium,
-243,The King's Valley Peaks,"In the King's valley, a row of watchtowers of varying heights stand tall. The King wants to identify all ""peaks""—a peak is a tower taller than its immediate neighbors. Find all the indices of these peaks.
+243,The King's Valley Peaks,"In the King's valley, a row of watchtowers of varying heights stand tall. The King wants to identify all ""peaks""ï¿½a peak is a tower taller than its immediate neighbors. Find all the indices of these peaks.
 
 Function Description:
  Complete the function findPeaks with the following parameter(s):
@@ -2648,7 +2648,7 @@ Print:
     ""explanation"": ""Towers at indices 1, 3, and 5 are taller than their neighbors.""
   }
 ]",Medium,
-244,The Desert Caravan’s Water Challenge," A desert caravan tracks the water consumption of its members over n days. They wish to calculate the maximum total consumption in any sliding window of size k days to plan future expeditions.
+244,The Desert Caravanï¿½s Water Challenge," A desert caravan tracks the water consumption of its members over n days. They wish to calculate the maximum total consumption in any sliding window of size k days to plan future expeditions.
 
 Function Description:
  Complete the function maxWaterConsumption with the following parameter(s):
@@ -2679,12 +2679,12 @@ Print:
     ""explanation"": ""Stone number 9 appears once, which is an odd count.""
   }
 ]",Medium,
-246,The Scribe’s Anagram Scroll," In the ancient city of Lexiconia, a royal scribe is tasked with verifying if two scrolls contain the same set of characters, merely rearranged. Such scrolls are called “anagrams”. Given two scrolls, determine if they are anagrams of each other.
+246,The Scribeï¿½s Anagram Scroll," In the ancient city of Lexiconia, a royal scribe is tasked with verifying if two scrolls contain the same set of characters, merely rearranged. Such scrolls are called ï¿½anagramsï¿½. Given two scrolls, determine if they are anagrams of each other.
 
 Function Description:
  Complete the function areAnagrams with the following parameter(s):
-    s1: A string representing the first scroll’s content.
-    s2: A string representing the second scroll’s content.
+    s1: A string representing the first scrollï¿½s content.
+    s2: A string representing the second scrollï¿½s content.
 
 Print:
  Print ""YES"" if they are anagrams, otherwise print ""NO"".
@@ -2709,7 +2709,7 @@ Print:
     ""explanation"": ""Both 'bab' and 'aba' are valid answers. Either can be printed.""
   }
 ]",Medium,
-248,The Cryptographer’s Unique Password," A cryptographer in Numerica is developing secure passwords. She wants to count how many substrings of a given string contain all unique characters (no repeats). Help her count these substrings.
+248,The Cryptographerï¿½s Unique Password," A cryptographer in Numerica is developing secure passwords. She wants to count how many substrings of a given string contain all unique characters (no repeats). Help her count these substrings.
 
 Function Description:
  Complete the function countUniqueSubstrings with the following parameter(s):
@@ -2724,7 +2724,7 @@ Print:
     ""explanation"": ""Unique substrings: 'a', 'b', 'c', 'ab', 'bc', 'abc'.""
   }
 ]",Medium,
-249,The Wizard’s Spell Compression," A wizard records his spells as long repetitive sequences. To save parchment, he wants to compress strings by representing consecutive identical characters as the character followed by its count. Implement this basic compression.
+249,The Wizardï¿½s Spell Compression," A wizard records his spells as long repetitive sequences. To save parchment, he wants to compress strings by representing consecutive identical characters as the character followed by its count. Implement this basic compression.
 
 Function Description:
  Complete the function compressSpell with the following parameter(s):
@@ -2754,7 +2754,7 @@ Print:
     ""explanation"": ""Repeating 'ab' forms the entire string.""
   }
 ]",Medium,
-251,The Alchemist’s Element Set," An alchemist gathers various elemental ingredients from different realms. He wants to know how many unique elements he has collected so far to create a powerful potion. Help the alchemist find the count of unique elements.
+251,The Alchemistï¿½s Element Set," An alchemist gathers various elemental ingredients from different realms. He wants to know how many unique elements he has collected so far to create a powerful potion. Help the alchemist find the count of unique elements.
 
 Function Description:
  Complete the function countUniqueElements with the following parameter(s):
@@ -2769,7 +2769,7 @@ Print:
     ""explanation"": ""Unique elements are fire, water, earth, and air.""
   }
 ]",Medium,
-252,The Merchant’s Duplicate Check,"A merchant wants to ensure no duplicate items are sold in his shop on a given day. Given a list of item IDs sold, determine if any item is sold more than once.
+252,The Merchantï¿½s Duplicate Check,"A merchant wants to ensure no duplicate items are sold in his shop on a given day. Given a list of item IDs sold, determine if any item is sold more than once.
 
 Function Description:
  Complete the function hasDuplicates with the following parameter(s):
@@ -2784,7 +2784,7 @@ Print:
     ""explanation"": ""Item ID 10 appears twice.""
   }
 ]",Medium,
-253,The Librarian’s Book Sort," A librarian organizes books by their categories. However, the categories are mixed in a list. Help her find the category that appears most frequently.
+253,The Librarianï¿½s Book Sort," A librarian organizes books by their categories. However, the categories are mixed in a list. Help her find the category that appears most frequently.
 
 Function Description:
  Complete the function mostFrequentCategory with the following parameter(s):
@@ -2799,7 +2799,7 @@ Print:
     ""explanation"": ""'history' appears 3 times, more than others.""
   }
 ]",Medium,
-254,The Treasure Map’s Duplicate Coordinates," A treasure map lists several coordinates, but some spots are marked multiple times. Identify all coordinates that appear more than once.
+254,The Treasure Mapï¿½s Duplicate Coordinates," A treasure map lists several coordinates, but some spots are marked multiple times. Identify all coordinates that appear more than once.
 Function Description:
  Complete the function findDuplicateCoordinates with the following parameter(s):
 coords: A list of tuples, each tuple containing two integers (x, y).
@@ -2813,7 +2813,7 @@ Print:
     ""explanation"": ""Coordinates (1, 2) and (3, 4) repeat.""
   }
 ]",Medium,
-255,The Wizard’s Spellbook History," A wizard records spells in a spellbook. Over time, the same spell may appear multiple times. He wants to know how many spells have been cast an odd number of times.
+255,The Wizardï¿½s Spellbook History," A wizard records spells in a spellbook. Over time, the same spell may appear multiple times. He wants to know how many spells have been cast an odd number of times.
 
 Function Description:
  Complete the function countOddCastSpells with the following parameter(s):
@@ -2828,7 +2828,7 @@ Print:
     ""explanation"": ""'fireball' cast 2 times (even), 'lightning' 3 times (odd), 'heal' 1 time (odd).""
   }
 ]",Medium,
-256,The Castle’s Defense Queue," In Castle Fortis, warriors line up to defend the gates. The commander wants to know which warrior will be next to defend after a series of warriors have been called and sent into battle. Given a list of warriors in the queue and a number k, find the warrior who will be at the front after k warriors have gone.
+256,The Castleï¿½s Defense Queue," In Castle Fortis, warriors line up to defend the gates. The commander wants to know which warrior will be next to defend after a series of warriors have been called and sent into battle. Given a list of warriors in the queue and a number k, find the warrior who will be at the front after k warriors have gone.
 
 Function Description:
  Complete the function nextDefender with the following parameter(s):
@@ -2844,7 +2844,7 @@ Print:
     ""explanation"": ""After 2 warriors leave, 'galahad' is at the front.""
   }
 ]",Medium,
-257,The Sorcerer’s Spell Reversal," A sorcerer writes spells backward for secrecy. Given a sequence of spell commands pushed onto a stack, determine the order in which they will be revealed when popped.
+257,The Sorcererï¿½s Spell Reversal," A sorcerer writes spells backward for secrecy. Given a sequence of spell commands pushed onto a stack, determine the order in which they will be revealed when popped.
 
 Function Description:
  Complete the function revealSpells with the following parameter(s):
@@ -2859,7 +2859,7 @@ Print:
     ""explanation"": ""Stack pops spells in reverse order.""
   }
 ]",Medium,
-258,The Messenger’s Message Queue," A royal messenger has a queue of messages to deliver. Each message has a priority number. The messenger wants to process messages in order of arrival but prioritize any message with priority above a certain threshold by moving it to the front. Simulate this process.
+258,The Messengerï¿½s Message Queue," A royal messenger has a queue of messages to deliver. Each message has a priority number. The messenger wants to process messages in order of arrival but prioritize any message with priority above a certain threshold by moving it to the front. Simulate this process.
 
 Function Description:
  Complete the function prioritizedQueue with the following parameter(s):
@@ -2906,7 +2906,7 @@ Print:
     ""explanation"": ""Sum of all times: 4+3+2+1 = 10.""
   }
 ]",Medium,
-261,The Lost Explorer’s Beacon," An explorer lost in a vast forest has set up multiple beacons with unique signal strengths. To locate the nearest help, he needs to find the beacon with a specific signal strength from a list of beacons sorted by strength. Help him determine the position of the beacon in the list.
+261,The Lost Explorerï¿½s Beacon," An explorer lost in a vast forest has set up multiple beacons with unique signal strengths. To locate the nearest help, he needs to find the beacon with a specific signal strength from a list of beacons sorted by strength. Help him determine the position of the beacon in the list.
 
 Function Description:
  Complete the function findBeacon with the following parameter(s):
@@ -2922,7 +2922,7 @@ Print:
     ""explanation"": ""Beacon with strength 10 is at index 3.""
   }
 ]",Medium,
-262,The Library’s Missing Book,"A librarian has a sorted shelf of book IDs. One book is missing, causing a gap. Find the smallest missing book ID assuming the IDs are consecutive integers starting from the first ID.
+262,The Libraryï¿½s Missing Book,"A librarian has a sorted shelf of book IDs. One book is missing, causing a gap. Find the smallest missing book ID assuming the IDs are consecutive integers starting from the first ID.
 
 Function Description:
  Complete the function findMissingBook with the following parameter(s):
@@ -2937,7 +2937,7 @@ Print:
     ""explanation"": ""104 is missing from the consecutive sequence.""
   }
 ]",Medium,
-263,The Artifact Collector’s Search," An artifact collector maintains a collection sorted by rarity score. Given a rarity score, determine if the artifact exists in the collection and print its index.
+263,The Artifact Collectorï¿½s Search," An artifact collector maintains a collection sorted by rarity score. Given a rarity score, determine if the artifact exists in the collection and print its index.
 
 Function Description:
  Complete the function artifactSearch with the following parameter(s):
@@ -2953,7 +2953,7 @@ Print:
     ""explanation"": ""Artifact with rarity 23 is at index 3.""
   }
 ]",Medium,
-264,The Codebreaker’s Secret Number," A codebreaker receives a sorted list of secret numbers but suspects one number appears multiple times. Determine the first and last positions of the suspect number.
+264,The Codebreakerï¿½s Secret Number," A codebreaker receives a sorted list of secret numbers but suspects one number appears multiple times. Determine the first and last positions of the suspect number.
 
 Function Description:
  Complete the function findNumberRange with the following parameter(s):
@@ -2961,7 +2961,7 @@ Function Description:
     suspect: The number to find.
 
 Print:
- Print two integers separated by a space — the first and last positions of the suspect. If not found, print ""-1 -1"".
+ Print two integers separated by a space ï¿½ the first and last positions of the suspect. If not found, print ""-1 -1"".
 ",1 ? len(numbers) ? 10^6,"[
   {
     ""input"": ""5 7 7 7 9 12 15\n7"",
@@ -2969,7 +2969,7 @@ Print:
     ""explanation"": ""The number 7 appears from index 1 to index 3.""
   }
 ]",Medium,
-265,The Hunter’s Target Zone," A hunter tracks animals moving in a straight line with their locations sorted. He wants to find how many animals lie within a specific range [low, high].
+265,The Hunterï¿½s Target Zone," A hunter tracks animals moving in a straight line with their locations sorted. He wants to find how many animals lie within a specific range [low, high].
 
 Function Description:
  Complete the function countInRange with the following parameter(s):
@@ -2986,11 +2986,11 @@ Print:
     ""explanation"": ""Animals at positions 5, 7, 9 lie in [4, 10].""
   }
 ]",Medium,
-266,The Knight’s Tournament Ranking," In the kingdom of Eldoria, knights compete in tournaments earning scores after each match. The grandmaster wants the final leaderboard sorted by scores in descending order. Given the list of knights’ scores, help the grandmaster sort and print them.
+266,The Knightï¿½s Tournament Ranking," In the kingdom of Eldoria, knights compete in tournaments earning scores after each match. The grandmaster wants the final leaderboard sorted by scores in descending order. Given the list of knightsï¿½ scores, help the grandmaster sort and print them.
 
 Function Description:
  Complete the function sortScoresDescending with the following parameter(s):
-    scores: A list of integers representing knights’ scores.
+    scores: A list of integers representing knightsï¿½ scores.
 
 Print:
  Print the sorted scores in descending order, space-separated.
@@ -3001,7 +3001,7 @@ Print:
     ""explanation"": ""The scores are sorted in descending order.""
   }
 ]",Medium,
-267,The Farmer’s Crop Harvest,"A farmer harvests crops daily and records the yield weights. He wants to arrange the harvest days from least to greatest yield to plan storage better. Sort the harvest weights in ascending order.
+267,The Farmerï¿½s Crop Harvest,"A farmer harvests crops daily and records the yield weights. He wants to arrange the harvest days from least to greatest yield to plan storage better. Sort the harvest weights in ascending order.
 
 Function Description:
  Complete the function sortHarvestAscending with the following parameter(s):
@@ -3016,7 +3016,7 @@ Print:
     ""explanation"": ""The harvest weights are sorted in ascending order.""
   }
 ]",Medium,
-268,The Architect’s Blueprint Layers,"An architect organizes blueprint layers by their complexity level. Each layer is represented by an integer complexity score. Sort the layers so the simplest is first and the most complex last.
+268,The Architectï¿½s Blueprint Layers,"An architect organizes blueprint layers by their complexity level. Each layer is represented by an integer complexity score. Sort the layers so the simplest is first and the most complex last.
 
 Function Description:
  Complete the function sortLayers with the following parameter(s):
@@ -3031,7 +3031,7 @@ Print:
     ""explanation"": ""The layers are sorted in ascending order of complexity.""
   }
 ]",Medium,
-269,The Artisan’s Tool Set," An artisan has tools with different ages in years. To decide which tools to replace first, she wants them sorted from oldest to newest.
+269,The Artisanï¿½s Tool Set," An artisan has tools with different ages in years. To decide which tools to replace first, she wants them sorted from oldest to newest.
 
 Function Description:
  Complete the function sortToolsByAge with the following parameter(s):
@@ -3045,7 +3045,7 @@ Print:
     ""explanation"": ""The tools are sorted in descending order of age.""
   }
 ]",Medium,
-270,The Merchant’s Price List," A merchant has a list of product prices scattered randomly. To prepare for a sale, he needs the prices sorted in ascending order.
+270,The Merchantï¿½s Price List," A merchant has a list of product prices scattered randomly. To prepare for a sale, he needs the prices sorted in ascending order.
 
 Function Description:
  Complete the function sortPrices with the following parameter(s):

@@ -20,11 +20,12 @@ if "question" not in st.session_state:
 
 question = st.session_state.question
 st.subheader("Problem Statement")
-st.markdown(f"### {question['problem_name']}")
+st.markdown(f"### {question['title']}")
 st.markdown(f"**Description:** {question['description']}")
 #st.markdown(f"**Constraints:** {question['constraints']}")
 
 st.markdown("**Examples:**")
+
 for i, ex in enumerate(question['examples'], 1):
     st.markdown(f"- **Example {i}:**")
     st.code(f"Input: {ex['input']}\nOutput: {ex['output']}", language="text")

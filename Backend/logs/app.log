@@ -555,3 +555,269 @@ Traceback (most recent call last):
   File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\random.py", line 370, in choice
     raise IndexError('Cannot choose from an empty sequence')
 IndexError: Cannot choose from an empty sequence
+2025-05-27 17:33:54,066 - ERROR - ai-code-assessment - Invalid Question ID: 8
+2025-05-27 17:35:38,088 - ERROR - ai-code-assessment - Invalid Question ID: 8
+2025-05-28 10:33:05,679 - CRITICAL - ai-code-assessment - Unexpected error while loading questions: Cannot choose from an empty sequence
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\question_loader_service.py", line 44, in load_random_question
+    return random.choice(questions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\random.py", line 370, in choice
+    raise IndexError('Cannot choose from an empty sequence')
+IndexError: Cannot choose from an empty sequence
+2025-05-28 10:33:05,684 - ERROR - ai-code-assessment - Unhandled Exception: Cannot choose from an empty sequence
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\concurrency.py", line 37, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\_backends\_asyncio.py", line 2470, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\_backends\_asyncio.py", line 967, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\routers\ai_code_assessment_routers.py", line 15, in get_question
+    return interview_service.get_random_question()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\candidate_depth_skilltest_service.py", line 11, in get_random_question
+    return load_random_question()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\question_loader_service.py", line 44, in load_random_question
+    return random.choice(questions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\random.py", line 370, in choice
+    raise IndexError('Cannot choose from an empty sequence')
+IndexError: Cannot choose from an empty sequence
+2025-05-28 10:51:08,250 - CRITICAL - ai-code-assessment - Unexpected error while loading questions: Cannot choose from an empty sequence
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\question_loader_service.py", line 44, in load_random_question
+    return random.choice(questions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\random.py", line 370, in choice
+    raise IndexError('Cannot choose from an empty sequence')
+IndexError: Cannot choose from an empty sequence
+2025-05-28 10:52:06,086 - CRITICAL - ai-code-assessment - Unexpected error while loading questions: Cannot choose from an empty sequence
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\question_loader_service.py", line 44, in load_random_question
+    return random.choice(questions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\random.py", line 370, in choice
+    raise IndexError('Cannot choose from an empty sequence')
+IndexError: Cannot choose from an empty sequence
+2025-05-28 10:57:24,845 - CRITICAL - ai-code-assessment - Unexpected error while loading questions: Cannot choose from an empty sequence
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\question_loader_service.py", line 44, in load_random_question
+    return random.choice(questions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\random.py", line 370, in choice
+    raise IndexError('Cannot choose from an empty sequence')
+IndexError: Cannot choose from an empty sequence
+2025-05-28 10:57:24,846 - ERROR - ai-code-assessment - Unhandled Exception: Cannot choose from an empty sequence
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 165, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 714, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 734, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 288, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 76, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 73, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 301, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 214, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\concurrency.py", line 37, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\_backends\_asyncio.py", line 2470, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\_backends\_asyncio.py", line 967, in run
+    result = context.run(func, *args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\routers\ai_code_assessment_routers.py", line 15, in get_question
+    return interview_service.get_random_question()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\candidate_depth_skilltest_service.py", line 11, in get_random_question
+    return load_random_question()
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\question_loader_service.py", line 44, in load_random_question
+    return random.choice(questions)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\random.py", line 370, in choice
+    raise IndexError('Cannot choose from an empty sequence')
+IndexError: Cannot choose from an empty sequence
+2025-05-28 11:22:40,111 - CRITICAL - ai-code-assessment - Code evaluation failed for Question ID 259: name 'evaluate_code' is not defined
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\candidate_depth_skilltest_service.py", line 29, in evaluate_submission
+    result = await evaluate_code(submission.code, submission.language_id, question.test_input)
+                   ^^^^^^^^^^^^^
+NameError: name 'evaluate_code' is not defined
+2025-05-28 11:43:48,277 - CRITICAL - ai-code-assessment - Code evaluation failed for Question ID 215: 'Question' object has no attribute 'test_input'
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\candidate_skilltest_service.py", line 30, in evaluate_submission
+    result = await evaluate_code(submission.code, submission.language_id, question.test_input)
+                                                                          ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\pydantic\main.py", line 989, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'Question' object has no attribute 'test_input'
+2025-05-28 12:10:25,511 - CRITICAL - ai-code-assessment - Unexpected error in evaluate_code: Header value must be str or bytes, not <class 'NoneType'>
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 28, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1527, in request
+    request = self.build_request(
+              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 367, in build_request
+    headers = self._merge_headers(headers)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 430, in _merge_headers
+    merged_headers.update(headers)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 275, in update
+    headers = Headers(headers)
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 156, in __init__
+    bytes_value = _normalize_header_value(v, encoding)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 81, in _normalize_header_value
+    raise TypeError(f"Header value must be str or bytes, not {type(value)}")
+TypeError: Header value must be str or bytes, not <class 'NoneType'>
+2025-05-28 12:10:25,516 - CRITICAL - ai-code-assessment - Code evaluation failed for Question ID 215: Header value must be str or bytes, not <class 'NoneType'>
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\candidate_skilltest_service.py", line 46, in evaluate_submission
+    result = await evaluate_code(submission.code, submission.language_id, test_input)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 28, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1527, in request
+    request = self.build_request(
+              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 367, in build_request
+    headers = self._merge_headers(headers)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 430, in _merge_headers
+    merged_headers.update(headers)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 275, in update
+    headers = Headers(headers)
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 156, in __init__
+    bytes_value = _normalize_header_value(v, encoding)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 81, in _normalize_header_value
+    raise TypeError(f"Header value must be str or bytes, not {type(value)}")
+TypeError: Header value must be str or bytes, not <class 'NoneType'>
+2025-05-28 12:14:57,289 - CRITICAL - ai-code-assessment - Unexpected error in evaluate_code: Header value must be str or bytes, not <class 'NoneType'>
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 27, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1527, in request
+    request = self.build_request(
+              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 367, in build_request
+    headers = self._merge_headers(headers)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 430, in _merge_headers
+    merged_headers.update(headers)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 275, in update
+    headers = Headers(headers)
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 156, in __init__
+    bytes_value = _normalize_header_value(v, encoding)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 81, in _normalize_header_value
+    raise TypeError(f"Header value must be str or bytes, not {type(value)}")
+TypeError: Header value must be str or bytes, not <class 'NoneType'>
+2025-05-28 12:14:57,289 - CRITICAL - ai-code-assessment - Code evaluation failed for Question ID 215: Header value must be str or bytes, not <class 'NoneType'>
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\candidate_skilltest_service.py", line 46, in evaluate_submission
+    result = await evaluate_code(submission.code, submission.language_id, test_input)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 27, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1859, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1527, in request
+    request = self.build_request(
+              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 367, in build_request
+    headers = self._merge_headers(headers)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 430, in _merge_headers
+    merged_headers.update(headers)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 275, in update
+    headers = Headers(headers)
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 156, in __init__
+    bytes_value = _normalize_header_value(v, encoding)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 81, in _normalize_header_value
+    raise TypeError(f"Header value must be str or bytes, not {type(value)}")
+TypeError: Header value must be str or bytes, not <class 'NoneType'>
+2025-05-28 12:19:56,445 - ERROR - ai-code-assessment - Test case 1 failed: expected='Found', actual=''
+2025-05-28 12:20:35,030 - ERROR - ai-code-assessment - Test case 1 failed: expected='Found', actual=''
