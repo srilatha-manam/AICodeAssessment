@@ -12,7 +12,6 @@ def get_random_question():
     return load_random_question()
 
 # Define an asynchronous function to evaluate a code submission
-# Define an asynchronous function to evaluate a code submission
 async def evaluate_submission(submission: CodeSubmission) -> EvaluationResult:      
     # Load all questions from the database
     questions = load_all_questions()
