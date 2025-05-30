@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from ..models.code_evaluation_model import CodeSubmission
-from ..services import candidate_depth_skilltest_service as interview_service
+from ..services import candidate_skilltest_service as interview_service
 # This module defines the API endpoints for automatic code assessment related operations.
 
 router = APIRouter(
@@ -18,7 +18,10 @@ def get_question():
 @router.post("/evaluate")
 async def evaluate_code(submission: CodeSubmission):
     try:
-        return await interview_service.evaluate_submission(submission)
+        print(f"controller calling user service method")
+        result = await interview_service.evaluate_submission(submission)
+        print(f"Code evaluation completed for question ID: {submission.question_id}")
+        return result
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
     except Exception:

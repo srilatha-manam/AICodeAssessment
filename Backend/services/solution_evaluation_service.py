@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+load_dotenv()
+
 import httpx
 from ..logging_config import logger
 import os
@@ -23,9 +26,9 @@ async def evaluate_code(code: str, language_id: int, stdin: str) -> dict:
     # Use an asynchronous with statement to create an httpx.AsyncClient object
     try:
         async with httpx.AsyncClient() as client:
-            # Send a POST request to the Judge0 API with the payload and headers
-            response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
-            response.raise_for_status()
+            # Send a POST request to the Judge0 API with the payload and headers            
+            response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)            
+            response.raise_for_status()            
             return response.json()
     except httpx.HTTPStatusError as e:
         # Log an error message if an HTTP error occurs

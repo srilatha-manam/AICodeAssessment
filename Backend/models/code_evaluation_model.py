@@ -12,11 +12,11 @@ class Example(BaseModel):
 
 class Question(BaseModel):
     id: int
-    problem_name: str
+    title: str
     description: str
-    constraints: str
+    #constraints: str
     examples: List[Example]
-    difficulty_level: str
+    difficultylevel: str
     
 
 class CodeSubmission(BaseModel):
