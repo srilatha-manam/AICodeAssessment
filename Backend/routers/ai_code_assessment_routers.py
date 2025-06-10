@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from ..models.code_evaluation_model import CodeSubmission
-from ..services import candidate_skilltest_service as interview_service
+from ..services import load_and_evaluation_service as interview_service
 # This module defines the API endpoints for automatic code assessment related operations.
 
 router = APIRouter(
@@ -11,8 +11,9 @@ router = APIRouter(
 
 # API endpoint to get a random question for the code assessment
 @router.get("/question")
-def get_question():
-    return interview_service.get_random_question()
+async def get_question():
+    
+    return await interview_service.get_random_question()
 
 #endpoint to evaluate the submitted code against the question
 @router.post("/evaluate")

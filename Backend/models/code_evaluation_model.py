@@ -1,5 +1,6 @@
 from pydantic import BaseModel
-from typing import List
+from typing import List, Optional
+
 # This module defines the data models used for code evaluation and submission.
 
 class Example(BaseModel):
@@ -33,3 +34,4 @@ class EvaluationResult(BaseModel):
     expected: str
     actual: str
     status: str
+    feedback: Optional[dict] = None

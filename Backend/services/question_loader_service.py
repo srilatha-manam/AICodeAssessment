@@ -13,7 +13,7 @@ from ..models.code_evaluation_model import Example
 DATA_FILE = Path(__file__).resolve().parent.parent / "data" / "questions.csv"
 
 # Define a function to load questions from a CSV file
-def load_random_question() -> Question:
+async def load_random_question() -> Question:
     try:
         with open(DATA_FILE, newline='', encoding='cp1252') as file:
             reader = csv.DictReader(file)
@@ -49,7 +49,7 @@ def load_random_question() -> Question:
     except Exception as e:
         logger.critical(f"Unexpected error while loading questions: {e}", exc_info=True)
         raise
-def load_all_questions() -> List[Question]:
+async def load_all_questions() -> List[Question]:
     try:
         with open(DATA_FILE, newline='', encoding='cp1252') as file:
             reader = csv.DictReader(file)

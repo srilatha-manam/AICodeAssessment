@@ -1,40 +1,37 @@
 import streamlit as st
 import requests
-import json
 
-# FastAPI backend URL
 API_URL = "http://localhost:8000/code-assessment"
 
-# Page Config
 st.set_page_config(page_title="AI Code Assessment App", layout="wide")
-
 st.title("AI Code Assessment App")
 
-# 1. Load a random question
+# Load question only once per session unless manually refreshed
 if "question" not in st.session_state:
-    response = requests.get(f"{API_URL}/question")
-    if response.status_code == 200:
+    try:
+        response = requests.get(f"{API_URL}/question")
+        response.raise_for_status()
         st.session_state.question = response.json()
-    else:
-        st.error("Failed to load a question.")
+    except Exception as e:
+        st.error(f"Failed to load a question: {e}")
+        st.stop()
 
 question = st.session_state.question
+
+# Display question
 st.subheader("Problem Statement")
 st.markdown(f"### {question['title']}")
 st.markdown(f"**Description:** {question['description']}")
-#st.markdown(f"**Constraints:** {question['constraints']}")
-
 st.markdown("**Examples:**")
-
 for i, ex in enumerate(question['examples'], 1):
     st.markdown(f"- **Example {i}:**")
     st.code(f"Input: {ex['input']}\nOutput: {ex['output']}", language="text")
 
-# 2. User input code
+# Code editor
 st.subheader("Write Your Code Below")
-code_input = st.text_area("Code Editor", height=300, key="code_editor")
+code_input = st.text_area("Code Editor", height=300)
 
-# Language selector (Judge0 uses language_id: 71 for Python 3)
+# Language options
 languages = {
     "Python 3": 71,
     "C": 50,
@@ -46,7 +43,7 @@ languages = {
 selected_lang = st.selectbox("Choose Language", list(languages.keys()))
 language_id = languages[selected_lang]
 
-# Submit code
+# Submit and evaluate
 if st.button("Submit Code"):
     with st.spinner("Evaluating your solution..."):
         payload = {
@@ -54,17 +51,39 @@ if st.button("Submit Code"):
             "language_id": language_id,
             "question_id": question["id"]
         }
-
         try:
             res = requests.post(f"{API_URL}/evaluate", json=payload)
-            if res.status_code == 200:
-                result = res.json()
-                st.success(" Evaluation Completed")
-                st.markdown(f"**Correct:** `{result['correct']}`")
-                st.markdown(f"**Expected Output:** `{result['expected']}`")
-                st.markdown(f"**Your Output:** `{result['actual']}`")
-                st.markdown(f"**Status:** `{result['status']}`")
-            else:
-                st.error(f"Error: {res.status_code} - {res.text}")
+            res.raise_for_status()
+            result = res.json()
+            st.success("Evaluation Completed")
+            st.markdown(f"**Correct:** `{result['correct']}`")
+            st.markdown(f"**Expected Output:** `{result['expected']}`")
+            st.markdown(f"**Your Output:** `{result['actual']}`")
+            st.markdown(f"**Status:** `{result['status']}`")
+            # Show detailed feedback
+            if 'feedback' in result and isinstance(result['feedback'], dict):
+                st.subheader("AI Feedback")
+
+                for category in ["correctness", "edge_cases", "readability", "structure", "error_handling", "performance"]:
+                    feedback_section = result["feedback"].get(category, {})
+                    if feedback_section:
+                        st.markdown(f"**{category.capitalize()}**")
+                        st.markdown(f"- **Status:** {feedback_section.get('status', '')}")
+                        st.markdown(f"- **Comments:** {feedback_section.get('comments', '')}")
+
+                suggestions = result["feedback"].get("suggestions", [])
+                if suggestions:
+                    st.markdown("**Suggestions:**")
+                    for s in suggestions:
+                        st.markdown(f"- {s}")
+
+                summary = result["feedback"].get("summary", {})
+                if summary:
+                    st.markdown("**Summary:**")
+                    st.markdown(f"- **Overall Score:** {summary.get('overall_score', 0.0)}")
+                    st.markdown(f"- **Remarks:** {summary.get('remarks', '')}")
+
         except Exception as e:
-            st.exception("Submission failed.")
+            st.exception(f"Submission failed: {e}")
+
+
