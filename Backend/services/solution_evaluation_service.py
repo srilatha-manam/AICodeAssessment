@@ -21,14 +21,12 @@ async def evaluate_code(code: str, language_id: int, stdin: str) -> dict:
         "language_id": language_id,
         "source_code": code,
         "stdin": stdin
-    }
-    print("inside judge0 evaluate_code")
+    }    
     # Use an asynchronous with statement to create an httpx.AsyncClient object
     try:
         async with httpx.AsyncClient() as client:            
             # Send a POST request to the Judge0 API with the payload and headers            
-            response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)  
-            print(response)     
+            response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)               
             response.raise_for_status()            
             return response.json()
     except httpx.HTTPStatusError as e:

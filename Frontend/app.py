@@ -55,35 +55,37 @@ if st.button("Submit Code"):
             res = requests.post(f"{API_URL}/evaluate", json=payload)
             res.raise_for_status()
             result = res.json()
+
             st.success("Evaluation Completed")
             st.markdown(f"**Correct:** `{result['correct']}`")
             st.markdown(f"**Expected Output:** `{result['expected']}`")
             st.markdown(f"**Your Output:** `{result['actual']}`")
             st.markdown(f"**Status:** `{result['status']}`")
-            # Show detailed feedback
-            if 'feedback' in result and isinstance(result['feedback'], dict):
+
+            # Show detailed feedback if present
+            feedback = result.get("feedback")
+            if feedback and isinstance(feedback, dict):
                 st.subheader("AI Feedback")
 
                 for category in ["correctness", "edge_cases", "readability", "structure", "error_handling", "performance"]:
-                    feedback_section = result["feedback"].get(category, {})
-                    if feedback_section:
+                    section = feedback.get(category)
+                    if section:
                         st.markdown(f"**{category.capitalize()}**")
-                        st.markdown(f"- **Status:** {feedback_section.get('status', '')}")
-                        st.markdown(f"- **Comments:** {feedback_section.get('comments', '')}")
+                        st.markdown(f"- **Status:** {section.get('status', '')}")
+                        st.markdown(f"- **Comments:** {section.get('comments', '')}")
 
-                suggestions = result["feedback"].get("suggestions", [])
+                suggestions = feedback.get("suggestions", [])
                 if suggestions:
                     st.markdown("**Suggestions:**")
                     for s in suggestions:
                         st.markdown(f"- {s}")
 
-                summary = result["feedback"].get("summary", {})
+                summary = feedback.get("summary", {})
                 if summary:
                     st.markdown("**Summary:**")
                     st.markdown(f"- **Overall Score:** {summary.get('overall_score', 0.0)}")
                     st.markdown(f"- **Remarks:** {summary.get('remarks', '')}")
-
+            else:
+                st.info("AI feedback is only available when your code passes all test cases and executes successfully.")
         except Exception as e:
             st.exception(f"Submission failed: {e}")
-
-

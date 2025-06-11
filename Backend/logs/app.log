@@ -1397,3 +1397,8 @@ httpx.ConnectTimeout
 2025-06-10 12:31:27,412 - ERROR - ai-code-assessment - Test case 1 failed: expected='50', actual='Output: 50'
 2025-06-10 12:33:07,184 - ERROR - ai-code-assessment - Test case 2 failed: expected='5', actual='50'
 2025-06-10 12:35:38,546 - ERROR - ai-code-assessment - Test case 1 failed: expected='50', actual='50\n5'
+2025-06-11 11:59:39,724 - ERROR - ai-code-assessment - Test case 1 failed: expected='2', actual='', status=runtime error (nzec)
+2025-06-11 12:01:48,679 - ERROR - ai-code-assessment - Test case 1 failed: expected='2', actual='', status=runtime error (nzec)
+2025-06-11 12:03:26,333 - ERROR - ai-code-assessment - Test case 1 failed: expected='2', actual='', status=runtime error (nzec)
+2025-06-11 12:05:24,808 - ERROR - ai-code-assessment - Test case 1 failed: expected='3', actual='', status=runtime error (nzec)
+2025-06-11 12:21:51,432 - WARNING - huggingface_hub.file_download - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`

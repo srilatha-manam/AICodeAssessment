@@ -39,24 +39,21 @@ async def evaluate_submission(submission: CodeSubmission) -> EvaluationResult:
             test_input = example.input.strip()           
             expected_output = example.output.strip()          
             # Add the expected output to the list
-            expected_outputs.append(expected_output)
-            print(test_input)
-            print("expected output:", expected_output)
+            expected_outputs.append(expected_output)            
             # Log the input for the example
             #logger.info(f"Running test case {idx}: input={test_input!r}")            
             # Evaluate the code with the input
             result = await evaluate_code(submission.code, submission.language_id, test_input)
-            # Get the actual output from the result
-            print(result)
-            actual_output = (result.get("stdout") or "").strip()  
-            print("actual output:", actual_output)     
+            # Get the actual output from the result            
+            actual_output = (result.get("stdout") or "").strip()                   
             # Add the actual output to the list
             actual_outputs.append(actual_output)
 
             # If the actual output does not match the expected output, log an error and set the flag to False
-            if actual_output != expected_output:
+            status_desc = result.get("status", {}).get("description", "").lower()
+            if status_desc != "accepted" or actual_output != expected_output:
                 logger.error(
-                    f"Test case {idx} failed: expected={expected_output!r}, actual={actual_output!r}"
+                    f"Test case {idx} failed: expected={expected_output!r}, actual={actual_output!r}, status={status_desc}"
                 )
                 all_passed = False
                 break
@@ -70,8 +67,11 @@ async def evaluate_submission(submission: CodeSubmission) -> EvaluationResult:
         )
         # Raise a ValueError
         raise ValueError("Error evaluating code")    
-    
-    feedback = await generate_feedback(submission.code, question.description)
+    #return feedback if all test cases passed and the status is "accepted"
+    feedback = None
+    if all_passed and result.get("status", {}).get("description", "").lower() == "accepted":
+        feedback = await generate_feedback(submission.code, question.description)
+
     #print(feedback)
     # Return an EvaluationResult object with the results of the evaluation
     return  EvaluationResult(

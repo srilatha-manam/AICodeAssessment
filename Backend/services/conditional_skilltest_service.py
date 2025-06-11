@@ -10,8 +10,7 @@ async def get_random_question(difficulty: str):
     return random.choice(filtered) if filtered else None
 
 async def evaluate_submission(submission: CodeSubmission) -> dict:
-    questions = await load_all_questions()
-    print("retrived all questions")
+    questions = await load_all_questions()    
     question = next((q for q in questions if q.id == submission.question_id), None)
     if not question:
         raise ValueError("Invalid Question ID")
@@ -19,14 +18,11 @@ async def evaluate_submission(submission: CodeSubmission) -> dict:
     passed_count = 0
     results = []
     for example in question.examples:
-        try:
-            print("calling evaluate_code")
+        try:           
             res = await evaluate_code(submission.code, submission.language_id, example.input)
-            print("evaluate_code returned")
-            print(res)
+                   
             actual = (res.get("stdout") or "").strip()
-            expected = example.output.strip()
-            print(actual, expected)
+            expected = example.output.strip()           
             is_correct = actual == expected
             results.append((is_correct, expected, actual))
             if is_correct:

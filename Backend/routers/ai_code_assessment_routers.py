@@ -18,10 +18,8 @@ async def get_question():
 #endpoint to evaluate the submitted code against the question
 @router.post("/evaluate")
 async def evaluate_code(submission: CodeSubmission):
-    try:
-        print(f"controller calling user service method")
-        result = await interview_service.evaluate_submission(submission)
-        print(f"Code evaluation completed for question ID: {submission.question_id}")
+    try:       
+        result = await interview_service.evaluate_submission(submission)        
         return result
     except ValueError as e:
         raise HTTPException(status_code=400, detail=str(e))
