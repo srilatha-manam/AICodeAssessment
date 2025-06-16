@@ -5,9 +5,14 @@ from .question_loader_service import load_all_questions
 from .solution_evaluation_service import evaluate_code
 from ..logging_config import logger
 from .feedback_generation_service import generate_feedback
+from .question_loader_service import load_question_by_id
 import ast
 
 # This module provides functionality to evaluate code submissions against predefined questions.
+
+# Define an asynchronous function to get a question by its ID
+async def get_question_by_id(question_id: int):
+    return await load_question_by_id(question_id)
 
 #Define a function called get_random_question that returns a random question from the questions list
 async def get_random_question():
@@ -36,8 +41,10 @@ async def evaluate_submission(submission: CodeSubmission) -> EvaluationResult:
         # Iterate through each example in the question
         for idx, example in enumerate(question.examples, start=1):
             # Get the input and expected output for the example                      
-            test_input = example.input.strip()           
-            expected_output = example.output.strip()          
+            test_input = example.input.strip()
+            print(f"Test input for example {idx}: {test_input!r}")           
+            expected_output = example.output.strip()  
+            print(f"Expected output for example {idx}: {expected_output!r}")        
             # Add the expected output to the list
             expected_outputs.append(expected_output)            
             # Log the input for the example
@@ -45,7 +52,8 @@ async def evaluate_submission(submission: CodeSubmission) -> EvaluationResult:
             # Evaluate the code with the input
             result = await evaluate_code(submission.code, submission.language_id, test_input)
             # Get the actual output from the result            
-            actual_output = (result.get("stdout") or "").strip()                   
+            actual_output = (result.get("stdout") or "").strip() 
+            print(f"Actual output for example {idx}: {actual_output!r}")                  
             # Add the actual output to the list
             actual_outputs.append(actual_output)
 

@@ -10,12 +10,12 @@ from ..models.code_evaluation_model import Example
 # This module loads questions from a CSV file and returns them as a list of Question objects.
 
 # path to the CSV file containing questions
-DATA_FILE = Path(__file__).resolve().parent.parent / "data" / "questions.csv"
+DATA_FILE = Path(__file__).resolve().parent.parent / "data" / "formatted_problems.csv"
 
 # Define a function to load questions from a CSV file
 async def load_random_question() -> Question:
     try:
-        with open(DATA_FILE, newline='', encoding='cp1252') as file:
+        with open(DATA_FILE, newline='', encoding='utf-8') as file:
             reader = csv.DictReader(file)
             questions = []
             for row in reader:
@@ -51,7 +51,7 @@ async def load_random_question() -> Question:
         raise
 async def load_all_questions() -> List[Question]:
     try:
-        with open(DATA_FILE, newline='', encoding='cp1252') as file:
+        with open(DATA_FILE, newline='', encoding='utf-8') as file:
             reader = csv.DictReader(file)
             questions = []
             for row in reader:
@@ -74,3 +74,30 @@ async def load_all_questions() -> List[Question]:
     except Exception as e:
         logger.critical(f"Error loading questions: {e}", exc_info=True)
         raise
+    
+# This function loads a specific question by its ID from the CSV file. 
+async def load_question_by_id(question_id: int) -> Question:
+    try:
+        with open(DATA_FILE, newline='', encoding='utf-8') as file:
+            reader = csv.DictReader(file)
+            for row in reader:
+                try:
+                    if int(row['id']) == question_id:
+                        examples = json.loads(row['examples'])
+                        parsed_examples = [Example(**ex) for ex in examples]
+                        return Question(
+                            id=int(row['id']),
+                            title=row['title'],
+                            description=row['description'],
+                            examples=parsed_examples,
+                            difficultylevel=row['difficultylevel']
+                        )
+                except Exception as e:
+                    logger.warning(f"Skipping row due to error: {e}")
+                    continue
+        # If question is not found
+        raise ValueError(f"Question with ID {question_id} not found")
+    except Exception as e:
+        logger.critical(f"Error loading question by ID: {e}", exc_info=True)
+        raise
+   

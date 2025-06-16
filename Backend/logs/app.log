@@ -1402,3 +1402,6 @@ httpx.ConnectTimeout
 2025-06-11 12:03:26,333 - ERROR - ai-code-assessment - Test case 1 failed: expected='2', actual='', status=runtime error (nzec)
 2025-06-11 12:05:24,808 - ERROR - ai-code-assessment - Test case 1 failed: expected='3', actual='', status=runtime error (nzec)
 2025-06-11 12:21:51,432 - WARNING - huggingface_hub.file_download - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-06-11 14:32:50,931 - ERROR - ai-code-assessment - Test case 1 failed: expected='Suggested Meal: Paneer Butter Masala', actual='Enter dietary preference (vegetarian/non-vegetarian): Suggested Meal: Invalid dietary preference entered.', status=accepted
+2025-06-11 14:36:55,025 - ERROR - ai-code-assessment - Test case 1 failed: expected='Suggested Meal: Paneer Butter Masala', actual='', status=runtime error (nzec)
+2025-06-11 15:06:26,057 - ERROR - ai-code-assessment - Test case 1 failed: expected='Weak PIN', actual='Unusual PIN', status=accepted
