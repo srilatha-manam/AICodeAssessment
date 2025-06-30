@@ -1,264 +1,439 @@
+# Frontend/app.py - Complete version with enhanced feedback formatting
+
 import streamlit as st
 import requests
 import json
 from typing import Dict, Any
+import time
 
 API_URL = "http://localhost:8000/code-assessment"
 
 st.set_page_config(
-    page_title="AI Code Assessment App", 
+    page_title="AI Code Assessment - Dynamic Questions", 
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="expanded",
+    page_icon="🎯"
 )
 
-# Custom CSS for better styling
+# Initialize session state
+if "current_question" not in st.session_state:
+    st.session_state.current_question = None
+if "user_code" not in st.session_state:
+    st.session_state.user_code = ""
+if "evaluation_result" not in st.session_state:
+    st.session_state.evaluation_result = None
+if "questions_generated" not in st.session_state:
+    st.session_state.questions_generated = 0
+
+# Custom CSS for better UI and feedback display
 st.markdown("""
 <style>
-    .feedback-card {
-        background-color: #f8f9fa;
-        padding: 1rem;
-        border-radius: 8px;
-        border-left: 4px solid #007bff;
-        margin: 1rem 0;
-    }
-    .score-excellent { color: #28a745; font-weight: bold; }
-    .score-good { color: #ffc107; font-weight: bold; }
-    .score-poor { color: #dc3545; font-weight: bold; }
-    .status-pass { color: #28a745; }
-    .status-fail { color: #dc3545; }
-    .status-partial { color: #ffc107; }
+.stAlert > div {
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+.success-box {
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    color: #155724;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+.error-box {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+.info-box {
+    background-color: #d1ecf1;
+    border: 1px solid #bee5eb;
+    color: #0c5460;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+}
+.dynamic-badge {
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 1rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+.feedback-section {
+    background-color: #f8f9fa;
+    border-left: 4px solid #007bff;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 0.25rem;
+}
+.feedback-section h2, .feedback-section h3 {
+    margin-top: 0;
+    color: #495057;
+}
+.feedback-section p {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+.feedback-section ul {
+    padding-left: 1.5rem;
+}
+.feedback-section li {
+    margin-bottom: 0.3rem;
+}
+/* Better spacing for markdown content */
+.stMarkdown > div > p {
+    margin-bottom: 0.8rem !important;
+}
+.stMarkdown > div > ul {
+    margin-bottom: 1rem !important;
+}
+.stMarkdown > div > h2 {
+    margin-top: 1.5rem !important;
+    margin-bottom: 0.8rem !important;
+}
+.stMarkdown > div > h3 {
+    margin-top: 1.2rem !important;
+    margin-bottom: 0.6rem !important;
+}
+/* Custom feedback styling */
+.feedback-container {
+    background: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.feedback-header {
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+.feedback-item {
+    margin-bottom: 1.5rem;
+    padding: 0.8rem;
+    background: #f8f9fa;
+    border-radius: 0.3rem;
+    border-left: 3px solid #28a745;
+}
+.feedback-item.error {
+    border-left-color: #dc3545;
+}
+.feedback-item.warning {
+    border-left-color: #ffc107;
+}
 </style>
 """, unsafe_allow_html=True)
 
-st.title("🚀 AI Code Assessment App")
-st.markdown("*Powered by Gemini 1.5 Flash for intelligent code evaluation*")
+st.title("🎯 AI Code Assessment Platform")
+st.markdown("*Powered by Google Gemini 1.5 Flash - Every question is unique and freshly generated*")
 
-# Sidebar for additional controls
+# Sidebar for controls
 with st.sidebar:
-    st.header("🔧 Controls")
-    if st.button("🔄 Load New Question"):
-        if "question" in st.session_state:
-            del st.session_state.question
-        st.rerun()
+    st.header("🎛️ Dynamic Question Generator")       
+    # Main generation button   
+    if st.button("🎲 New Question", type="primary", use_container_width=True):
+        try:
+            with st.spinner("🤖 AI is creating a unique question..."):               
+                
+                start_time = time.time()
+                response = requests.get(f"{API_URL}/question", timeout=45)
+                generation_time = time.time() - start_time                
+                response.raise_for_status()
+                question_data = response.json()                
+                st.session_state.current_question = question_data
+                st.session_state.user_code = ""  # Reset code
+                st.session_state.evaluation_result = None  # Reset results
+                st.session_state.questions_generated += 1
+                
+                st.success(f"✅ Fresh question generated in {generation_time:.1f}s!")
+                st.rerun()
+                
+        except requests.exceptions.RequestException as e:
+            st.error(f"❌ Failed to generate question: {e}")
+        except Exception as e:
+            st.error(f"❌ Unexpected error: {e}")
     
-    st.header("📊 Assessment Focus")
-    st.info("""
-    **Gemini AI evaluates your code on:**
-    - ✅ Correctness
-    - 🧩 Complexity appropriateness
-    - 🎯 Simplicity & clarity
-    - 🔍 Edge case handling
-    - 🛡️ Error handling
-    - ⚡ Performance
-    - 🏗️ Code structure
-    - 📖 Readability
-    """)
-
-# Load question only once per session unless manually refreshed
-if "question" not in st.session_state:
-    try:
-        with st.spinner("Loading coding challenge..."):
-            response = requests.get(f"{API_URL}/question")
-            response.raise_for_status()
-            st.session_state.question = response.json()
-    except Exception as e:
-        st.error(f"❌ Failed to load a question: {e}")
-        st.stop()
-
-question = st.session_state.question
-
-# Display question in a more attractive format
-col1, col2 = st.columns([2, 1])
-
-with col1:
-    st.markdown("## 📝 Problem Statement")
-    
-    # Question title
-    st.markdown(f"### {question['title']}")
-    
-    # Question description
-    st.markdown("**Description:**")
-    st.markdown(question['description'])
-    
-    # Examples
-    st.markdown("**Examples:**")
-    for i, ex in enumerate(question['examples'], 1):
-        with st.expander(f"💡 Example {i}", expanded=True):
-            col_input, col_output = st.columns(2)
-            with col_input:
-                st.markdown("**Input:**")
-                st.code(ex['input'], language="text")
-            with col_output:
-                st.markdown("**Output:**")
-                st.code(ex['output'], language="text")
-            if 'explanation' in ex and ex['explanation']:
-                st.markdown("**🧠 Explanation:**")
-                st.info(ex['explanation'])
-
-with col2:
-    st.markdown("## ⚙️ Submission Details")
-    
-    # Language selection with icons
-    languages = {
-        "🐍 Python 3": 71,
-        "🔧 C": 50,
-        "⚡ C++": 54,
-        "☕ Java": 62,
-        "💎 C#": 51,
-        "🌐 JavaScript": 63
+    # Language selector
+    st.markdown("### 💻 Programming Language")
+    language_options = {
+        "Python": 71,
+        "Java": 62,
+        "JavaScript": 63,
+        "C": 50,
+        "C++": 54,
+        "C#": 51
     }
     
-    selected_lang = st.selectbox("Choose Programming Language", list(languages.keys()))
-    language_id = languages[selected_lang]
-    language_name = selected_lang.split(" ", 1)[1]  # Remove emoji for API
-
-# Code editor section
-st.markdown("## 💻 Code Editor")
-st.markdown("*Write your solution below:*")
-
-code_input = st.text_area(
-    "Your Code", 
-    height=400,
-    placeholder=f"Write your {language_name} solution here..."
-)
-
-# Submission section
-col_submit, col_clear = st.columns([3, 1])
-
-with col_submit:
-    submit_button = st.button("🚀 Submit & Evaluate Code", type="primary", use_container_width=True)
-
-with col_clear:
-    if st.button("🗑️ Clear Code", use_container_width=True):
-        st.rerun()
-
-# Handle code submission
-if submit_button:
-    if not code_input.strip():
-        st.warning("⚠️ Please enter your code before submitting!")
-    else:
-        with st.spinner("🤖 Gemini AI is evaluating your solution..."):
-            payload = {
-                "code": code_input,
-                "language_id": language_id,
-                "question_id": question["id"]
-            }
-            
-            try:
-                response = requests.post(f"{API_URL}/evaluate", json=payload)
-                response.raise_for_status()
-                result = response.json()
-                
-                # Display execution results
-                st.markdown("## 🎯 Execution Results")
-                
-                col1, col2, col3, col4 = st.columns(4)
-                
+    selected_language = st.selectbox(
+        "Choose Language",
+        list(language_options.keys()),
+        index=0
+    )  
+# Main content area
+if st.session_state.current_question:
+    question = st.session_state.current_question
+    
+    # Question header with difficulty and generation info
+    col1, col2, col3, col4 = st.columns([3, 1, 1, 1])
+    with col1:
+        st.header(f"📝 {question.get('title', 'Unknown Title')}")    
+    with col3:
+        st.markdown('<span class="dynamic-badge">🤖 AI Generated</span>', unsafe_allow_html=True)
+    with col4:
+        st.markdown(f"**ID:** {question.get('id', 'N/A')}")
+    
+    # Question description
+    st.markdown("### 📋 Problem Description")
+    
+    description = question.get('description', 'No description available')
+    st.markdown(f"""
+    <div class="info-box">
+    {description}
+    </div>
+    """, unsafe_allow_html=True)
+    
+    # Examples section with correct counts per difficulty
+    if question.get('examples'):     
+        examples = question['examples']            
+        for i, example in enumerate(examples, 1):                
+                col1, col2 = st.columns(2)                
                 with col1:
-                    correct_color = "green" if result.get('correct') else "red"
-                    st.markdown(f"**Correctness:** :{correct_color}[{result.get('correct', 'Unknown')}]")
+                    st.markdown("**Input:**")
+                    input_value = example.get('input', '').strip()
+                    if input_value:
+                        st.code(input_value, language='text')
+                    else:
+                        st.error("No input provided")
                 
                 with col2:
-                    st.markdown(f"**Status:** `{result.get('status', 'Unknown')}`")
+                    st.markdown("**Output:**")
+                    output_value = example.get('output', '').strip()
+                    if output_value:
+                        st.code(output_value, language='text')
+                    else:
+                        st.error("No output provided")
                 
-                with col3:
-                    st.markdown(f"**Expected:** `{result.get('expected', 'N/A')}`")
-                
-                with col4:
-                    st.markdown(f"**Your Output:** `{result.get('actual', 'N/A')}`")
-                
-                # Display AI feedback if available
-                feedback = result.get("feedback")
-                if feedback and isinstance(feedback, dict) and "error" not in feedback:
-                    st.markdown("## 🤖 Gemini AI Feedback")
-                    
-                    # Overall score display
-                    summary = feedback.get("summary", {})
-                    overall_score = summary.get("overall_score", 0)
-                    recommendation = summary.get("recommendation", "unknown")
-                    
-                    # Score visualization
-                    col1, col2, col3 = st.columns(3)
-                    with col1:
-                        st.metric("Overall Score", f"{overall_score}/10")
-                    with col2:
-                        rec_color = {"accept": "green", "review": "orange", "reject": "red"}.get(recommendation, "gray")
-                        st.markdown(f"**Recommendation:** :{rec_color}[{recommendation.upper()}]")
-                    with col3:
-                        complexity = summary.get("complexity_rating", "unknown")
-                        st.markdown(f"**Complexity:** {complexity}")
-                    
-                    # Detailed feedback sections
-                    feedback_sections = feedback.get("feedback", {})
-                    
-                    # Create tabs for different feedback categories
-                    tab1, tab2, tab3, tab4 = st.tabs(["📊 Scores", "💡 Suggestions", "✨ Positives", "🎯 Improvements"])
-                    
-                    with tab1:
-                        # Display detailed scores
-                        for section_name, section_data in feedback_sections.items():
-                            if isinstance(section_data, dict):
-                                col1, col2, col3 = st.columns([2, 1, 3])
-                                
-                                with col1:
-                                    st.markdown(f"**{section_name.replace('_', ' ').title()}**")
-                                
-                                with col2:
-                                    score = section_data.get("score", 0)
-                                    status = section_data.get("status", "unknown")
-                                    
-                                    score_color = "green" if score >= 7 else "orange" if score >= 4 else "red"
-                                    st.markdown(f":{score_color}[{score}/10]")
-                                    st.markdown(f"*{status}*")
-                                
-                                with col3:
-                                    comments = section_data.get("comments", "")
-                                    st.markdown(comments)
-                                
-                                st.divider()
-                    
-                    with tab2:
-                        suggestions = feedback.get("intelligent_suggestions", [])
-                        if suggestions:
-                            for i, suggestion in enumerate(suggestions, 1):
-                                st.markdown(f"**{i}.** {suggestion}")
-                        else:
-                            st.info("No specific suggestions available.")
-                    
-                    with tab3:
-                        positives = feedback.get("positive_aspects", [])
-                        if positives:
-                            for positive in positives:
-                                st.success(f"✅ {positive}")
-                        else:
-                            st.info("Keep coding to discover what you do well!")
-                    
-                    with tab4:
-                        improvements = feedback.get("areas_for_improvement", [])
-                        if improvements:
-                            for improvement in improvements:
-                                st.warning(f"🎯 {improvement}")
-                        else:
-                            st.info("Great job! No major areas for improvement identified.")
-                    
-                    # Final remarks
-                    remarks = summary.get("remarks", "")
-                    if remarks:
-                        st.markdown("### 📝 Final Remarks")
-                        st.info(remarks)
-                
-                elif feedback and "error" in feedback:
-                    st.warning(f"⚠️ AI Feedback Error: {feedback.get('error', 'Unknown error')}")
-                    st.info("AI feedback is temporarily unavailable, but your code execution results are shown above.")
+                if example.get('explanation'):
+                    st.markdown("**Explanation:**")
+                    st.info(example['explanation'])
                 else:
-                    st.info("💡 **Tip:** AI feedback is only available when your code executes successfully. Try fixing any runtime errors first!")
+                    st.warning("No explanation provided for this example")
+    
+    # Code editor section
+    st.markdown("### 💻 Your Solution")
+    
+    st.session_state.user_code = st.text_area(
+        f"Write your {selected_language} solution:",
+        value=st.session_state.user_code,
+        height=350    
+    )
+    
+    # Submit button section
+    col1, col2, col3 = st.columns([2, 1, 1])    
+    with col1:
+        submit_button = st.button(
+            "🚀 Submit & Evaluate", 
+            type="primary", 
+            disabled=not st.session_state.user_code.strip(),
+            use_container_width=True
+        )   
+    # Code submission with enhanced feedback
+    if submit_button and st.session_state.user_code.strip():
+        try:
+            with st.spinner("🔄 Evaluating code and generating AI feedback..."):
+                submission_data = {
+                    "code": st.session_state.user_code,
+                    "language_id": language_options[selected_language],
+                    "question_id": question['id']
+                }
                 
-            except requests.exceptions.RequestException as e:
-                st.error(f"❌ Network error: {e}")
-            except Exception as e:
-                st.error(f"❌ Submission failed: {e}")
-                st.exception(e)
+                response = requests.post(f"{API_URL}/evaluate", json=submission_data, timeout=45)
+                response.raise_for_status()                
+                result = response.json()
+                st.session_state.evaluation_result = result
+                st.rerun()
+                
+        except requests.exceptions.Timeout:
+            st.error("⏱️ Request timed out. Your code might be taking too long to execute or our AI is working hard!")
+        except requests.exceptions.RequestException as e:
+            st.error(f"❌ Submission failed: {e}")
+        except Exception as e:
+            st.error(f"❌ Unexpected error: {e}")
+    
+    # Display results with enhanced formatting
+    if st.session_state.evaluation_result:
+        result = st.session_state.evaluation_result
+        
+        st.markdown("---")
+        st.markdown("## 📊 Evaluation Results")
+        
+        # Result header with better styling
+        if result.get('correct'):
+            st.markdown("""
+            <div class="success-box">
+            <h3>🎉 Perfect! Your solution is correct!</h3>
+            <p>Excellent work! Your code passed all test cases. 🏆</p>
+            </div>
+            """, unsafe_allow_html=True)
+        else:
+            st.markdown("""
+            <div class="error-box">
+            <h3>🔍 Almost there! Let's debug together</h3>
+            <p>Learning happens through iterations. Let's see what can be improved! 💪</p>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        # Execution details with tabs
+        tab1, tab2, tab3 = st.tabs(["📊 Test Results", "🔍 Execution Details", "🤖 AI Feedback"])
+        
+        with tab1:
+            col1, col2 = st.columns(2)
+            
+            with col1:
+                st.markdown("### 📥 Expected Output")
+                st.code(result.get('expected', ''), language='text')
+            
+            with col2:
+                st.markdown("### 📤 Your Output")
+                actual_output = result.get('actual', '')
+                if actual_output.strip():
+                    st.code(actual_output, language='text')
+                else:
+                    st.code("No output produced", language='text')
+        
+        with tab2:
+            # Status information
+            status = result.get('status', 'Unknown')
+            if 'error' in status.lower() or 'fail' in status.lower():
+                st.error(f"**Execution Status:** {status}")
+            elif 'accept' in status.lower():
+                st.success(f"**Execution Status:** {status}")
+            else:
+                st.info(f"**Execution Status:** {status}")
+            
+            # Additional debug info
+            if result.get('feedback'):
+                with st.expander("🔧 Raw Feedback Data (for debugging)"):
+                    st.json(result['feedback'])
+        
+        with tab3:
+            # AI Feedback section with improved formatting
+            if result.get('has_ai_feedback') and result.get('formatted_feedback'):
+                # Display the formatted feedback with proper spacing and styling
+                feedback_content = result['formatted_feedback']
+                
+                # Display the AI feedback header
+                st.markdown("### 🤖 AI Code Analysis")
+                
+                # Display the formatted feedback content with HTML support
+                st.markdown(feedback_content, unsafe_allow_html=True)                
+                # Action buttons after feedback
+              
+                
+            elif result.get('feedback'):
+                st.markdown("### 🤖 AI Analysis")
+                st.json(result['feedback'])
+            else:
+                st.info("💡 AI feedback will be available once your code executes successfully. Keep trying! 🚀")
 
-# Footer
+
+    # Quick start buttons with enhanced styling
+    st.markdown("### 🚀 Quick Start Options")  
+       
+    # Feature highlights
+    st.markdown("---")
+    st.markdown("### 🎯 Feedback Analysis Features:")
+    
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        st.markdown("""
+        **🟢 Success Feedback:**
+        - Overall Assessment (score & recommendation)
+        - Detailed section analysis (8 categories)
+        - Line-by-line breakdown
+        - Actionable suggestions
+        """)
+    
+    with col2:
+        st.markdown("""
+        **🔴 Failure Feedback:**
+        - Error Analysis (root cause identification)
+        - Output Comparison (why it differs)
+        - Step-by-step fixes
+        - Debugging strategies
+        """)    
+   
+    
+    # Additional feature showcase
+    st.markdown("---")
+    st.markdown("### 🔍 What Makes Our AI Feedback Special:")
+    
+    # Create an example feedback display
+    st.markdown("#### Example Success Feedback Format:")
+    st.markdown("""
+    ```
+    Overall Assessment
+    Score: 8.5/10
+    Recommendation: REVIEW
+    Complexity: low
+    Simplicity: excellent
+
+    ✅ Correctness
+    Status: pass
+    Score: 10/10
+
+    The code correctly identifies and counts the unique elements...
+
+    🧩 Complexity
+    Status: appropriate
+    Score: 10/10
+
+    The solution uses a concise and efficient approach...
+
+    💡 Intelligent Suggestions
+    • Add input validation for edge cases
+    • Consider adding docstrings for better documentation
+    • Implement error handling for robustness
+    ```
+    """)
+    
+    st.markdown("#### Example Failure Feedback Format:")
+    st.markdown("""
+    ```
+    Error Analysis
+    Primary Error: Logic Error - Wrong Output
+    Location: In the main algorithm loop
+    Root Cause: Incorrect handling of edge cases
+    Severity: MAJOR
+
+    📊 Output Comparison
+
+    Why Output Differs:
+    Your code handles the basic case correctly but fails on edge cases...
+
+    🛠️ How to Fix Your Code
+    • Check your loop termination condition
+    • Add validation for empty inputs
+    • Review the algorithm logic for boundary cases
+
+    🐛 Debugging Tips
+    • Use print statements to trace variable values
+    • Test with the provided examples step by step
+    • Consider edge cases like empty arrays or single elements
+    ```
+    """)
+
+# Footer with enhanced stats
 st.markdown("---")
-st.markdown("*Powered by Gemini 1.5 Flash AI • Built with Streamlit*")
+st.markdown("""
+---
+*🤖 Powered by Google Gemini 1.5 Flash for unlimited, original question generation*  
+
+""")

@@ -11,3 +11,4 @@ orjson
 bitsandbytes
 langchain
 sentencepiece
+google.generativeai

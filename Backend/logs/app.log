@@ -1405,3 +1405,478 @@ httpx.ConnectTimeout
 2025-06-11 14:32:50,931 - ERROR - ai-code-assessment - Test case 1 failed: expected='Suggested Meal: Paneer Butter Masala', actual='Enter dietary preference (vegetarian/non-vegetarian): Suggested Meal: Invalid dietary preference entered.', status=accepted
 2025-06-11 14:36:55,025 - ERROR - ai-code-assessment - Test case 1 failed: expected='Suggested Meal: Paneer Butter Masala', actual='', status=runtime error (nzec)
 2025-06-11 15:06:26,057 - ERROR - ai-code-assessment - Test case 1 failed: expected='Weak PIN', actual='Unusual PIN', status=accepted
+2025-06-20 13:01:32,461 - ERROR - ai-code-assessment - Test case 1 failed: expected='3', actual='3\n5', status=accepted
+2025-06-20 13:02:18,544 - ERROR - ai-code-assessment - Test case 2 failed: expected='5', actual='3', status=accepted
+2025-06-20 13:03:48,124 - ERROR - ai-code-assessment - Test case 1 failed: expected='4 7 2 5 6 9', actual='[4, 7, 2, 5, 6, 9]', status=accepted
+2025-06-23 11:53:52,348 - ERROR - ai-code-assessment - Test case 1 failed: expected='Sprints Detected: 2\nSlow Down Alerts: 4', actual='Sprints Detected: 2\nSlow Down Alerts: 5', status=accepted
+2025-06-23 16:48:30,930 - ERROR - ai-code-assessment - Unhandled Exception: module 'Backend.services.load_and_evaluation_service' has no attribute 'get_random_question'
+Traceback (most recent call last):
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/routing.py", line 758, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/routing.py", line 778, in app
+    await route.handle(scope, receive, send)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/routing.py", line 299, in handle
+    await self.app(scope, receive, send)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/routing.py", line 79, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/routing.py", line 74, in app
+    response = await func(request)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/routers/ai_code_assessment_routers.py", line 18, in get_question
+    return await interview_service.get_random_question()
+AttributeError: module 'Backend.services.load_and_evaluation_service' has no attribute 'get_random_question'
+2025-06-23 16:51:28,330 - ERROR - ai-code-assessment - Code execution error: 'NoneType' object has no attribute 'strip'
+2025-06-23 16:51:45,798 - ERROR - ai-code-assessment - Code execution error: 'NoneType' object has no attribute 'strip'
+2025-06-23 17:12:26,709 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:12:26,710 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:15:08,985 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:15:08,985 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:18:13,682 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:18:13,682 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:18:44,044 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:18:44,045 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:21:20,411 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:21:20,411 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:20,854 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:20,857 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:22,508 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:22,508 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:23,323 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:23,324 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:23,850 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:23,851 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:24,009 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:24,010 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:24,183 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:24,183 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:24,315 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:24,315 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:24,445 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:24,446 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:24,581 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:24,582 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:24,693 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:24,693 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:24,825 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:24,825 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:24,947 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:24,947 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:25,731 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:25,731 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:25,906 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:25,906 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:26,045 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:26,045 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:26,174 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:26,175 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:26,297 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:26,297 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:31:28,594 - ERROR - ai-code-assessment - Row 84: JSON parse error - Expecting ':' delimiter: line 3 column 13 (char 71)
+2025-06-23 17:31:28,595 - ERROR - ai-code-assessment - Problematic JSON: [{
+    "input": "Titles = [apple, banana, cherry], k = 2",
+    "output"": "banana",
+    "explanation": "Sorted titles: ['apple', 'banana', 'cherry']. The 2nd smallest title is 'banana'."
+  }, {
+    "i...
+2025-06-23 17:31:28,595 - ERROR - ai-code-assessment - Row 114: JSON parse error - Expecting ',' delimiter: line 2 column 45 (char 47)
+2025-06-23 17:31:28,596 - ERROR - ai-code-assessment - Problematic JSON: [{
+    "input": "Give details of products: (\\"Laptop\\", 45000), (\\"Tablet\\", 20000), (\\"Phone\\", 30000), (\\"Mouse\\", 700)]",
+    "output": "Cheapest Product: Mouse - ₹700",
+    "explanation": ...
+2025-06-23 17:31:28,596 - ERROR - ai-code-assessment - Row 116: JSON parse error - Expecting ',' delimiter: line 2 column 18 (char 20)
+2025-06-23 17:31:28,596 - ERROR - ai-code-assessment - Problematic JSON: [{
+    "input": "\\"Alice Johnson\\", \\"Bob Smith\\", \\"Charlie Lee\\"]",
+    "output": "Sorted: Charlie Lee, Alice Johnson, Bob Smith"
+  }]...
+2025-06-23 17:31:28,596 - ERROR - ai-code-assessment - Row 117: JSON parse error - Unterminated string starting at: line 2 column 14 (char 16)
+2025-06-23 17:31:28,596 - ERROR - ai-code-assessment - Problematic JSON: [{
+    "input": "Enter Stock details: \"pen\": 10, \"pencil\": 5, \"eraser\": 0}, {\"pen\": 3, \"eraser\": 1}]...
+2025-06-23 17:31:28,596 - ERROR - ai-code-assessment - Row 141: JSON parse error - Invalid control character at: line 3 column 57 (char 62)
+2025-06-23 17:31:28,596 - ERROR - ai-code-assessment - Problematic JSON: [
+  {
+    "input": "\"abccba\", \"test\", \"1221\", \"hello\",
+    "output": "2 mirrored strings"
+  }
+]...
+2025-06-23 17:31:28,597 - ERROR - ai-code-assessment - Row 148: JSON parse error - Unterminated string starting at: line 2 column 14 (char 16)
+2025-06-23 17:31:28,597 - ERROR - ai-code-assessment - Problematic JSON: [{
+    "input": "He is very quick and smart\", Replacements: { \"quick\": \"fast\", \"smart\": \"intelligent\" }]...
+2025-06-23 17:31:28,597 - ERROR - ai-code-assessment - Row 165: JSON parse error - Unterminated string starting at: line 2 column 14 (char 16)
+2025-06-23 17:31:28,597 - ERROR - ai-code-assessment - Problematic JSON: [{
+    "input": "Projects : P1: \"Active\", P2: \"Pending\"}, {P2: \"Active\", P1: \"Closed\"}, {P1: \"Closed\", P2: \"Active\"}]...
+2025-06-23 17:31:28,599 - ERROR - ai-code-assessment - Row 219: JSON parse error - Unterminated string starting at: line 2 column 14 (char 16)
+2025-06-23 17:31:28,599 - ERROR - ai-code-assessment - Problematic JSON: [{
+    "input": "items = \"sword\": 150, \"shield\": 100, \"potion\": 50}]...
+2025-06-23 17:31:28,599 - ERROR - ai-code-assessment - Row 221: JSON parse error - Unterminated string starting at: line 2 column 14 (char 16)
+2025-06-23 17:31:28,599 - ERROR - ai-code-assessment - Problematic JSON: [{
+    "input": "dictionary = \"arcane\", \"mystic\", \"alchemy\"}]...
+2025-06-23 17:31:28,599 - ERROR - ai-code-assessment - Row 222: JSON parse error - Unterminated string starting at: line 2 column 14 (char 16)
+2025-06-23 17:31:28,599 - ERROR - ai-code-assessment - Problematic JSON: [{
+    "input": "\"fire\": 12, \"water\": 7, \"earth\": 20, \"air\": 15}]...
+2025-06-23 17:40:32,424 - ERROR - ai-code-assessment - Unhandled Exception: name 'logger' is not defined
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/routers/ai_code_assessment_routers.py", line 30, in evaluate_code
+    formatted_feedback = format_feedback_for_display(result.feedback)
+NameError: name 'format_feedback_for_display' is not defined. Did you mean: 'format_failure_feedback_for_display'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/routing.py", line 758, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/routing.py", line 778, in app
+    await route.handle(scope, receive, send)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/routing.py", line 299, in handle
+    await self.app(scope, receive, send)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/routing.py", line 79, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/routing.py", line 74, in app
+    response = await func(request)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/routers/ai_code_assessment_routers.py", line 49, in evaluate_code
+    logger.error(f"Unexpected error in evaluate_code: {e}", exc_info=True)
+NameError: name 'logger' is not defined
+2025-06-23 18:39:17,691 - ERROR - ai-code-assessment - HTTP error while evaluating code: 400 - {"error":"some attributes for this submission cannot be converted to UTF-8, use base64_encoded=true query parameter"}
+2025-06-23 18:44:31,941 - ERROR - ai-code-assessment - HTTP error while evaluating code: 400 - {"error":"some attributes for this submission cannot be converted to UTF-8, use base64_encoded=true query parameter"}
+2025-06-23 18:45:31,284 - ERROR - ai-code-assessment - HTTP error while evaluating code: 400 - {"error":"some attributes for this submission cannot be converted to UTF-8, use base64_encoded=true query parameter"}
