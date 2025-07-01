@@ -3,6 +3,9 @@ from routers import (
     ai_code_assessment_routers as evaluation,
     conditional_code_assessment_router as conditional_evaluation)
 from exception_handler import add_exception_handlers
+
+#when testing in local add . before routers and exception_handler import statement 
+#from .routers import   and from .exception_handler import
 from dotenv import load_dotenv
 import os
 load_dotenv()
