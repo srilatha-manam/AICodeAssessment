@@ -822,3 +822,1061 @@ TypeError: Header value must be str or bytes, not <class 'NoneType'>
 2025-05-28 12:19:56,445 - ERROR - ai-code-assessment - Test case 1 failed: expected='Found', actual=''
 2025-05-28 12:20:35,030 - ERROR - ai-code-assessment - Test case 1 failed: expected='Found', actual=''
 2025-05-28 13:00:41,619 - ERROR - ai-code-assessment - Test case 1 failed: expected='Found', actual=''
+2025-05-30 14:46:00,559 - ERROR - ai-code-assessment - Test case 1 failed: expected='Yes', actual='Yes\nNo'
+2025-05-30 14:48:48,396 - ERROR - ai-code-assessment - Test case 1 failed: expected='Yes', actual='s'
+2025-06-02 10:35:32,344 - ERROR - ai-code-assessment - Test case 1 failed: expected='Yes', actual=''
+2025-06-02 10:36:48,910 - ERROR - ai-code-assessment - Test case 1 failed: expected='Yes', actual=''
+2025-06-02 10:38:29,572 - ERROR - ai-code-assessment - Test case 1 failed: expected='Yes', actual=''
+2025-06-02 10:39:35,612 - ERROR - ai-code-assessment - Test case 1 failed: expected='Yes', actual="Error: invalid literal for int() with base 10: 's'"
+2025-06-02 10:57:24,808 - ERROR - ai-code-assessment - Test case 1 failed: expected='Rune found', actual=''
+2025-06-02 11:01:06,099 - ERROR - ai-code-assessment - Test case 1 failed: expected='Rune found', actual=''
+2025-06-02 11:02:46,075 - ERROR - ai-code-assessment - Test case 1 failed: expected='Gmail users: john@gmail.com, mark@gmail.com', actual='Enter Emails:'
+2025-06-02 11:07:27,601 - ERROR - ai-code-assessment - Test case 1 failed: expected='Gmail users: john@gmail.com, mark@gmail.com', actual=''
+2025-06-02 11:13:52,297 - ERROR - ai-code-assessment - Test case 1 failed: expected='Gmail users: john@gmail.com, mark@gmail.com', actual=''
+2025-06-03 16:53:52,089 - ERROR - ai-code-assessment - Test case 1 failed: expected='2', actual=''
+2025-06-03 16:53:53,108 - ERROR - Backend.services.feedback_generation_service - Feedback generation failed: 403 Client Error: Forbidden for url: https://api-inference.huggingface.co/models/bigcode/starcoder
+2025-06-03 17:32:52,706 - ERROR - ai-code-assessment - Test case 1 failed: expected='2', actual=''
+2025-06-03 17:32:53,795 - ERROR - Backend.services.feedback_generation_service - Feedback generation failed: 403 Client Error: Forbidden for url: https://api-inference.huggingface.co/models/bigcode/starcoder
+2025-06-03 17:39:11,147 - ERROR - ai-code-assessment - Test case 1 failed: expected='2', actual=''
+2025-06-03 17:39:11,580 - ERROR - Backend.services.feedback_generation_service - Feedback generation failed: 403 Client Error: Forbidden for url: https://api-inference.huggingface.co/models/bigcode/starcoder
+2025-06-03 17:39:38,645 - CRITICAL - ai-code-assessment - Code evaluation failed for Question ID 85: name 'pritint' is not defined
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\load_and_evaluation_service.py", line 37, in evaluate_submission
+    pritint("input"+example.input)
+    ^^^^^^^
+NameError: name 'pritint' is not defined
+2025-06-03 17:40:29,519 - CRITICAL - ai-code-assessment - Code evaluation failed for Question ID 85: name 'pritint' is not defined
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\load_and_evaluation_service.py", line 50, in evaluate_submission
+    pritint("result"+str(result))
+    ^^^^^^^
+NameError: name 'pritint' is not defined
+2025-06-03 17:41:21,824 - ERROR - ai-code-assessment - Test case 1 failed: expected='2', actual=''
+2025-06-03 17:41:22,259 - ERROR - Backend.services.feedback_generation_service - Feedback generation failed: 403 Client Error: Forbidden for url: https://api-inference.huggingface.co/models/bigcode/starcoder
+2025-06-03 17:45:50,278 - ERROR - ai-code-assessment - Test case 1 failed: expected='2', actual=''
+2025-06-03 17:45:50,743 - ERROR - Backend.services.feedback_generation_service - Feedback generation failed: 403 Client Error: Forbidden for url: https://api-inference.huggingface.co/models/bigcode/starcoder
+2025-06-03 17:47:19,643 - ERROR - ai-code-assessment - Test case 1 failed: expected='2', actual=''
+2025-06-03 17:47:20,105 - ERROR - Backend.services.feedback_generation_service - Feedback generation failed: 403 Client Error: Forbidden for url: https://api-inference.huggingface.co/models/bigcode/starcoder
+2025-06-03 17:49:34,864 - ERROR - ai-code-assessment - Test case 1 failed: expected='2', actual=''
+2025-06-03 17:49:35,363 - ERROR - Backend.services.feedback_generation_service - Feedback generation failed: 403 Client Error: Forbidden for url: https://api-inference.huggingface.co/models/bigcode/starcoder
+2025-06-03 17:58:36,928 - ERROR - ai-code-assessment - Test case 1 failed: expected='180', actual=''
+2025-06-03 17:58:37,681 - ERROR - Backend.services.feedback_generation_service - Feedback generation failed: 403 Client Error: Forbidden for url: https://api-inference.huggingface.co/models/bigcode/starcoder
+2025-06-03 18:01:24,268 - ERROR - ai-code-assessment - Test case 1 failed: expected='180', actual=''
+2025-06-03 18:01:24,811 - ERROR - Backend.services.feedback_generation_service - Feedback generation failed: 403 Client Error: Forbidden for url: https://api-inference.huggingface.co/models/bigcode/starcoder
+2025-06-03 18:02:04,617 - ERROR - ai-code-assessment - Test case 1 failed: expected='180', actual=''
+2025-06-03 18:02:05,138 - ERROR - Backend.services.feedback_generation_service - Feedback generation failed: 403 Client Error: Forbidden for url: https://api-inference.huggingface.co/models/bigcode/starcoder
+2025-06-03 18:13:03,864 - ERROR - Backend.services.feedback_generation_service - Feedback generation failed: 403 Client Error: Forbidden for url: https://api-inference.huggingface.co/models/bigcode/starcoder
+2025-06-03 18:16:01,340 - ERROR - Backend.services.feedback_generation_service - Feedback generation failed: 403 Client Error: Forbidden for url: https://api-inference.huggingface.co/models/bigcode/starcoder
+2025-06-09 14:27:04,093 - CRITICAL - ai-code-assessment - Code evaluation failed for Question ID 64: malformed node or string on line 1: <ast.Name object at 0x000001B8289DED10>
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\load_and_evaluation_service.py", line 38, in evaluate_submission
+    test_input = " ".join(map(str, ast.literal_eval(example.input))) # Convert input string to a list and join with spaces
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 108, in literal_eval
+    return _convert(node_or_string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 107, in _convert
+    return _convert_signed_num(node)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 81, in _convert_signed_num
+    return _convert_num(node)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 72, in _convert_num
+    _raise_malformed_node(node)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 69, in _raise_malformed_node
+    raise ValueError(msg + f': {node!r}')
+ValueError: malformed node or string on line 1: <ast.Name object at 0x000001B8289DED10>
+2025-06-09 14:28:14,795 - CRITICAL - ai-code-assessment - Code evaluation failed for Question ID 64: malformed node or string on line 1: <ast.Name object at 0x000001B8289AE710>
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\load_and_evaluation_service.py", line 38, in evaluate_submission
+    test_input = " ".join(map(str, ast.literal_eval(example.input))) # Convert input string to a list and join with spaces
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 108, in literal_eval
+    return _convert(node_or_string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 107, in _convert
+    return _convert_signed_num(node)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 81, in _convert_signed_num
+    return _convert_num(node)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 72, in _convert_num
+    _raise_malformed_node(node)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 69, in _raise_malformed_node
+    raise ValueError(msg + f': {node!r}')
+ValueError: malformed node or string on line 1: <ast.Name object at 0x000001B8289AE710>
+2025-06-09 14:30:53,995 - CRITICAL - ai-code-assessment - Code evaluation failed for Question ID 64: malformed node or string on line 1: <ast.Name object at 0x000001B8289AE3B0>
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\load_and_evaluation_service.py", line 38, in evaluate_submission
+    test_input = " ".join(map(str, ast.literal_eval(example.input))) # Convert input string to a list and join with spaces
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 108, in literal_eval
+    return _convert(node_or_string)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 107, in _convert
+    return _convert_signed_num(node)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 81, in _convert_signed_num
+    return _convert_num(node)
+           ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 72, in _convert_num
+    _raise_malformed_node(node)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\ast.py", line 69, in _raise_malformed_node
+    raise ValueError(msg + f': {node!r}')
+ValueError: malformed node or string on line 1: <ast.Name object at 0x000001B8289AE3B0>
+2025-06-09 14:32:35,746 - CRITICAL - ai-code-assessment - Code evaluation failed for Question ID 193: 'int' object is not iterable
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\load_and_evaluation_service.py", line 38, in evaluate_submission
+    test_input = " ".join(map(str, ast.literal_eval(example.input))) # Convert input string to a list and join with spaces
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'int' object is not iterable
+2025-06-09 14:35:45,967 - CRITICAL - ai-code-assessment - Code evaluation failed for Question ID 193: name 'test_input' is not defined
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\load_and_evaluation_service.py", line 46, in evaluate_submission
+    result = await evaluate_code(submission.code, submission.language_id, test_input)
+                                                                          ^^^^^^^^^^
+NameError: name 'test_input' is not defined
+2025-06-09 14:36:03,788 - CRITICAL - ai-code-assessment - Code evaluation failed for Question ID 193: name 'test_input' is not defined
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\load_and_evaluation_service.py", line 46, in evaluate_submission
+    result = await evaluate_code(submission.code, submission.language_id, test_input)
+                                                                          ^^^^^^^^^^
+NameError: name 'test_input' is not defined
+2025-06-09 14:37:33,724 - CRITICAL - ai-code-assessment - Code evaluation failed for Question ID 178: invalid literal for int() with base 10: 'Enter total seats: 10\nEnter occupied seats = [3, 5, 8]'
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\load_and_evaluation_service.py", line 38, in evaluate_submission
+    test_input = int(example.input.strip())
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: 'Enter total seats: 10\nEnter occupied seats = [3, 5, 8]'
+2025-06-09 14:39:33,135 - ERROR - Backend.services.feedback_generation_service - Feedback generation failed: 403 Client Error: Forbidden for url: https://api-inference.huggingface.co/models/bigcode/starcoder
+2025-06-09 14:50:53,719 - ERROR - Backend.services.feedback_generation_service - Feedback generation failed: 403 Client Error: Forbidden for url: https://api-inference.huggingface.co/models/bigcode/starcoder
+2025-06-09 14:58:50,049 - ERROR - Backend.services.feedback_generation_service - Feedback generation failed: 403 Client Error: Forbidden for url: https://api-inference.huggingface.co/bigcode/starcoder
+2025-06-09 15:00:48,423 - ERROR - Backend.services.feedback_generation_service - Feedback generation failed: 403 Client Error: Forbidden for url: https://api-inference.huggingface.co/bigcode/starcoder2-15b
+2025-06-09 15:11:47,368 - ERROR - Backend.services.feedback_generation_service - Feedback generation failed: 403 Client Error: Forbidden for url: https://api-inference.huggingface.co/bigcode/starcoder2-15b
+2025-06-09 17:14:59,750 - ERROR - ai-code-assessment - Unhandled Exception: [TypeError("'coroutine' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\encoders.py", line 322, in jsonable_encoder
+    data = dict(obj)
+           ^^^^^^^^^
+TypeError: 'coroutine' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\encoders.py", line 327, in jsonable_encoder
+    data = vars(obj)
+           ^^^^^^^^^
+TypeError: vars() argument must have __dict__ attribute
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py", line 79, in __call__
+    raise exc
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 20, in __call__
+    raise e
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 292, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 180, in serialize_response
+    return jsonable_encoder(response_content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\encoders.py", line 330, in jsonable_encoder
+    raise ValueError(errors) from e
+ValueError: [TypeError("'coroutine' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+2025-06-09 17:19:18,120 - ERROR - ai-code-assessment - Unhandled Exception: [TypeError("'coroutine' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\encoders.py", line 322, in jsonable_encoder
+    data = dict(obj)
+           ^^^^^^^^^
+TypeError: 'coroutine' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\encoders.py", line 327, in jsonable_encoder
+    data = vars(obj)
+           ^^^^^^^^^
+TypeError: vars() argument must have __dict__ attribute
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py", line 79, in __call__
+    raise exc
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 20, in __call__
+    raise e
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 292, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 180, in serialize_response
+    return jsonable_encoder(response_content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\encoders.py", line 330, in jsonable_encoder
+    raise ValueError(errors) from e
+ValueError: [TypeError("'coroutine' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+2025-06-09 17:28:38,163 - ERROR - ai-code-assessment - Unhandled Exception: [TypeError("'coroutine' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\encoders.py", line 322, in jsonable_encoder
+    data = dict(obj)
+           ^^^^^^^^^
+TypeError: 'coroutine' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\encoders.py", line 327, in jsonable_encoder
+    data = vars(obj)
+           ^^^^^^^^^
+TypeError: vars() argument must have __dict__ attribute
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py", line 79, in __call__
+    raise exc
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 20, in __call__
+    raise e
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 292, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 180, in serialize_response
+    return jsonable_encoder(response_content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\encoders.py", line 330, in jsonable_encoder
+    raise ValueError(errors) from e
+ValueError: [TypeError("'coroutine' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+2025-06-09 17:29:42,954 - ERROR - ai-code-assessment - Unhandled Exception: [TypeError("'coroutine' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\encoders.py", line 322, in jsonable_encoder
+    data = dict(obj)
+           ^^^^^^^^^
+TypeError: 'coroutine' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\encoders.py", line 327, in jsonable_encoder
+    data = vars(obj)
+           ^^^^^^^^^
+TypeError: vars() argument must have __dict__ attribute
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py", line 79, in __call__
+    raise exc
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 20, in __call__
+    raise e
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 292, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 180, in serialize_response
+    return jsonable_encoder(response_content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\encoders.py", line 330, in jsonable_encoder
+    raise ValueError(errors) from e
+ValueError: [TypeError("'coroutine' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+2025-06-09 17:37:57,440 - ERROR - ai-code-assessment - Unhandled Exception: [TypeError("'coroutine' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\encoders.py", line 322, in jsonable_encoder
+    data = dict(obj)
+           ^^^^^^^^^
+TypeError: 'coroutine' object is not iterable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\encoders.py", line 327, in jsonable_encoder
+    data = vars(obj)
+           ^^^^^^^^^
+TypeError: vars() argument must have __dict__ attribute
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\errors.py", line 162, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py", line 79, in __call__
+    raise exc
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\middleware\exceptions.py", line 68, in __call__
+    await self.app(scope, receive, sender)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 20, in __call__
+    raise e
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 17, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 718, in __call__
+    await route.handle(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 276, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\starlette\routing.py", line 66, in app
+    response = await func(request)
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 292, in app
+    content = await serialize_response(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\routing.py", line 180, in serialize_response
+    return jsonable_encoder(response_content)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\fastapi\encoders.py", line 330, in jsonable_encoder
+    raise ValueError(errors) from e
+ValueError: [TypeError("'coroutine' object is not iterable"), TypeError('vars() argument must have __dict__ attribute')]
+2025-06-09 18:09:35,540 - CRITICAL - ai-code-assessment - Code evaluation failed for Question ID 264: invalid literal for int() with base 10: '5 7 7 7 9 12 15\n7'
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\load_and_evaluation_service.py", line 38, in evaluate_submission
+    test_input = int(example.input.strip())
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '5 7 7 7 9 12 15\n7'
+2025-06-09 18:12:01,005 - CRITICAL - ai-code-assessment - Code evaluation failed for Question ID 228: invalid literal for int() with base 10: '(()())'
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\load_and_evaluation_service.py", line 38, in evaluate_submission
+    test_input = int(example.input.strip())
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '(()())'
+2025-06-09 18:13:50,024 - CRITICAL - ai-code-assessment - Code evaluation failed for Question ID 50: invalid literal for int() with base 10: '[5, 2, 8, 1]'
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\load_and_evaluation_service.py", line 38, in evaluate_submission
+    test_input = int(example.input.strip())
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '[5, 2, 8, 1]'
+2025-06-09 18:15:31,794 - CRITICAL - ai-code-assessment - Code evaluation failed for Question ID 237: invalid literal for int() with base 10: '5 2 8 3 1'
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\load_and_evaluation_service.py", line 38, in evaluate_submission
+    test_input = int(example.input.strip())
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: '5 2 8 3 1'
+2025-06-09 18:17:53,999 - ERROR - ai-code-assessment - Test case 1 failed: expected='Valid', actual='6 lights are ON'
+2025-06-09 18:20:57,090 - ERROR - ai-code-assessment - Test case 1 failed: expected='1 2 3 5 8', actual=''
+2025-06-09 18:21:54,015 - ERROR - ai-code-assessment - Test case 1 failed: expected='50', actual=''
+2025-06-10 11:41:59,346 - ERROR - ai-code-assessment - Test case 1 failed: expected='Drift detected at index: 1', actual='Drift detected at index: 0'
+2025-06-10 11:57:40,586 - ERROR - ai-code-assessment - Test case 1 failed: expected='Yellow', actual='Red'
+2025-06-10 11:59:50,438 - CRITICAL - ai-code-assessment - Unexpected error in evaluate_code: 
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\_core\_sockets.py", line 189, in connect_tcp
+    addr_obj = ip_address(remote_host)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\ipaddress.py", line 54, in ip_address
+    raise ValueError(f'{address!r} does not appear to be an IPv4 or IPv6 address')
+ValueError: 'judge0-ce.p.rapidapi.com' does not appear to be an IPv4 or IPv6 address
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_backends\anyio.py", line 114, in connect_tcp
+    stream: anyio.abc.ByteStream = await anyio.connect_tcp(
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\_core\_sockets.py", line 192, in connect_tcp
+    gai_res = await getaddrinfo(
+              ^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_exceptions.py", line 10, in map_exceptions
+    yield
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_backends\anyio.py", line 113, in connect_tcp
+    with anyio.fail_after(timeout):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\_core\_tasks.py", line 119, in __exit__
+    raise TimeoutError
+TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 60, in map_httpcore_exceptions
+    yield
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 353, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 262, in handle_async_request
+    raise exc
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 245, in handle_async_request
+    response = await connection.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 92, in handle_async_request
+    raise exc
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 69, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 117, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_backends\auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_backends\anyio.py", line 112, in connect_tcp
+    with map_exceptions(exc_map):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 30, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1848, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1530, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1617, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1645, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1682, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1719, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 352, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 77, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout
+2025-06-10 11:59:50,493 - CRITICAL - ai-code-assessment - Code evaluation failed for Question ID 2: 
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\_core\_sockets.py", line 189, in connect_tcp
+    addr_obj = ip_address(remote_host)
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\ipaddress.py", line 54, in ip_address
+    raise ValueError(f'{address!r} does not appear to be an IPv4 or IPv6 address')
+ValueError: 'judge0-ce.p.rapidapi.com' does not appear to be an IPv4 or IPv6 address
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_backends\anyio.py", line 114, in connect_tcp
+    stream: anyio.abc.ByteStream = await anyio.connect_tcp(
+                                   ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\_core\_sockets.py", line 192, in connect_tcp
+    gai_res = await getaddrinfo(
+              ^^^^^^^^^^^^^^^^^^
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_exceptions.py", line 10, in map_exceptions
+    yield
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_backends\anyio.py", line 113, in connect_tcp
+    with anyio.fail_after(timeout):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\_core\_tasks.py", line 119, in __exit__
+    raise TimeoutError
+TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 60, in map_httpcore_exceptions
+    yield
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 353, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 262, in handle_async_request
+    raise exc
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 245, in handle_async_request
+    response = await connection.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 92, in handle_async_request
+    raise exc
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 69, in handle_async_request
+    stream = await self._connect(request)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 117, in _connect
+    stream = await self._network_backend.connect_tcp(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_backends\auto.py", line 31, in connect_tcp
+    return await self._backend.connect_tcp(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_backends\anyio.py", line 112, in connect_tcp
+    with map_exceptions(exc_map):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ConnectTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\load_and_evaluation_service.py", line 48, in evaluate_submission
+    result = await evaluate_code(submission.code, submission.language_id, test_input)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\AICodeAssessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 30, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1848, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1530, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1617, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1645, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1682, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1719, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 352, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 77, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ConnectTimeout
+2025-06-10 12:07:15,995 - ERROR - ai-code-assessment - Test case 1 failed: expected='Yellow', actual='Red'
+2025-06-10 12:31:27,412 - ERROR - ai-code-assessment - Test case 1 failed: expected='50', actual='Output: 50'
+2025-06-10 12:33:07,184 - ERROR - ai-code-assessment - Test case 2 failed: expected='5', actual='50'
+2025-06-10 12:35:38,546 - ERROR - ai-code-assessment - Test case 1 failed: expected='50', actual='50\n5'
+2025-06-11 11:59:39,724 - ERROR - ai-code-assessment - Test case 1 failed: expected='2', actual='', status=runtime error (nzec)
+2025-06-11 12:01:48,679 - ERROR - ai-code-assessment - Test case 1 failed: expected='2', actual='', status=runtime error (nzec)
+2025-06-11 12:03:26,333 - ERROR - ai-code-assessment - Test case 1 failed: expected='2', actual='', status=runtime error (nzec)
+2025-06-11 12:05:24,808 - ERROR - ai-code-assessment - Test case 1 failed: expected='3', actual='', status=runtime error (nzec)
+2025-06-11 12:21:51,432 - WARNING - huggingface_hub.file_download - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-06-11 14:32:50,931 - ERROR - ai-code-assessment - Test case 1 failed: expected='Suggested Meal: Paneer Butter Masala', actual='Enter dietary preference (vegetarian/non-vegetarian): Suggested Meal: Invalid dietary preference entered.', status=accepted
+2025-06-11 14:36:55,025 - ERROR - ai-code-assessment - Test case 1 failed: expected='Suggested Meal: Paneer Butter Masala', actual='', status=runtime error (nzec)
+2025-06-11 15:06:26,057 - ERROR - ai-code-assessment - Test case 1 failed: expected='Weak PIN', actual='Unusual PIN', status=accepted
+2025-06-20 13:01:32,461 - ERROR - ai-code-assessment - Test case 1 failed: expected='3', actual='3\n5', status=accepted
+2025-06-20 13:02:18,544 - ERROR - ai-code-assessment - Test case 2 failed: expected='5', actual='3', status=accepted
+2025-06-20 13:03:48,124 - ERROR - ai-code-assessment - Test case 1 failed: expected='4 7 2 5 6 9', actual='[4, 7, 2, 5, 6, 9]', status=accepted
+2025-06-23 11:53:52,348 - ERROR - ai-code-assessment - Test case 1 failed: expected='Sprints Detected: 2\nSlow Down Alerts: 4', actual='Sprints Detected: 2\nSlow Down Alerts: 5', status=accepted
+2025-06-23 16:48:30,930 - ERROR - ai-code-assessment - Unhandled Exception: module 'Backend.services.load_and_evaluation_service' has no attribute 'get_random_question'
+Traceback (most recent call last):
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/routing.py", line 758, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/routing.py", line 778, in app
+    await route.handle(scope, receive, send)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/routing.py", line 299, in handle
+    await self.app(scope, receive, send)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/routing.py", line 79, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/routing.py", line 74, in app
+    response = await func(request)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/routers/ai_code_assessment_routers.py", line 18, in get_question
+    return await interview_service.get_random_question()
+AttributeError: module 'Backend.services.load_and_evaluation_service' has no attribute 'get_random_question'
+2025-06-23 16:51:28,330 - ERROR - ai-code-assessment - Code execution error: 'NoneType' object has no attribute 'strip'
+2025-06-23 16:51:45,798 - ERROR - ai-code-assessment - Code execution error: 'NoneType' object has no attribute 'strip'
+2025-06-23 17:12:26,709 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:12:26,710 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:15:08,985 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:15:08,985 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:18:13,682 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:18:13,682 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:18:44,044 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:18:44,045 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:21:20,411 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:21:20,411 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:20,854 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:20,857 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:22,508 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:22,508 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:23,323 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:23,324 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:23,850 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:23,851 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:24,009 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:24,010 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:24,183 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:24,183 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:24,315 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:24,315 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:24,445 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:24,446 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:24,581 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:24,582 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:24,693 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:24,693 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:24,825 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:24,825 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:24,947 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:24,947 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:25,731 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:25,731 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:25,906 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:25,906 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:26,045 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:26,045 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:26,174 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:26,175 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:27:26,297 - ERROR - ai-code-assessment - Error loading questions from CSV: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/services/question_loader_service.py", line 24, in load_questions_from_csv
+    df = pd.read_csv(file_path)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 626, in _read
+    return parser.read(nrows)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/readers.py", line 1923, in read
+    ) = self._engine.read(  # type: ignore[attr-defined]
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/pandas/io/parsers/c_parser_wrapper.py", line 234, in read
+    chunks = self._reader.read_low_memory(nrows)
+  File "parsers.pyx", line 838, in pandas._libs.parsers.TextReader.read_low_memory
+  File "parsers.pyx", line 905, in pandas._libs.parsers.TextReader._read_rows
+  File "parsers.pyx", line 874, in pandas._libs.parsers.TextReader._tokenize_rows
+  File "parsers.pyx", line 891, in pandas._libs.parsers.TextReader._check_tokenize_status
+  File "parsers.pyx", line 2061, in pandas._libs.parsers.raise_parser_error
+pandas.errors.ParserError: Error tokenizing data. C error: Expected 7 fields in line 21, saw 8
+
+2025-06-23 17:27:26,297 - ERROR - ai-code-assessment - No questions available
+2025-06-23 17:31:28,594 - ERROR - ai-code-assessment - Row 84: JSON parse error - Expecting ':' delimiter: line 3 column 13 (char 71)
+2025-06-23 17:31:28,595 - ERROR - ai-code-assessment - Problematic JSON: [{
+    "input": "Titles = [apple, banana, cherry], k = 2",
+    "output"": "banana",
+    "explanation": "Sorted titles: ['apple', 'banana', 'cherry']. The 2nd smallest title is 'banana'."
+  }, {
+    "i...
+2025-06-23 17:31:28,595 - ERROR - ai-code-assessment - Row 114: JSON parse error - Expecting ',' delimiter: line 2 column 45 (char 47)
+2025-06-23 17:31:28,596 - ERROR - ai-code-assessment - Problematic JSON: [{
+    "input": "Give details of products: (\\"Laptop\\", 45000), (\\"Tablet\\", 20000), (\\"Phone\\", 30000), (\\"Mouse\\", 700)]",
+    "output": "Cheapest Product: Mouse - ₹700",
+    "explanation": ...
+2025-06-23 17:31:28,596 - ERROR - ai-code-assessment - Row 116: JSON parse error - Expecting ',' delimiter: line 2 column 18 (char 20)
+2025-06-23 17:31:28,596 - ERROR - ai-code-assessment - Problematic JSON: [{
+    "input": "\\"Alice Johnson\\", \\"Bob Smith\\", \\"Charlie Lee\\"]",
+    "output": "Sorted: Charlie Lee, Alice Johnson, Bob Smith"
+  }]...
+2025-06-23 17:31:28,596 - ERROR - ai-code-assessment - Row 117: JSON parse error - Unterminated string starting at: line 2 column 14 (char 16)
+2025-06-23 17:31:28,596 - ERROR - ai-code-assessment - Problematic JSON: [{
+    "input": "Enter Stock details: \"pen\": 10, \"pencil\": 5, \"eraser\": 0}, {\"pen\": 3, \"eraser\": 1}]...
+2025-06-23 17:31:28,596 - ERROR - ai-code-assessment - Row 141: JSON parse error - Invalid control character at: line 3 column 57 (char 62)
+2025-06-23 17:31:28,596 - ERROR - ai-code-assessment - Problematic JSON: [
+  {
+    "input": "\"abccba\", \"test\", \"1221\", \"hello\",
+    "output": "2 mirrored strings"
+  }
+]...
+2025-06-23 17:31:28,597 - ERROR - ai-code-assessment - Row 148: JSON parse error - Unterminated string starting at: line 2 column 14 (char 16)
+2025-06-23 17:31:28,597 - ERROR - ai-code-assessment - Problematic JSON: [{
+    "input": "He is very quick and smart\", Replacements: { \"quick\": \"fast\", \"smart\": \"intelligent\" }]...
+2025-06-23 17:31:28,597 - ERROR - ai-code-assessment - Row 165: JSON parse error - Unterminated string starting at: line 2 column 14 (char 16)
+2025-06-23 17:31:28,597 - ERROR - ai-code-assessment - Problematic JSON: [{
+    "input": "Projects : P1: \"Active\", P2: \"Pending\"}, {P2: \"Active\", P1: \"Closed\"}, {P1: \"Closed\", P2: \"Active\"}]...
+2025-06-23 17:31:28,599 - ERROR - ai-code-assessment - Row 219: JSON parse error - Unterminated string starting at: line 2 column 14 (char 16)
+2025-06-23 17:31:28,599 - ERROR - ai-code-assessment - Problematic JSON: [{
+    "input": "items = \"sword\": 150, \"shield\": 100, \"potion\": 50}]...
+2025-06-23 17:31:28,599 - ERROR - ai-code-assessment - Row 221: JSON parse error - Unterminated string starting at: line 2 column 14 (char 16)
+2025-06-23 17:31:28,599 - ERROR - ai-code-assessment - Problematic JSON: [{
+    "input": "dictionary = \"arcane\", \"mystic\", \"alchemy\"}]...
+2025-06-23 17:31:28,599 - ERROR - ai-code-assessment - Row 222: JSON parse error - Unterminated string starting at: line 2 column 14 (char 16)
+2025-06-23 17:31:28,599 - ERROR - ai-code-assessment - Problematic JSON: [{
+    "input": "\"fire\": 12, \"water\": 7, \"earth\": 20, \"air\": 15}]...
+2025-06-23 17:40:32,424 - ERROR - ai-code-assessment - Unhandled Exception: name 'logger' is not defined
+Traceback (most recent call last):
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/routers/ai_code_assessment_routers.py", line 30, in evaluate_code
+    formatted_feedback = format_feedback_for_display(result.feedback)
+NameError: name 'format_feedback_for_display' is not defined. Did you mean: 'format_failure_feedback_for_display'?
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/middleware/exceptions.py", line 62, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/routing.py", line 758, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/routing.py", line 778, in app
+    await route.handle(scope, receive, send)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/routing.py", line 299, in handle
+    await self.app(scope, receive, send)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/routing.py", line 79, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 64, in wrapped_app
+    raise exc
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/starlette/routing.py", line 74, in app
+    response = await func(request)
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/fastapi/routing.py", line 278, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/nitish/opt/anaconda3/envs/myenv/lib/python3.10/site-packages/fastapi/routing.py", line 191, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/nitish/Downloads/AICodeAssessment/AICodeAssessment/Backend/routers/ai_code_assessment_routers.py", line 49, in evaluate_code
+    logger.error(f"Unexpected error in evaluate_code: {e}", exc_info=True)
+NameError: name 'logger' is not defined
+2025-06-23 18:39:17,691 - ERROR - ai-code-assessment - HTTP error while evaluating code: 400 - {"error":"some attributes for this submission cannot be converted to UTF-8, use base64_encoded=true query parameter"}
+2025-06-23 18:44:31,941 - ERROR - ai-code-assessment - HTTP error while evaluating code: 400 - {"error":"some attributes for this submission cannot be converted to UTF-8, use base64_encoded=true query parameter"}
+2025-06-23 18:45:31,284 - ERROR - ai-code-assessment - HTTP error while evaluating code: 400 - {"error":"some attributes for this submission cannot be converted to UTF-8, use base64_encoded=true query parameter"}

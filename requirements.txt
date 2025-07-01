@@ -4,3 +4,11 @@ httpx
 pydantic
 streamlit
 python-dotenv
+transformers
+accelerate
+torch
+orjson
+bitsandbytes
+langchain
+sentencepiece
+google.generativeai

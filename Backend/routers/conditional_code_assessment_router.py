@@ -1,12 +1,12 @@
 from fastapi import APIRouter, HTTPException
 from ..models.code_evaluation_model import CodeSubmission
-from ..services import conditional_skilltest_service as service
+from ..services import load_and_evaluation_service as service
 
 router = APIRouter(prefix="/conditional-code-assessment", tags=["Conditional Code Assessment"])
 
 @router.get("/conditional-question")
-def get_question(difficulty: str = "Easy"):
-    q = service.get_random_question(difficulty)
+async def get_question(difficulty: str = "Easy"):
+    q = await service.get_random_question(difficulty)
     if not q:
         raise HTTPException(status_code=404, detail="No question found")
     return q

@@ -1,14 +1,16 @@
 from pydantic import BaseModel
-from typing import List
+from typing import List, Optional
+
 # This module defines the data models used for code evaluation and submission.
 
 class Example(BaseModel):
     # This class represents an example input/output pair for a question
     input: str
     output: str
+    explanation: Optional[str] = None
 
     def __str__(self):
-        return f"Input: {self.input}, Output: {self.output}"
+        return f"Input: {self.input}, Output: {self.output},Explanation: {self.explanation}"
 
 class Question(BaseModel):
     id: int
@@ -33,3 +35,4 @@ class EvaluationResult(BaseModel):
     expected: str
     actual: str
     status: str
+    feedback: Optional[dict] = None
