@@ -5,7 +5,6 @@ from .routers import (
 from .exception_handler import add_exception_handlers
 from dotenv import load_dotenv
 import os
-
 load_dotenv()
 # This module initializes the FastAPI application and includes the interview router.
 
