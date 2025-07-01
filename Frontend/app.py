@@ -6,7 +6,7 @@ import json
 from typing import Dict, Any
 import time
 
-API_URL = "http://localhost:8000/code-assessment"
+API_URL = st.secrets.get("API_URL", "http://localhost:8000/code-assessment")
 
 st.set_page_config(
     page_title="AI Code Assessment - Dynamic Questions", 
