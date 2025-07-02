@@ -1,4 +1,6 @@
 from fastapi import FastAPI
+import asyncio
+import httpx
 from routers import (
     ai_code_assessment_routers as evaluation,
     conditional_code_assessment_router as conditional_evaluation
@@ -26,3 +28,22 @@ async def root():
 @app.get("/healthz")
 async def health_check():
     return {"status": "ok"}
+
+@app.get("/healthz")
+async def health_check():
+    return {"status": "ok"}
+
+async def self_ping_task():
+    await asyncio.sleep(60)  # initial delay
+    url = "https://aicodeassessment-backend.onrender.com/healthz"
+    while True:
+        try:
+            async with httpx.AsyncClient() as client:
+                await client.get(url, timeout=5)
+        except Exception:
+            pass
+        await asyncio.sleep(600)  # ping every 10 minutes
+
+@app.on_event("startup")
+async def start_self_ping():
+    asyncio.create_task(self_ping_task())
