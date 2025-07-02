@@ -1,7 +1,7 @@
-from Backend.models.code_evaluation_model import CodeSubmission, EvaluationResult
-from Backend.services.question_loader_service import load_all_questions
-from Backend.services.solution_evaluation_service import evaluate_code
-from Backend.logging_config import logger
+from models.code_evaluation_model import CodeSubmission, EvaluationResult
+from services.question_loader_service import load_all_questions
+from services.solution_evaluation_service import evaluate_code
+from logging_config import logger
 
 async def get_random_question(difficulty: str):
     all_questions = await load_all_questions()

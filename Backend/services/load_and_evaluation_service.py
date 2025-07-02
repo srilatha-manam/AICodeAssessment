@@ -1,22 +1,22 @@
 # load_and_evaluation_service.py
 
 from typing import List, Optional
-from Backend.models.code_evaluation_model import Question, Example, CodeSubmission, EvaluationResult
-from Backend.services.feedback_generation_service import (
+from models.code_evaluation_model import Question, Example, CodeSubmission, EvaluationResult
+from services.feedback_generation_service import (
     generate_feedback_for_success, 
     generate_feedback_for_failure,
     format_failure_feedback_for_display,
     get_language_name
 )
-from Backend.services.solution_evaluation_service import evaluate_code
-from Backend.services.question_loader_service import (
+from services.solution_evaluation_service import evaluate_code
+from services.question_loader_service import (
     load_questions_from_csv,
     get_question_by_id as csv_get_question_by_id,
     get_random_question as csv_get_random_question,
     get_questions_by_difficulty as csv_get_questions_by_difficulty,
     get_all_questions as csv_get_all_questions
 )
-from Backend.logging_config import logger
+from logging_config import logger
 
 # Use CSV-based question loading functions
 async def get_random_question(difficulty: Optional[str] = None) -> Optional[Question]:
