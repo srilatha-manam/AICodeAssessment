@@ -19,3 +19,10 @@ app.include_router(evaluation.router)
 app.include_router(conditional_evaluation.router)
 
 add_exception_handlers(app)
+
+@app.get("/")
+async def root():
+    return {"status": "Backend live", "message": "AI Code Assessment running"}
+@app.get("/healthz")
+async def health_check():
+    return {"status": "ok"}

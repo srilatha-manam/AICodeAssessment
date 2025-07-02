@@ -1880,3 +1880,4 @@ NameError: name 'logger' is not defined
 2025-06-23 18:39:17,691 - ERROR - ai-code-assessment - HTTP error while evaluating code: 400 - {"error":"some attributes for this submission cannot be converted to UTF-8, use base64_encoded=true query parameter"}
 2025-06-23 18:44:31,941 - ERROR - ai-code-assessment - HTTP error while evaluating code: 400 - {"error":"some attributes for this submission cannot be converted to UTF-8, use base64_encoded=true query parameter"}
 2025-06-23 18:45:31,284 - ERROR - ai-code-assessment - HTTP error while evaluating code: 400 - {"error":"some attributes for this submission cannot be converted to UTF-8, use base64_encoded=true query parameter"}
+2025-07-02 12:16:55,769 - ERROR - ai-code-assessment - Timeout error while evaluating code: 
