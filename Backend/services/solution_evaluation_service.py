@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 import httpx
-from ..logging_config import logger
+from Backend.logging_config import logger
 import os
 import json
 

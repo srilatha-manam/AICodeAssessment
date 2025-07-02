@@ -7,8 +7,8 @@ import csv
 import re
 import random
 from typing import List, Optional
-from ..models.code_evaluation_model import Question, Example
-from ..logging_config import logger
+from Backend.models.code_evaluation_model import Question, Example
+from Backend.logging_config import logger
 
 CSV_FILE_PATH = "Backend/data/formatted_problems.csv"
 

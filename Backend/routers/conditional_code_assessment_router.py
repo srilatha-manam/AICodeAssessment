@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
-from ..models.code_evaluation_model import CodeSubmission
-from ..services import load_and_evaluation_service as service
+from Backend.models.code_evaluation_model import CodeSubmission
+from Backend.services import load_and_evaluation_service as service
 
 router = APIRouter(prefix="/conditional-code-assessment", tags=["Conditional Code Assessment"])
 

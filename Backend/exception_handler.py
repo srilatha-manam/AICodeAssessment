@@ -1,6 +1,6 @@
 from fastapi import Request, FastAPI
 from fastapi.responses import JSONResponse
-from .logging_config import logger
+from Backend.logging_config import logger
 
 # Define a function to add exception handlers to a FastAPI app
 def add_exception_handlers(app: FastAPI):

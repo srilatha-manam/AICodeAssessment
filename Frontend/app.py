@@ -6,8 +6,8 @@ import json
 from typing import Dict, Any
 import time
 
-API_URL = st.secrets.get("API_URL", "http://localhost:8000/code-assessment")
-
+#API_URL = "http://localhost:8000/code-assessment"
+API_URL = st.secrets["API_URL"]
 st.set_page_config(
     page_title="AI Code Assessment - Dynamic Questions", 
     layout="wide",
@@ -142,7 +142,7 @@ with st.sidebar:
             with st.spinner("🤖 AI is creating a unique question..."):               
                 
                 start_time = time.time()
-                response = requests.get(f"{API_URL}/question", timeout=45)
+                response = requests.get(f"{API_URL}/question", timeout=90)
                 generation_time = time.time() - start_time                
                 response.raise_for_status()
                 question_data = response.json()                
