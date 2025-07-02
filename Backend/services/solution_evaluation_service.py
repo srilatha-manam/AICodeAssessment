@@ -12,7 +12,8 @@ import json
 JUDGE0_URL = "https://judge0-ce.p.rapidapi.com/submissions?base64_encoded=false&wait=true"
 HEADERS = {
     "X-RapidAPI-Host": os.getenv("JUDGE0_API_HOST"),
-    "X-RapidAPI-Key": os.getenv("JUDGE0_API_KEY")
+    "X-RapidAPI-Key": os.getenv("JUDGE0_API_KEY"),
+    "Content-Type": "application/json"
 }
 
 async def evaluate_code(code: str, language_id: int, stdin: str) -> dict:
