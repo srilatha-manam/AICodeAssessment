@@ -1,9 +1,9 @@
 from fastapi import FastAPI
-from Backend.routers import (
+from routers import (
     ai_code_assessment_routers as evaluation,
     conditional_code_assessment_router as conditional_evaluation
 )
-from Backend.exception_handler import add_exception_handlers
+from exception_handler import add_exception_handlers
 
 from dotenv import load_dotenv
 import os

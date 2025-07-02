@@ -1,9 +1,9 @@
 # Backend/routers/ai_code_assessment_routers.py - Simplified dynamic generation
 
 from fastapi import APIRouter, HTTPException, Query
-from Backend.models.code_evaluation_model import CodeSubmission
-from Backend.services import load_and_evaluation_service as interview_service
-from Backend.logging_config import logger
+from models.code_evaluation_model import CodeSubmission
+from services import load_and_evaluation_service as interview_service
+from logging_config import logger
 
 router = APIRouter(
     prefix="/code-assessment",

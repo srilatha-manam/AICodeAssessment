@@ -7,10 +7,10 @@ import csv
 import re
 import random
 from typing import List, Optional
-from Backend.models.code_evaluation_model import Question, Example
-from Backend.logging_config import logger
+from models.code_evaluation_model import Question, Example
+from logging_config import logger
 
-CSV_FILE_PATH = "Backend/data/formatted_problems.csv"
+CSV_FILE_PATH = "data/formatted_problems.csv"
 
 def repair_json_string(json_str: str) -> str:
     """
