@@ -131,11 +131,11 @@ async def reset_generation_history():
 def format_success_feedback(feedback_data: dict) -> str:
     """Format success feedback for display"""
     # Import the updated function from feedback service
-    from ..services.feedback_generation_service import format_feedback_for_display
+    from services.feedback_generation_service import format_feedback_for_display
     return format_feedback_for_display(feedback_data)
 
 def format_failure_feedback(feedback_data: dict) -> str:
     """Format failure feedback for display"""
     # Import the updated function from feedback service
-    from ..services.feedback_generation_service import format_failure_feedback_for_display
+    from services.feedback_generation_service import format_failure_feedback_for_display
     return format_failure_feedback_for_display(feedback_data)
