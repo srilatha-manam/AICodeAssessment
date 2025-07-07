@@ -3,6 +3,7 @@
 from fastapi import APIRouter, HTTPException, Query
 from models.code_evaluation_model import CodeSubmission
 from services import load_and_evaluation_service as interview_service
+from services import code_assessment_service
 from logging_config import logger
 
 router = APIRouter(
@@ -46,7 +47,9 @@ async def get_question(difficulty: str = Query(None, description="Question diffi
 async def evaluate_code(submission: CodeSubmission):
     """Evaluate submitted code with AI feedback"""
     try:       
-        result = await interview_service.evaluate_submission(submission)
+        print("contoller is called")
+        #result = await interview_service.evaluate_submission(submission)
+        result= await code_assessment_service.evaluate_submission(submission)
         
         # Format feedback for better display
         formatted_feedback = None

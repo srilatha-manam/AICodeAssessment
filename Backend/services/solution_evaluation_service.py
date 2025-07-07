@@ -73,6 +73,12 @@ def validate_and_clean_judge0_response(response: dict) -> dict:
                 "id": response.get("status", {}).get("id", 0) if response.get("status") else 0,
                 "description": response.get("status", {}).get("description", "Unknown") if response.get("status") else "Unknown"
             },
+            "language_id": response.get("language_id"),
+            "stdin": response.get("stdin", ""),
+            "source_code": response.get("source_code", ""),
+            "expected_output": response.get("expected_output", ""),
+            "cpu_time_limit": response.get("cpu_time_limit"),
+            "memory_limit": response.get("memory_limit"),
             "time": response.get("time") or "0",
             "memory": response.get("memory") or 0
         }
