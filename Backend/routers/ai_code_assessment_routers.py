@@ -47,7 +47,7 @@ async def get_question(difficulty: str = Query(None, description="Question diffi
 async def evaluate_code(submission: CodeSubmission):
     """Evaluate submitted code with AI feedback"""
     try:       
-        print("contoller is called")
+        print("contoller is called",flush=True)
         #result = await interview_service.evaluate_submission(submission)
         result= await code_assessment_service.evaluate_submission(submission)
         
@@ -66,7 +66,8 @@ async def evaluate_code(submission: CodeSubmission):
             "status": result.status,
             "feedback": result.feedback,
             "formatted_feedback": formatted_feedback,
-            "has_ai_feedback": result.feedback is not None
+            "has_ai_feedback": result.feedback is not None,
+            "judge0_response": result.full_judge_response
         }
         
     except ValueError as e:

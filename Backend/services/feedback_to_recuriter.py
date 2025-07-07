@@ -79,7 +79,7 @@ async def generate_recruiter_feedback(
             "changes_over_attempts": attempts
         },
         "comparison_with_peers": ai_feedback["peer_comparison"],
-        "ai_observations": ai_feedback["ai_observations"],
+        "observations": ai_feedback["ai_observations"],
         "improvement_suggestions": ai_feedback["improvement_suggestions"],
         "strengths": ai_feedback["strengths"],
         "areas_of_concern": ai_feedback["areas_of_concern"],

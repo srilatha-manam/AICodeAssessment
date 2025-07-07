@@ -9,10 +9,13 @@ import os
 import json
 
 # Judge0 API URL and headers for authentication
-JUDGE0_URL = "https://judge0-ce.p.rapidapi.com/submissions?base64_encoded=false&wait=true"
+JUDGE0_URL = os.getenv("JUDGE0_API_URL")
+JUDGE0_API_HOST = os.getenv("JUDGE0_API_HOST")
+JUDGE0_API_KEY = os.getenv("JUDGE0_API_KEY")
+
 HEADERS = {
-    "X-RapidAPI-Host": os.getenv("JUDGE0_API_HOST"),
-    "X-RapidAPI-Key": os.getenv("JUDGE0_API_KEY"),
+    "X-RapidAPI-Host": JUDGE0_API_HOST,
+    "X-RapidAPI-Key": JUDGE0_API_KEY,
     "Content-Type": "application/json"
 }
 

@@ -45,7 +45,7 @@ async def evaluate_submission(submission: CodeSubmission) -> EvaluationResult:
     """
     Enhanced evaluation that generates AI feedback for both success and failure cases
     """
-    try:
+    try:      
         # Get the question details
         question = await get_question_by_id(submission.question_id)
         if not question:

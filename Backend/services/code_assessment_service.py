@@ -44,8 +44,9 @@ def get_language_name(language_id: int) -> str:
 # Define an asynchronous function to evaluate a code submission
 async def evaluate_submission(submission: CodeSubmission) -> EvaluationResult:
     try:
-        print("evaluating submission")
+        print("evaluating submission", flush=True)
         question = await get_question_by_id(submission.question_id)
+        print("question is loaded", flush=True)
         if not question:
             raise ValueError(f"Question with ID {submission.question_id} not found")
 
