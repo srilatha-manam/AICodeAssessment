@@ -3,11 +3,13 @@
 import os
 import google.generativeai as genai
 import logging
+import json
+from dotenv import load_dotenv
+load_dotenv()
 
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "AIzaSyA2yG9LDl-UnfWv7B1UnsjXPXoa8Qk-3_s")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "fallback_if_missing")
 genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel('gemini-1.5-flash')
-
 logger = logging.getLogger(__name__)
 
 def build_prompt_for_feedback(code, question_description, language, judge_result, expected_outputs, actual_output) -> str:
@@ -22,6 +24,7 @@ You are a technical interviewer assessing a coding solution.
 **Language Used**: {language}
 
 **Submitted Code**:
+{code}
 
 **Expected Outputs**:
 {expected_outputs}
@@ -61,17 +64,31 @@ async def generate_feedback_with_gemini(code, question_description, language, ju
             expected_outputs=expected_outputs,
             actual_output=actual_output
         )
+
         logger.info("Sending prompt to Gemini model for feedback...")
         response = model.generate_content(prompt)
 
-        if not response.candidates:
-            logger.error("Gemini returned no candidates.")
+        if not response or not response.candidates or not response.candidates[0].content.parts:
+            logger.error("Gemini response is empty or missing required parts.")
             return {}
 
-        text = response.candidates[0].content.parts[0].text
-        import json
-        return json.loads(text)
+        text = response.candidates[0].content.parts[0].text.strip()
+
+        # ✅ Strip markdown-style formatting
+        if text.startswith("```json"):
+            text = text[len("```json"):].strip()
+        if text.endswith("```"):
+            text = text[:-3].strip()
+
+        logger.debug(f"Cleaned Gemini text:\n{text}")
+
+        # ✅ Safely parse JSON
+        try:
+            return json.loads(text)
+        except json.JSONDecodeError as e:
+            logger.error(f"Failed to parse Gemini output: {e}\nText was:\n{text}")
+            return {}
 
     except Exception as e:
-        logger.error(f"Gemini feedback generation failed: {e}")
-        raise  
+        logger.error(f"Gemini feedback generation failed: {e}", exc_info=True)
+        return {}

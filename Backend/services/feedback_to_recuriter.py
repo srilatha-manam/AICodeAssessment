@@ -77,8 +77,7 @@ async def generate_recruiter_feedback(
             "attempts_made": len(attempts),
             "approach_used": ai_feedback["approach_summary"],
             "changes_over_attempts": attempts
-        },
-        "comparison_with_peers": ai_feedback["peer_comparison"],
+        },        
         "observations": ai_feedback["ai_observations"],
         "improvement_suggestions": ai_feedback["improvement_suggestions"],
         "strengths": ai_feedback["strengths"],

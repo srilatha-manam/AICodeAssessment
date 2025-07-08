@@ -64,8 +64,7 @@ async def evaluate_code(submission: CodeSubmission):
             "expected": result.expected,
             "actual": result.actual,
             "status": result.status,
-            "feedback": result.feedback,
-            "formatted_feedback": formatted_feedback,
+            "feedback": result.feedback,           
             "has_ai_feedback": result.feedback is not None,
             "judge0_response": result.full_judge_response
         }

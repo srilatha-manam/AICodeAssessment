@@ -2568,3 +2568,71 @@ AttributeError: 'NoneType' object has no attribute 'encode'
 2025-07-07 19:08:58,239 - ERROR - ai-code-assessment - Code execution error: Expecting value: line 1 column 1 (char 0)
 2025-07-07 19:08:58,239 - ERROR - ai-code-assessment - Evaluation failed: Expecting value: line 1 column 1 (char 0)
 2025-07-07 19:08:58,240 - ERROR - ai-code-assessment - Validation error in evaluate_code: Expecting value: line 1 column 1 (char 0)
+2025-07-08 09:58:53,088 - ERROR - services.gemini_feedback_template_service - Gemini feedback generation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-08 09:58:53,088 - ERROR - ai-code-assessment - Code execution error: Expecting value: line 1 column 1 (char 0)
+2025-07-08 09:58:53,088 - ERROR - ai-code-assessment - Evaluation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-08 09:58:53,089 - ERROR - ai-code-assessment - Validation error in evaluate_code: Expecting value: line 1 column 1 (char 0)
+2025-07-08 10:07:49,546 - ERROR - services.gemini_feedback_template_service - Gemini feedback generation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-08 10:07:49,547 - ERROR - ai-code-assessment - Code execution error: Expecting value: line 1 column 1 (char 0)
+2025-07-08 10:07:49,547 - ERROR - ai-code-assessment - Evaluation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-08 10:07:49,549 - ERROR - ai-code-assessment - Validation error in evaluate_code: Expecting value: line 1 column 1 (char 0)
+2025-07-08 10:13:06,269 - ERROR - services.gemini_feedback_template_service - Gemini feedback generation failed: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\gemini_feedback_template_service.py", line 68, in generate_feedback_with_gemini
+    response = model.generate_content(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\generativeai\generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 835, in generate_content
+    response = rpc(
+               ^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_unary.py", line 293, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_unary.py", line 153, in retry_target
+    _retry_error_helper(
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_base.py", line 212, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_unary.py", line 144, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.InvalidArgument: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+2025-07-08 10:13:06,283 - ERROR - ai-code-assessment - Code execution error: 'problem_solving_score'
+2025-07-08 10:13:06,283 - ERROR - ai-code-assessment - Evaluation failed: 'problem_solving_score'
+2025-07-08 10:13:06,283 - ERROR - ai-code-assessment - Unexpected error in evaluate_code: 'problem_solving_score'
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\routers\ai_code_assessment_routers.py", line 52, in evaluate_code
+    result= await code_assessment_service.evaluate_submission(submission)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\code_assessment_service.py", line 99, in evaluate_submission
+    feedback = await generate_recruiter_feedback(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\feedback_to_recuriter.py", line 52, in generate_recruiter_feedback
+    "problem_solving_score_out_of_100": ai_feedback["problem_solving_score"],
+                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'problem_solving_score'
