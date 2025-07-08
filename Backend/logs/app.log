@@ -1881,3 +1881,758 @@ NameError: name 'logger' is not defined
 2025-06-23 18:44:31,941 - ERROR - ai-code-assessment - HTTP error while evaluating code: 400 - {"error":"some attributes for this submission cannot be converted to UTF-8, use base64_encoded=true query parameter"}
 2025-06-23 18:45:31,284 - ERROR - ai-code-assessment - HTTP error while evaluating code: 400 - {"error":"some attributes for this submission cannot be converted to UTF-8, use base64_encoded=true query parameter"}
 2025-07-02 12:16:55,769 - ERROR - ai-code-assessment - Timeout error while evaluating code: 
+2025-07-07 15:21:35,371 - CRITICAL - ai-code-assessment - Unexpected error in evaluate_code: 'NoneType' object has no attribute 'encode'
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 35, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1848, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1517, in request
+    request = self.build_request(
+              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 347, in build_request
+    headers = self._merge_headers(headers)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 414, in _merge_headers
+    merged_headers.update(headers)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 200, in update
+    headers = Headers(headers)
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 71, in __init__
+    self._list = [
+                 ^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 75, in <listcomp>
+    normalize_header_value(v, encoding),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_utils.py", line 53, in normalize_header_value
+    return value.encode(encoding or "ascii")
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+2025-07-07 16:15:07,473 - CRITICAL - ai-code-assessment - Unexpected error in evaluate_code: 'NoneType' object has no attribute 'encode'
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 35, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1848, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1517, in request
+    request = self.build_request(
+              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 347, in build_request
+    headers = self._merge_headers(headers)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 414, in _merge_headers
+    merged_headers.update(headers)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 200, in update
+    headers = Headers(headers)
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 71, in __init__
+    self._list = [
+                 ^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 75, in <listcomp>
+    normalize_header_value(v, encoding),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_utils.py", line 53, in normalize_header_value
+    return value.encode(encoding or "ascii")
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+2025-07-07 17:02:52,867 - ERROR - ai-code-assessment - Unexpected error in evaluate_code: module 'services.code_assessment_service' has no attribute 'evaluate_submission'
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\routers\ai_code_assessment_routers.py", line 51, in evaluate_code
+    result= await code_assessment_service.evaluate_submission(submission)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'services.code_assessment_service' has no attribute 'evaluate_submission'
+2025-07-07 17:05:32,024 - CRITICAL - ai-code-assessment - Unexpected error in evaluate_code: 'NoneType' object has no attribute 'encode'
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 35, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1848, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1517, in request
+    request = self.build_request(
+              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 347, in build_request
+    headers = self._merge_headers(headers)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 414, in _merge_headers
+    merged_headers.update(headers)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 200, in update
+    headers = Headers(headers)
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 71, in __init__
+    self._list = [
+                 ^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 75, in <listcomp>
+    normalize_header_value(v, encoding),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_utils.py", line 53, in normalize_header_value
+    return value.encode(encoding or "ascii")
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+2025-07-07 17:05:32,026 - ERROR - ai-code-assessment - Code execution error: 'CodeSubmission' object has no attribute 'time_taken'
+2025-07-07 17:05:32,026 - ERROR - ai-code-assessment - Evaluation failed: 'CodeSubmission' object has no attribute 'time_taken'
+2025-07-07 17:05:32,026 - ERROR - ai-code-assessment - Unexpected error in evaluate_code: 'CodeSubmission' object has no attribute 'time_taken'
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\routers\ai_code_assessment_routers.py", line 51, in evaluate_code
+    result= await code_assessment_service.evaluate_submission(submission)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\code_assessment_service.py", line 99, in evaluate_submission
+    time_taken=submission.time_taken or "Not Tracked",
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'CodeSubmission' object has no attribute 'time_taken'
+2025-07-07 17:18:35,569 - CRITICAL - ai-code-assessment - Unexpected error in evaluate_code: 'NoneType' object has no attribute 'encode'
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 35, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1848, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1517, in request
+    request = self.build_request(
+              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 347, in build_request
+    headers = self._merge_headers(headers)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 414, in _merge_headers
+    merged_headers.update(headers)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 200, in update
+    headers = Headers(headers)
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 71, in __init__
+    self._list = [
+                 ^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 75, in <listcomp>
+    normalize_header_value(v, encoding),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_utils.py", line 53, in normalize_header_value
+    return value.encode(encoding or "ascii")
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+2025-07-07 17:18:35,582 - ERROR - ai-code-assessment - Code execution error: 'CodeSubmission' object has no attribute 'time_taken'
+2025-07-07 17:18:35,582 - ERROR - ai-code-assessment - Evaluation failed: 'CodeSubmission' object has no attribute 'time_taken'
+2025-07-07 17:18:35,582 - ERROR - ai-code-assessment - Unexpected error in evaluate_code: 'CodeSubmission' object has no attribute 'time_taken'
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\routers\ai_code_assessment_routers.py", line 51, in evaluate_code
+    result= await code_assessment_service.evaluate_submission(submission)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\code_assessment_service.py", line 99, in evaluate_submission
+    time_taken=submission.time_taken or "Not Tracked",
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\pydantic\main.py", line 991, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'CodeSubmission' object has no attribute 'time_taken'
+2025-07-07 17:20:05,525 - CRITICAL - ai-code-assessment - Unexpected error in evaluate_code: 'NoneType' object has no attribute 'encode'
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 35, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1848, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1517, in request
+    request = self.build_request(
+              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 347, in build_request
+    headers = self._merge_headers(headers)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 414, in _merge_headers
+    merged_headers.update(headers)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 200, in update
+    headers = Headers(headers)
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 71, in __init__
+    self._list = [
+                 ^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 75, in <listcomp>
+    normalize_header_value(v, encoding),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_utils.py", line 53, in normalize_header_value
+    return value.encode(encoding or "ascii")
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+2025-07-07 17:20:10,354 - ERROR - services.gemini_feedback_template_service - Gemini feedback generation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-07 17:54:56,282 - CRITICAL - ai-code-assessment - Unexpected error in evaluate_code: 'NoneType' object has no attribute 'encode'
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 35, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1848, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1517, in request
+    request = self.build_request(
+              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 347, in build_request
+    headers = self._merge_headers(headers)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 414, in _merge_headers
+    merged_headers.update(headers)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 200, in update
+    headers = Headers(headers)
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 71, in __init__
+    self._list = [
+                 ^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 75, in <listcomp>
+    normalize_header_value(v, encoding),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_utils.py", line 53, in normalize_header_value
+    return value.encode(encoding or "ascii")
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+2025-07-07 17:55:00,817 - ERROR - services.gemini_feedback_template_service - Gemini feedback generation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:07:40,842 - CRITICAL - ai-code-assessment - Unexpected error in evaluate_code: 'NoneType' object has no attribute 'encode'
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 35, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1848, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1517, in request
+    request = self.build_request(
+              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 347, in build_request
+    headers = self._merge_headers(headers)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 414, in _merge_headers
+    merged_headers.update(headers)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 200, in update
+    headers = Headers(headers)
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 71, in __init__
+    self._list = [
+                 ^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 75, in <listcomp>
+    normalize_header_value(v, encoding),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_utils.py", line 53, in normalize_header_value
+    return value.encode(encoding or "ascii")
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+2025-07-07 18:07:45,248 - ERROR - services.gemini_feedback_template_service - Gemini feedback generation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:07:45,249 - ERROR - ai-code-assessment - Code execution error: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:07:45,249 - ERROR - ai-code-assessment - Evaluation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:07:45,249 - ERROR - ai-code-assessment - Validation error in evaluate_code: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:09:08,273 - CRITICAL - ai-code-assessment - Unexpected error in evaluate_code: 'NoneType' object has no attribute 'encode'
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 35, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1848, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1517, in request
+    request = self.build_request(
+              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 347, in build_request
+    headers = self._merge_headers(headers)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 414, in _merge_headers
+    merged_headers.update(headers)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 200, in update
+    headers = Headers(headers)
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 71, in __init__
+    self._list = [
+                 ^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 75, in <listcomp>
+    normalize_header_value(v, encoding),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_utils.py", line 53, in normalize_header_value
+    return value.encode(encoding or "ascii")
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+2025-07-07 18:09:12,803 - ERROR - services.gemini_feedback_template_service - Gemini feedback generation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:09:12,803 - ERROR - ai-code-assessment - Code execution error: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:09:12,805 - ERROR - ai-code-assessment - Evaluation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:09:12,805 - ERROR - ai-code-assessment - Validation error in evaluate_code: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:13:25,957 - CRITICAL - ai-code-assessment - Unexpected error in evaluate_code: 'NoneType' object has no attribute 'encode'
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 35, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1848, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1517, in request
+    request = self.build_request(
+              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 347, in build_request
+    headers = self._merge_headers(headers)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 414, in _merge_headers
+    merged_headers.update(headers)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 200, in update
+    headers = Headers(headers)
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 71, in __init__
+    self._list = [
+                 ^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 75, in <listcomp>
+    normalize_header_value(v, encoding),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_utils.py", line 53, in normalize_header_value
+    return value.encode(encoding or "ascii")
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+2025-07-07 18:13:30,329 - ERROR - services.gemini_feedback_template_service - Gemini feedback generation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:13:30,329 - ERROR - ai-code-assessment - Code execution error: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:13:30,329 - ERROR - ai-code-assessment - Evaluation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:13:30,329 - ERROR - ai-code-assessment - Validation error in evaluate_code: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:14:46,620 - CRITICAL - ai-code-assessment - Unexpected error in evaluate_code: 'NoneType' object has no attribute 'encode'
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 35, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1848, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1517, in request
+    request = self.build_request(
+              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 347, in build_request
+    headers = self._merge_headers(headers)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 414, in _merge_headers
+    merged_headers.update(headers)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 200, in update
+    headers = Headers(headers)
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 71, in __init__
+    self._list = [
+                 ^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 75, in <listcomp>
+    normalize_header_value(v, encoding),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_utils.py", line 53, in normalize_header_value
+    return value.encode(encoding or "ascii")
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+2025-07-07 18:14:49,798 - ERROR - services.gemini_feedback_template_service - Gemini feedback generation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:14:49,798 - ERROR - ai-code-assessment - Code execution error: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:14:49,798 - ERROR - ai-code-assessment - Evaluation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:14:49,798 - ERROR - ai-code-assessment - Validation error in evaluate_code: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:15:16,953 - CRITICAL - ai-code-assessment - Unexpected error in evaluate_code: 'NoneType' object has no attribute 'encode'
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 35, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1848, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1517, in request
+    request = self.build_request(
+              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 347, in build_request
+    headers = self._merge_headers(headers)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 414, in _merge_headers
+    merged_headers.update(headers)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 200, in update
+    headers = Headers(headers)
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 71, in __init__
+    self._list = [
+                 ^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 75, in <listcomp>
+    normalize_header_value(v, encoding),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_utils.py", line 53, in normalize_header_value
+    return value.encode(encoding or "ascii")
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+2025-07-07 18:15:21,820 - ERROR - services.gemini_feedback_template_service - Gemini feedback generation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:15:21,827 - ERROR - ai-code-assessment - Code execution error: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:15:21,836 - ERROR - ai-code-assessment - Evaluation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:15:21,852 - ERROR - ai-code-assessment - Validation error in evaluate_code: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:20:39,411 - CRITICAL - ai-code-assessment - Unexpected error in evaluate_code: 'NoneType' object has no attribute 'encode'
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 35, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1848, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1517, in request
+    request = self.build_request(
+              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 347, in build_request
+    headers = self._merge_headers(headers)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 414, in _merge_headers
+    merged_headers.update(headers)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 200, in update
+    headers = Headers(headers)
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 71, in __init__
+    self._list = [
+                 ^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 75, in <listcomp>
+    normalize_header_value(v, encoding),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_utils.py", line 53, in normalize_header_value
+    return value.encode(encoding or "ascii")
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+2025-07-07 18:20:43,898 - ERROR - services.gemini_feedback_template_service - Gemini feedback generation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:20:43,898 - ERROR - ai-code-assessment - Code execution error: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:20:43,898 - ERROR - ai-code-assessment - Evaluation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:20:43,898 - ERROR - ai-code-assessment - Validation error in evaluate_code: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:24:22,360 - CRITICAL - ai-code-assessment - Unexpected error in evaluate_code: 'NoneType' object has no attribute 'encode'
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 35, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1848, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1517, in request
+    request = self.build_request(
+              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 347, in build_request
+    headers = self._merge_headers(headers)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 414, in _merge_headers
+    merged_headers.update(headers)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 200, in update
+    headers = Headers(headers)
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 71, in __init__
+    self._list = [
+                 ^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 75, in <listcomp>
+    normalize_header_value(v, encoding),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_utils.py", line 53, in normalize_header_value
+    return value.encode(encoding or "ascii")
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+2025-07-07 18:24:25,721 - ERROR - services.gemini_feedback_template_service - Gemini feedback generation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:24:25,722 - ERROR - ai-code-assessment - Code execution error: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:24:25,724 - ERROR - ai-code-assessment - Evaluation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:24:25,724 - ERROR - ai-code-assessment - Validation error in evaluate_code: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:28:06,093 - CRITICAL - ai-code-assessment - Unexpected error in evaluate_code: 'NoneType' object has no attribute 'encode'
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 35, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1848, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1517, in request
+    request = self.build_request(
+              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 347, in build_request
+    headers = self._merge_headers(headers)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 414, in _merge_headers
+    merged_headers.update(headers)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 200, in update
+    headers = Headers(headers)
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 71, in __init__
+    self._list = [
+                 ^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 75, in <listcomp>
+    normalize_header_value(v, encoding),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_utils.py", line 53, in normalize_header_value
+    return value.encode(encoding or "ascii")
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+2025-07-07 18:34:12,909 - CRITICAL - ai-code-assessment - Unexpected error in evaluate_code: 'NoneType' object has no attribute 'encode'
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 35, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1848, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1517, in request
+    request = self.build_request(
+              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 347, in build_request
+    headers = self._merge_headers(headers)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 414, in _merge_headers
+    merged_headers.update(headers)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 200, in update
+    headers = Headers(headers)
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 71, in __init__
+    self._list = [
+                 ^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 75, in <listcomp>
+    normalize_header_value(v, encoding),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_utils.py", line 53, in normalize_header_value
+    return value.encode(encoding or "ascii")
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+2025-07-07 18:34:35,884 - CRITICAL - ai-code-assessment - Unexpected error in evaluate_code: 'NoneType' object has no attribute 'encode'
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 35, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1848, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1517, in request
+    request = self.build_request(
+              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 347, in build_request
+    headers = self._merge_headers(headers)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 414, in _merge_headers
+    merged_headers.update(headers)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 200, in update
+    headers = Headers(headers)
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 71, in __init__
+    self._list = [
+                 ^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 75, in <listcomp>
+    normalize_header_value(v, encoding),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_utils.py", line 53, in normalize_header_value
+    return value.encode(encoding or "ascii")
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+2025-07-07 18:38:21,741 - CRITICAL - ai-code-assessment - Unexpected error in evaluate_code: 'NoneType' object has no attribute 'encode'
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 35, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1848, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1517, in request
+    request = self.build_request(
+              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 347, in build_request
+    headers = self._merge_headers(headers)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 414, in _merge_headers
+    merged_headers.update(headers)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 200, in update
+    headers = Headers(headers)
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 71, in __init__
+    self._list = [
+                 ^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 75, in <listcomp>
+    normalize_header_value(v, encoding),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_utils.py", line 53, in normalize_header_value
+    return value.encode(encoding or "ascii")
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+2025-07-07 18:38:46,077 - CRITICAL - ai-code-assessment - Unexpected error in evaluate_code: 'NoneType' object has no attribute 'encode'
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 35, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1848, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1517, in request
+    request = self.build_request(
+              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 347, in build_request
+    headers = self._merge_headers(headers)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 414, in _merge_headers
+    merged_headers.update(headers)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 200, in update
+    headers = Headers(headers)
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 71, in __init__
+    self._list = [
+                 ^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 75, in <listcomp>
+    normalize_header_value(v, encoding),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_utils.py", line 53, in normalize_header_value
+    return value.encode(encoding or "ascii")
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+2025-07-07 18:39:59,738 - CRITICAL - ai-code-assessment - Unexpected error in evaluate_code: 'NoneType' object has no attribute 'encode'
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 35, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1848, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1517, in request
+    request = self.build_request(
+              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 347, in build_request
+    headers = self._merge_headers(headers)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 414, in _merge_headers
+    merged_headers.update(headers)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 200, in update
+    headers = Headers(headers)
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 71, in __init__
+    self._list = [
+                 ^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 75, in <listcomp>
+    normalize_header_value(v, encoding),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_utils.py", line 53, in normalize_header_value
+    return value.encode(encoding or "ascii")
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+2025-07-07 18:40:04,393 - ERROR - services.gemini_feedback_template_service - Gemini feedback generation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:40:04,394 - ERROR - ai-code-assessment - Code execution error: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:40:04,394 - ERROR - ai-code-assessment - Evaluation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:40:04,394 - ERROR - ai-code-assessment - Validation error in evaluate_code: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:42:06,765 - CRITICAL - ai-code-assessment - Unexpected error in evaluate_code: 'NoneType' object has no attribute 'encode'
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 35, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1848, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1517, in request
+    request = self.build_request(
+              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 347, in build_request
+    headers = self._merge_headers(headers)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 414, in _merge_headers
+    merged_headers.update(headers)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 200, in update
+    headers = Headers(headers)
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 71, in __init__
+    self._list = [
+                 ^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 75, in <listcomp>
+    normalize_header_value(v, encoding),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_utils.py", line 53, in normalize_header_value
+    return value.encode(encoding or "ascii")
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+2025-07-07 18:42:11,528 - ERROR - services.gemini_feedback_template_service - Gemini feedback generation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:42:11,529 - ERROR - ai-code-assessment - Code execution error: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:42:11,529 - ERROR - ai-code-assessment - Evaluation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:42:11,529 - ERROR - ai-code-assessment - Validation error in evaluate_code: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:53:02,104 - CRITICAL - ai-code-assessment - Unexpected error in evaluate_code: 'NoneType' object has no attribute 'encode'
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 35, in evaluate_code
+    response = await client.post(JUDGE0_URL, headers=HEADERS, json=payload)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1848, in post
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1517, in request
+    request = self.build_request(
+              ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 347, in build_request
+    headers = self._merge_headers(headers)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 414, in _merge_headers
+    merged_headers.update(headers)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 200, in update
+    headers = Headers(headers)
+              ^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 71, in __init__
+    self._list = [
+                 ^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_models.py", line 75, in <listcomp>
+    normalize_header_value(v, encoding),
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_utils.py", line 53, in normalize_header_value
+    return value.encode(encoding or "ascii")
+           ^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'encode'
+2025-07-07 18:53:06,475 - ERROR - services.gemini_feedback_template_service - Gemini feedback generation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:53:06,475 - ERROR - ai-code-assessment - Code execution error: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:53:06,475 - ERROR - ai-code-assessment - Evaluation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-07 18:53:06,476 - ERROR - ai-code-assessment - Validation error in evaluate_code: Expecting value: line 1 column 1 (char 0)
+2025-07-07 19:08:58,237 - ERROR - services.gemini_feedback_template_service - Gemini feedback generation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-07 19:08:58,239 - ERROR - ai-code-assessment - Code execution error: Expecting value: line 1 column 1 (char 0)
+2025-07-07 19:08:58,239 - ERROR - ai-code-assessment - Evaluation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-07 19:08:58,240 - ERROR - ai-code-assessment - Validation error in evaluate_code: Expecting value: line 1 column 1 (char 0)
+2025-07-08 09:58:53,088 - ERROR - services.gemini_feedback_template_service - Gemini feedback generation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-08 09:58:53,088 - ERROR - ai-code-assessment - Code execution error: Expecting value: line 1 column 1 (char 0)
+2025-07-08 09:58:53,088 - ERROR - ai-code-assessment - Evaluation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-08 09:58:53,089 - ERROR - ai-code-assessment - Validation error in evaluate_code: Expecting value: line 1 column 1 (char 0)
+2025-07-08 10:07:49,546 - ERROR - services.gemini_feedback_template_service - Gemini feedback generation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-08 10:07:49,547 - ERROR - ai-code-assessment - Code execution error: Expecting value: line 1 column 1 (char 0)
+2025-07-08 10:07:49,547 - ERROR - ai-code-assessment - Evaluation failed: Expecting value: line 1 column 1 (char 0)
+2025-07-08 10:07:49,549 - ERROR - ai-code-assessment - Validation error in evaluate_code: Expecting value: line 1 column 1 (char 0)
+2025-07-08 10:13:06,269 - ERROR - services.gemini_feedback_template_service - Gemini feedback generation failed: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\gemini_feedback_template_service.py", line 68, in generate_feedback_with_gemini
+    response = model.generate_content(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\generativeai\generative_models.py", line 331, in generate_content
+    response = self._client.generate_content(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\ai\generativelanguage_v1beta\services\generative_service\client.py", line 835, in generate_content
+    response = rpc(
+               ^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\gapic_v1\method.py", line 131, in __call__
+    return wrapped_func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_unary.py", line 293, in retry_wrapped_func
+    return retry_target(
+           ^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_unary.py", line 153, in retry_target
+    _retry_error_helper(
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_base.py", line 212, in _retry_error_helper
+    raise final_exc from source_exc
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\retry\retry_unary.py", line 144, in retry_target
+    result = target()
+             ^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\timeout.py", line 130, in func_with_timeout
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\google\api_core\grpc_helpers.py", line 78, in error_remapped_callable
+    raise exceptions.from_grpc_error(exc) from exc
+google.api_core.exceptions.InvalidArgument: 400 API key not valid. Please pass a valid API key. [reason: "API_KEY_INVALID"
+domain: "googleapis.com"
+metadata {
+  key: "service"
+  value: "generativelanguage.googleapis.com"
+}
+, locale: "en-US"
+message: "API key not valid. Please pass a valid API key."
+]
+2025-07-08 10:13:06,283 - ERROR - ai-code-assessment - Code execution error: 'problem_solving_score'
+2025-07-08 10:13:06,283 - ERROR - ai-code-assessment - Evaluation failed: 'problem_solving_score'
+2025-07-08 10:13:06,283 - ERROR - ai-code-assessment - Unexpected error in evaluate_code: 'problem_solving_score'
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\routers\ai_code_assessment_routers.py", line 52, in evaluate_code
+    result= await code_assessment_service.evaluate_submission(submission)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\code_assessment_service.py", line 99, in evaluate_submission
+    feedback = await generate_recruiter_feedback(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\feedback_to_recuriter.py", line 52, in generate_recruiter_feedback
+    "problem_solving_score_out_of_100": ai_feedback["problem_solving_score"],
+                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'problem_solving_score'

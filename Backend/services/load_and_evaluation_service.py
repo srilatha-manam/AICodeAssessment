@@ -4,13 +4,11 @@ from typing import List, Optional
 from models.code_evaluation_model import Question, Example, CodeSubmission, EvaluationResult
 from services.feedback_generation_service import (
     generate_feedback_for_success, 
-    generate_feedback_for_failure,
-    format_failure_feedback_for_display,
+    generate_feedback_for_failure,   
     get_language_name
 )
 from services.solution_evaluation_service import evaluate_code
 from services.question_loader_service import (
-    load_questions_from_csv,
     get_question_by_id as csv_get_question_by_id,
     get_random_question as csv_get_random_question,
     get_questions_by_difficulty as csv_get_questions_by_difficulty,
@@ -47,7 +45,7 @@ async def evaluate_submission(submission: CodeSubmission) -> EvaluationResult:
     """
     Enhanced evaluation that generates AI feedback for both success and failure cases
     """
-    try:
+    try:      
         # Get the question details
         question = await get_question_by_id(submission.question_id)
         if not question:

@@ -28,7 +28,7 @@ class CodeSubmission(BaseModel):
     language_id: int
     # The ID of the question the code is submitted for
     question_id: int
-
+   
 class EvaluationResult(BaseModel):
     # This class represents the result of an evaluation
     correct: bool
@@ -36,3 +36,4 @@ class EvaluationResult(BaseModel):
     actual: str
     status: str
     feedback: Optional[dict] = None
+    full_judge_response: Optional[dict] = None
