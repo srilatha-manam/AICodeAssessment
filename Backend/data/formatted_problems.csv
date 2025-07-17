@@ -650,12 +650,12 @@ Given the basket array and the total number of fruit types, determine if the bas
 ]",Easy,
 55,Traffic Flow Analysis,"A city monitors vehicle counts at a checkpoint each hour. To answer queries about total vehicles between specific hours, they need an efficient method. Given a list of hourly vehicle counts and a range of hours, compute the total vehicles in that range.",Number of hours: 1 ≤ n ≤ 10^5; Vehicles per hour: 0 ≤ vehicles ≤ 10^4; Query range: 1 ≤ start ≤ end ≤ n,"[
   {
-    ""input"": ""Vehicles = 100 200 300 400 Range = 1 3"",
+    ""input"": ""100 200 300 400\n1 3"",
     ""output"": ""600"",
     ""explanation"": ""Vehicles from hours 1-3 are 100 + 200 + 300 = 600.""
   },
   {
-    ""input"": ""Vehicles = 50 50 50 Range = 2 3"",
+    ""input"": ""50 50 50\n2 3"",
     ""output"": ""100"",
     ""explanation"": ""Vehicles from hours 2-3 are 50 + 50 = 100.""
   }

@@ -51,9 +51,7 @@ async def generate_recruiter_feedback(
     return {
     "problem_solving_score_out_of_100": ai_feedback.get("problem_solving_score", 0),
     "code_correctness_score_out_of_100": passed / total * 100 if total else 0,
-    "code_quality_score_out_of_100": ai_feedback.get("code_quality_score", 0),
-    "efficiency_score_out_of_100": ai_feedback.get("efficiency_score", 0),
-
+    "code_quality_score_out_of_100": ai_feedback.get("code_quality_score", 0), 
     "language_used": language,
     "language_proficiency_comments": ai_feedback.get("language_proficiency", "Unavailable"),
     "code_readability_feedback": ai_feedback.get("readability", "Unavailable"),
@@ -66,6 +64,11 @@ async def generate_recruiter_feedback(
     "logical_accuracy": logical_accuracy,
     "code_completion_status": ai_feedback.get("completion_status", "Unavailable"),
     "time_taken": time_taken,
+
+    "critical_errors": ai_feedback.get("critical_errors") or ('No critical errors'),
+    "problem_understanding_issues": ai_feedback.get("problem_understanding_issues") or ('No issues'),
+    "language_specific_issues": ai_feedback.get("language_specific_issues") or ('No issues'),
+
     "attempt_summary": {
         "attempts_made": len(attempts),
         "approach_used": ai_feedback.get("approach_summary", "Unavailable"),

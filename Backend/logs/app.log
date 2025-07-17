@@ -4226,3 +4226,137 @@ google.api_core.exceptions.ResourceExhausted: 429 You exceeded your current quot
   seconds: 14
 }
 ]
+2025-07-16 15:14:53,504 - ERROR - ai-code-assessment - Evaluation failed: Question with ID 55 not found
+2025-07-16 15:14:53,528 - ERROR - ai-code-assessment - Validation error in evaluate_code: Question with ID 55 not found
+2025-07-16 19:03:13,433 - ERROR - services.gemini_feedback_template_service - Gemini feedback generation failed: An asyncio.Future, a coroutine or an awaitable is required
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\gemini_feedback_template_service.py", line 89, in generate_feedback_with_gemini
+    response = await rotate_gemini_keys(prompt)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\utils\key_rotator.py", line 85, in rotate_gemini_keys
+    raise e
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\utils\key_rotator.py", line 69, in rotate_gemini_keys
+    response = await asyncio.wait_for(model.generate_content(prompt), timeout=timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\asyncio\tasks.py", line 460, in wait_for
+    fut = ensure_future(fut, loop=loop)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\asyncio\tasks.py", line 649, in ensure_future
+    return _ensure_future(coro_or_future, loop=loop)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\asyncio\tasks.py", line 664, in _ensure_future
+    raise TypeError('An asyncio.Future, a coroutine or an awaitable '
+TypeError: An asyncio.Future, a coroutine or an awaitable is required
+2025-07-16 19:10:07,791 - CRITICAL - ai-code-assessment - Unexpected error in evaluate_code: 
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\streams\tls.py", line 131, in _call_sslobject_method
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\ssl.py", line 921, in read
+    v = self._sslobj.read(len)
+        ^^^^^^^^^^^^^^^^^^^^^^
+ssl.SSLWantReadError: The operation did not complete (read) (_ssl.c:2546)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_backends\anyio.py", line 34, in read
+    return await self._stream.receive(max_bytes=max_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\streams\tls.py", line 196, in receive
+    data = await self._call_sslobject_method(self._ssl_object.read, max_bytes)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\streams\tls.py", line 138, in _call_sslobject_method
+    data = await self.transport_stream.receive()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\_backends\_asyncio.py", line 1203, in receive
+    await self._protocol.read_event.wait()
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\asyncio\locks.py", line 213, in wait
+    await fut
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_exceptions.py", line 10, in map_exceptions
+    yield
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_backends\anyio.py", line 32, in read
+    with anyio.fail_after(timeout):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\anyio\_core\_tasks.py", line 119, in __exit__
+    raise TimeoutError
+TimeoutError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 60, in map_httpcore_exceptions
+    yield
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 353, in handle_async_request
+    resp = await self._pool.handle_async_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 262, in handle_async_request
+    raise exc
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection_pool.py", line 245, in handle_async_request
+    response = await connection.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\connection.py", line 96, in handle_async_request
+    return await self._connection.handle_async_request(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 121, in handle_async_request
+    raise exc
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 99, in handle_async_request
+    ) = await self._receive_response_headers(**kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 164, in _receive_response_headers
+    event = await self._receive_event(timeout=timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_async\http11.py", line 200, in _receive_event
+    data = await self._network_stream.read(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_backends\anyio.py", line 31, in read
+    with map_exceptions(exc_map):
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpcore\_exceptions.py", line 14, in map_exceptions
+    raise to_exc(exc) from exc
+httpcore.ReadTimeout
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 49, in evaluate_code
+    result_response = await client.get(result_url, headers=headers)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1757, in get
+    return await self.request(
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1530, in request
+    return await self.send(request, auth=auth, follow_redirects=follow_redirects)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1617, in send
+    response = await self._send_handling_auth(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1645, in _send_handling_auth
+    response = await self._send_handling_redirects(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1682, in _send_handling_redirects
+    response = await self._send_single_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_client.py", line 1719, in _send_single_request
+    response = await transport.handle_async_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 352, in handle_async_request
+    with map_httpcore_exceptions():
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\contextlib.py", line 155, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "C:\Users\Srilatha\AppData\Local\Programs\Python\Python311\Lib\site-packages\httpx\_transports\default.py", line 77, in map_httpcore_exceptions
+    raise mapped_exc(message) from exc
+httpx.ReadTimeout
+2025-07-16 19:24:14,628 - CRITICAL - ai-code-assessment - Unexpected error in evaluate_code: All Judge0 keys exhausted or invalid.
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\solution_evaluation_service.py", line 31, in evaluate_code
+    submit_result = await rotate_judge0_keys(payload, JUDGE0_API_HOST) #API fallback
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\utils\key_rotator.py", line 47, in rotate_judge0_keys
+    raise Exception("All Judge0 keys exhausted or invalid.")
+Exception: All Judge0 keys exhausted or invalid.

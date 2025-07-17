@@ -1,61 +1,80 @@
-# services/gemini_feedback_template_service.py
-
-import os
-import google.generativeai as genai
 import logging
 import json
 from dotenv import load_dotenv
-load_dotenv()
+from utils.key_rotator import rotate_gemini_keys  
 
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY", "fallback_if_missing")
-genai.configure(api_key=GEMINI_API_KEY)
-model = genai.GenerativeModel('gemini-1.5-flash')
+
+load_dotenv()
 logger = logging.getLogger(__name__)
 
 def build_prompt_for_feedback(code, question_description, language, judge_result, expected_outputs, actual_output) -> str:
+    # This function builds a prompt for feedback on a candidate's code submission
     return f"""
-You are a technical interviewer assessing a coding solution.
+You are a technical interviewer evaluating a candidate’s code submission for a programming challenge.
+
+Please review the provided information below:
 
 ---
 
-**Question Description**:
+**Question Description**:  
 {question_description}
 
-**Language Used**: {language}
+**Language Used**:  
+{language}
 
-**Submitted Code**:
+**Submitted Code**:  
 {code}
 
-**Expected Outputs**:
+**Expected Outputs**:  
 {expected_outputs}
 
-**Actual Output**:
+**Actual Output**:  
 {actual_output}
 
-**Execution Details**:
+**Execution Details** (from code runner / Judge0):  
 {judge_result}
+---
+Your goal is to deeply analyze the candidate's solution and return **honest, structured feedback**.
+
+Please consider the following when evaluating:
+- The **logical correctness** of the approach.
+- Whether the candidate **understood the problem** or misinterpreted key parts.
+- Quality and **readability** of the code structure and syntax, based on the programming language.
+- Use of efficient or inefficient algorithms.
+- Handling of **edge cases**, failure conditions, and completeness.
+- Any **compilation or runtime errors**, and whether they were fixed.
+- Comments or structure suggesting multiple **approaches attempted**.
+- Partial correctness (e.g., only some test cases passed).
+- Any signs of **template reuse** or generic code not tailored to the problem.
 
 ---
 
-Provide a structured JSON response with the following fields (no markdown, only raw JSON object):
-- problem_solving_score (0–100)
-- code_quality_score (0–100)
-- efficiency_score (0–100)
-- readability
-- algorithm_design
-- debugging_and_testing
-- completion_status
-- language_proficiency
-- approach_summary
-- peer_comparison
-- improvement_suggestions
-- strengths
-- areas_of_concern
-- ai_observations
+Return a **raw JSON object only**, with no markdown or formatting. The object must include:
+
+"problem_solving_score": int (0 to 100),         
+  "code_quality_score": int (0 to 100),         
+  "algorithm_design": "string",                    
+  "debugging_and_testing": "string",               
+  "completion_status": "string",                   
+  "language_proficiency": "string",                 
+  "readability": "string",                          
+  "critical_errors": ["string"],                    
+  "problem_understanding_issues": ["string"],       
+  "language_specific_issues": ["string"],           
+  "approach_summary": "string",                    
+  "peer_comparison": "string",                      
+  "improvement_suggestions": ["string"],            
+  "strengths": ["string"],                          
+  "areas_of_concern": ["string"],                   
+  "ai_observations": ["string"]                    
+
 """
 
+#retry added in key rotation function
 async def generate_feedback_with_gemini(code, question_description, language, judge_result, expected_outputs, actual_output) -> dict:
+    # Try to generate feedback using the Gemini model
     try:
+        # Build the prompt for the feedback
         prompt = build_prompt_for_feedback(
             code=code,
             question_description=question_description,
@@ -65,30 +84,42 @@ async def generate_feedback_with_gemini(code, question_description, language, ju
             actual_output=actual_output
         )
 
-        logger.info("Sending prompt to Gemini model for feedback...")
-        response = model.generate_content(prompt)
+        # Log that the prompt is being sent to the Gemini model with key rotation
+        logger.info("Sending prompt to Gemini model with key rotation...")
+        # Send the prompt to the Gemini model and get the response
+        response = await rotate_gemini_keys(prompt)
 
+        # Check if the response is empty or missing required parts
         if not response or not response.candidates or not response.candidates[0].content.parts:
+            # Log an error if the response is empty or missing required parts
             logger.error("Gemini response is empty or missing required parts.")
+            # Return an empty dictionary
             return {}
 
+        # Get the text from the response
         text = response.candidates[0].content.parts[0].text.strip()
 
-        # ✅ Strip markdown-style formatting
+        # Strip markdown-style formatting
         if text.startswith("```json"):
             text = text[len("```json"):].strip()
         if text.endswith("```"):
             text = text[:-3].strip()
 
+        # Log the cleaned Gemini text
         logger.debug(f"Cleaned Gemini text:\n{text}")
 
-        # ✅ Safely parse JSON
+        # Try to parse the text as JSON
         try:
+            # Return the parsed JSON
             return json.loads(text)
+        # Catch any JSONDecodeError and log an error
         except json.JSONDecodeError as e:
             logger.error(f"Failed to parse Gemini output: {e}\nText was:\n{text}")
+            # Return an empty dictionary
             return {}
 
+    # Catch any other exceptions and log an error
     except Exception as e:
         logger.error(f"Gemini feedback generation failed: {e}", exc_info=True)
+        # Return an empty dictionary
         return {}

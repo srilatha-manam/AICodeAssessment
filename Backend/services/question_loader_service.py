@@ -1,5 +1,4 @@
-# question_loader_service.py - Complete version with all required functions
-
+# question_loader_service.py -time out and retry logic not implemented as this is a simple file loading service
 import pandas as pd
 import json
 import os
@@ -62,13 +61,13 @@ def repair_json_string(json_str: str) -> str:
         logger.warning(f"JSON repair failed: {e}")
         return json_str
 
-def extract_examples_safely(json_str: str) -> List[dict]:
+# Extract examples with multiple fallback strategies
+def extract_examples_safely(json_str: str) -> List[dict]: 
     """
     Extract examples with multiple fallback strategies
-    """
-    # Strategy 1: Try parsing as-is
+    """ 
     try:
-        return json.loads(json_str)
+        return json.loads(json_str) # Attempt to parse directly
     except json.JSONDecodeError:
         pass
     
@@ -118,7 +117,7 @@ def extract_examples_safely(json_str: str) -> List[dict]:
         "output": "No output available", 
         "explanation": "Failed to parse examples from data"
     }]
-
+# Load questions from CSV file and convert to Question objects
 async def load_questions_from_csv(file_path: str = CSV_FILE_PATH) -> List[Question]:
     """
     Load questions from CSV file and convert to Question objects with robust error handling
@@ -221,17 +220,22 @@ async def get_question_by_id(question_id: int) -> Optional[Question]:
     Get a specific question by its ID from CSV
     """
     try:
+        # Load questions from CSV
         questions = await load_questions_from_csv()
         
+        # Loop through questions
         for question in questions:
+            # If question ID matches, return question
             if question.id == question_id:
                 logger.info(f"Found question {question_id}: {question.title}")
                 return question
         
+        # If question ID not found, log warning and return None
         logger.warning(f"Question with ID {question_id} not found")
         return None
         
     except Exception as e:
+        # Log error if exception occurs
         logger.error(f"Error getting question by ID {question_id}: {e}")
         return None
 
@@ -240,12 +244,15 @@ async def get_random_question(difficulty: Optional[str] = None) -> Optional[Ques
     Get a random question, optionally filtered by difficulty
     """
     try:
+        # Load questions from CSV file
         questions = await load_questions_from_csv()
         
+        # If no questions are available, log an error and return None
         if not questions:
             logger.error("No questions available")
             return None
         
+        # If a difficulty is provided, filter questions by difficulty (case-insensitive)
         if difficulty:
             # Filter by difficulty (case-insensitive)
             filtered_questions = [
@@ -253,6 +260,7 @@ async def get_random_question(difficulty: Optional[str] = None) -> Optional[Ques
                 if q.difficultylevel.lower() == difficulty.lower()
             ]
             
+            # If no questions are found for the provided difficulty, log a warning and return a random question from any difficulty as fallback
             if not filtered_questions:
                 logger.warning(f"No questions found for difficulty: {difficulty}")
                 logger.info(f"Available difficulties: {list(set(q.difficultylevel for q in questions))}")
@@ -261,6 +269,7 @@ async def get_random_question(difficulty: Optional[str] = None) -> Optional[Ques
                 logger.info(f"Returning random question as fallback: {selected_question.title}")
                 return selected_question
             
+            # Set questions to the filtered questions
             questions = filtered_questions
         
         # Select random question
@@ -278,16 +287,20 @@ async def get_questions_by_difficulty(difficulty: str) -> List[Question]:
     Get all questions filtered by difficulty level
     """
     try:
+        # Load all questions from CSV file
         questions = await load_questions_from_csv()
+        # Filter questions by difficulty level
         filtered_questions = [
             q for q in questions 
             if q.difficultylevel.lower() == difficulty.lower()
         ]
         
+        # Log the number of questions found
         logger.info(f"Found {len(filtered_questions)} questions for difficulty: {difficulty}")
         return filtered_questions
         
     except Exception as e:
+        # Log any errors that occur
         logger.error(f"Error getting questions by difficulty: {e}")
         return []
 
@@ -296,11 +309,16 @@ async def get_all_questions() -> List[Question]:
     Get all available questions
     """
     try:
+        # Load all questions from the CSV file
         questions = await load_questions_from_csv()
+        # Log the number of questions retrieved
         logger.info(f"Retrieved all {len(questions)} questions")
+        # Return the list of questions
         return questions
     except Exception as e:
+        # Log any errors that occur
         logger.error(f"Error getting all questions: {e}")
+        # Return an empty list if an error occurs
         return []
 
 def validate_csv_structure(file_path: str = CSV_FILE_PATH) -> bool:
@@ -308,9 +326,12 @@ def validate_csv_structure(file_path: str = CSV_FILE_PATH) -> bool:
     Validate that the CSV has the required columns and proper structure
     """
     try:
+        # Read the CSV file into a DataFrame, skipping any bad lines
         df = pd.read_csv(file_path, on_bad_lines='skip', engine='python')
         
+        # Define the required columns
         required_columns = ['id', 'title', 'description', 'examples', 'difficultylevel']
+        # Check if the required columns are in the DataFrame
         missing_columns = [col for col in required_columns if col not in df.columns]
         
         if missing_columns:

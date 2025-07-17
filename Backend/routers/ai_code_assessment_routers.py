@@ -7,12 +7,12 @@ from services import code_assessment_service
 from logging_config import logger
 
 router = APIRouter(
-    prefix="/code-assessment",
+    prefix="/api/v1/code-assessment",
     tags=["Code Assessment"],
     responses={404: {"description": "Not found"}}
 )
 
-@router.get("/question")
+@router.get("/load-question")
 async def get_question(difficulty: str = Query(None, description="Question difficulty: Easy, Moderate, Hard")):
     """Generate a fresh question every time - fully dynamic"""
     try:
@@ -43,7 +43,7 @@ async def get_question(difficulty: str = Query(None, description="Question diffi
         logger.error(f"Error getting question: {e}")
         raise HTTPException(status_code=500, detail=f"Failed to generate question: {str(e)}")
 
-@router.post("/evaluate")
+@router.post("/evaluate-code")
 async def evaluate_code(submission: CodeSubmission):
     """Evaluate submitted code with AI feedback"""
     try:       
