@@ -1,9 +1,10 @@
 # Backend/routers/ai_code_assessment_routers.py - Simplified dynamic generation
 
 from fastapi import APIRouter, HTTPException, Query
-from models.code_evaluation_model import CodeSubmission
+from models.code_evaluation_model import CodeSubmission, EvaluationResult
 from services import load_and_evaluation_service as interview_service
 from services import code_assessment_service
+from services.gemini_evaluation_service import evaluate_code_with_gemini
 from logging_config import logger
 
 router = APIRouter(
@@ -49,15 +50,7 @@ async def evaluate_code(submission: CodeSubmission):
     try:       
         print("contoller is called",flush=True)
         #result = await interview_service.evaluate_submission(submission)
-        result= await code_assessment_service.evaluate_submission(submission)
-        
-        # Format feedback for better display
-        formatted_feedback = None
-        if result.feedback:
-            if result.correct:
-                formatted_feedback = format_success_feedback(result.feedback)
-            else:
-                formatted_feedback = format_failure_feedback(result.feedback)
+        result= await code_assessment_service.evaluate_submission(submission)     
         
         return {
             "correct": result.correct,
@@ -104,41 +97,10 @@ async def get_question_by_id(question_id: int):
     except Exception as e:
         logger.error(f"Error getting question by ID: {e}")
         raise HTTPException(status_code=500, detail="Failed to load question by ID")
+@router.post("/gemini-evaluatation", response_model=EvaluationResult)
+async def evaluate_with_gemini_only(submission: CodeSubmission):
+    return await evaluate_code_with_gemini(submission)
 
-@router.get("/stats")
-async def get_generation_stats():
-    """Get statistics about question generation"""
-    try:
-        stats = interview_service.get_generation_stats()
-        return {
-            "generation_stats": stats,
-            "message": "Dynamic generation - each question is unique"
-        }
-    except Exception as e:
-        logger.error(f"Error getting stats: {e}")
-        raise HTTPException(status_code=500, detail="Failed to get statistics")
-
-@router.post("/reset")
-async def reset_generation_history():
-    """Reset generation history for fresh start"""
-    try:
-        success = interview_service.clear_generation_history()
-        if success:
-            return {"message": "Generation history cleared - ready for fresh questions"}
-        else:
-            raise HTTPException(status_code=500, detail="Failed to reset history")
-    except Exception as e:
-        logger.error(f"Error resetting history: {e}")
-        raise HTTPException(status_code=500, detail=f"Failed to reset: {str(e)}")
-
-def format_success_feedback(feedback_data: dict) -> str:
-    """Format success feedback for display"""
-    # Import the updated function from feedback service
-    from services.feedback_generation_service import format_feedback_for_display
-    return format_feedback_for_display(feedback_data)
-
-def format_failure_feedback(feedback_data: dict) -> str:
-    """Format failure feedback for display"""
-    # Import the updated function from feedback service
-    from services.feedback_generation_service import format_failure_feedback_for_display
-    return format_failure_feedback_for_display(feedback_data)
+@router.get("/health-check")
+async def health_check():
+    return {"status": "OK"}

@@ -67,7 +67,7 @@ async def rotate_gemini_keys(prompt: str, model_name: str = "gemini-1.5-flash", 
 
             # enforce timeout on the model call
             # Wait for the model to generate content with the given prompt
-            loop = asyncio.get_event_loop()  # ✅ DEFINE LOOP HERE
+            loop = asyncio.get_event_loop()  
 
             # Run blocking Gemini SDK call inside executor with timeout
             response = await asyncio.wait_for(

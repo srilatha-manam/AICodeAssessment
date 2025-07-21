@@ -44,7 +44,7 @@ async def evaluate_code(code: str, language_id: int, stdin: str) -> dict:
             "X-RapidAPI-Host": JUDGE0_API_HOST,
             "X-RapidAPI-Key": used_key
         }
-        timeout_config = httpx.Timeout(timeout=30.0, read=90.0) # Set read timeout to 60 seconds
+        timeout_config = httpx.Timeout(timeout=30.0, read=90.0) # Set read timeout to 90 seconds
 
         async with httpx.AsyncClient(timeout=timeout_config) as client: # Used 30 second timeout to avoid hanging indefinitely
             for attempt in range(10):  # Maximum of 10 attempts for retry
