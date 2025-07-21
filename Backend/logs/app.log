@@ -4422,3 +4422,534 @@ Traceback (most recent call last):
   File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\backend\utils\key_rotator.py", line 95, in rotate_gemini_keys
     raise Exception("All Gemini keys exhausted or failed.")
 Exception: All Gemini keys exhausted or failed.
+2025-07-21 15:39:51,373 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 15:39:51,400 - ERROR - ai-code-assessment - Row 88: All JSON parsing failed - No active exception to reraise
+2025-07-21 15:39:52,433 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 15:39:52,434 - ERROR - ai-code-assessment - Row 211: All JSON parsing failed - No active exception to reraise
+2025-07-21 15:40:08,675 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 15:40:08,675 - ERROR - ai-code-assessment - Row 88: All JSON parsing failed - No active exception to reraise
+2025-07-21 15:40:09,705 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 15:40:09,705 - ERROR - ai-code-assessment - Row 211: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:33:31,566 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:33:31,567 - ERROR - ai-code-assessment - Row 88: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:33:32,654 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:33:32,654 - ERROR - ai-code-assessment - Row 220: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:33:34,001 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:33:34,190 - ERROR - ai-code-assessment - Row 266: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:33:35,229 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:33:35,229 - ERROR - ai-code-assessment - Row 276: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:33:36,231 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:33:36,244 - ERROR - ai-code-assessment - Row 277: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:33:37,250 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:33:37,250 - ERROR - ai-code-assessment - Row 278: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:33:38,286 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:33:38,521 - ERROR - ai-code-assessment - Row 279: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:33:39,592 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:33:39,592 - ERROR - ai-code-assessment - Row 280: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:33:40,597 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:33:40,597 - ERROR - ai-code-assessment - Row 281: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:33:41,602 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:33:41,602 - ERROR - ai-code-assessment - Row 282: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:33:42,605 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:33:42,605 - ERROR - ai-code-assessment - Row 283: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:33:43,607 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:33:43,607 - ERROR - ai-code-assessment - Row 284: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:33:44,609 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:33:44,609 - ERROR - ai-code-assessment - Row 285: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:33:45,611 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:33:45,611 - ERROR - ai-code-assessment - Row 286: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:33:46,616 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:33:46,616 - ERROR - ai-code-assessment - Row 287: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:39:34,718 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:39:34,719 - ERROR - ai-code-assessment - Row 88: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:39:35,746 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:39:35,746 - ERROR - ai-code-assessment - Row 220: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:39:36,760 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:39:36,760 - ERROR - ai-code-assessment - Row 266: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:39:37,765 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:39:37,765 - ERROR - ai-code-assessment - Row 276: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:39:38,767 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:39:38,767 - ERROR - ai-code-assessment - Row 277: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:39:39,770 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:39:39,772 - ERROR - ai-code-assessment - Row 278: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:39:40,775 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:39:40,776 - ERROR - ai-code-assessment - Row 279: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:39:41,783 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:39:41,783 - ERROR - ai-code-assessment - Row 280: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:39:42,789 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:39:42,789 - ERROR - ai-code-assessment - Row 281: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:39:44,219 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:39:44,289 - ERROR - ai-code-assessment - Row 282: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:39:45,295 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:39:45,297 - ERROR - ai-code-assessment - Row 283: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:39:46,300 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:39:46,300 - ERROR - ai-code-assessment - Row 284: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:39:47,310 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:39:47,310 - ERROR - ai-code-assessment - Row 285: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:39:48,314 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:39:48,315 - ERROR - ai-code-assessment - Row 286: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:39:49,318 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:39:49,318 - ERROR - ai-code-assessment - Row 287: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:39:49,320 - ERROR - ai-code-assessment - Evaluation failed: Question with ID 233 not found
+Traceback (most recent call last):
+  File "C:\Users\Srilatha\Desktop\Ai-Code-Assessment\AICodeAssessment\Backend\services\code_assessment_service.py", line 57, in evaluate_submission
+    raise ValueError(f"Question with ID {submission.question_id} not found")
+ValueError: Question with ID 233 not found
+2025-07-21 17:39:49,322 - ERROR - ai-code-assessment - Validation error in evaluate_code: Question with ID 233 not found
+2025-07-21 17:40:45,371 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:40:45,371 - ERROR - ai-code-assessment - Row 88: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:40:46,383 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:40:46,383 - ERROR - ai-code-assessment - Row 220: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:40:47,389 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:40:47,389 - ERROR - ai-code-assessment - Row 266: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:40:48,392 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:40:48,392 - ERROR - ai-code-assessment - Row 276: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:40:49,394 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:40:49,397 - ERROR - ai-code-assessment - Row 277: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:40:50,400 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:40:50,400 - ERROR - ai-code-assessment - Row 278: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:40:51,402 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:40:51,404 - ERROR - ai-code-assessment - Row 279: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:40:52,409 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:40:52,410 - ERROR - ai-code-assessment - Row 280: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:40:53,413 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:40:53,415 - ERROR - ai-code-assessment - Row 281: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:40:54,419 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:40:54,420 - ERROR - ai-code-assessment - Row 282: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:40:55,425 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:40:55,425 - ERROR - ai-code-assessment - Row 283: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:40:56,590 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:40:56,602 - ERROR - ai-code-assessment - Row 284: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:40:57,637 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:40:57,637 - ERROR - ai-code-assessment - Row 285: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:40:58,641 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:40:58,643 - ERROR - ai-code-assessment - Row 286: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:40:59,651 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:40:59,653 - ERROR - ai-code-assessment - Row 287: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:42:21,206 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:42:21,206 - ERROR - ai-code-assessment - Row 88: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:42:22,254 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:42:22,255 - ERROR - ai-code-assessment - Row 220: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:42:23,280 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:42:23,281 - ERROR - ai-code-assessment - Row 266: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:42:24,285 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:42:24,289 - ERROR - ai-code-assessment - Row 276: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:42:25,296 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:42:25,299 - ERROR - ai-code-assessment - Row 277: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:42:26,304 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:42:26,304 - ERROR - ai-code-assessment - Row 278: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:42:27,306 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:42:27,307 - ERROR - ai-code-assessment - Row 279: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:42:28,308 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:42:28,308 - ERROR - ai-code-assessment - Row 280: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:42:29,312 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:42:29,312 - ERROR - ai-code-assessment - Row 281: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:42:30,315 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:42:30,334 - ERROR - ai-code-assessment - Row 282: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:42:31,339 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:42:31,339 - ERROR - ai-code-assessment - Row 283: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:42:32,341 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:42:32,341 - ERROR - ai-code-assessment - Row 284: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:42:33,350 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:42:33,353 - ERROR - ai-code-assessment - Row 285: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:42:34,358 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:42:34,358 - ERROR - ai-code-assessment - Row 286: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:42:35,361 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:42:35,361 - ERROR - ai-code-assessment - Row 287: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:43:36,657 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:43:36,657 - ERROR - ai-code-assessment - Row 88: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:43:37,685 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:43:37,688 - ERROR - ai-code-assessment - Row 220: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:43:38,708 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:43:38,709 - ERROR - ai-code-assessment - Row 266: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:43:39,716 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:43:39,716 - ERROR - ai-code-assessment - Row 276: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:43:40,722 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:43:40,726 - ERROR - ai-code-assessment - Row 277: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:43:41,739 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:43:41,739 - ERROR - ai-code-assessment - Row 278: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:43:42,746 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:43:42,748 - ERROR - ai-code-assessment - Row 279: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:43:43,749 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:43:43,750 - ERROR - ai-code-assessment - Row 280: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:43:44,756 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:43:44,756 - ERROR - ai-code-assessment - Row 281: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:43:45,758 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:43:45,758 - ERROR - ai-code-assessment - Row 282: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:43:46,764 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:43:46,766 - ERROR - ai-code-assessment - Row 283: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:43:47,768 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:43:47,768 - ERROR - ai-code-assessment - Row 284: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:43:48,773 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:43:48,773 - ERROR - ai-code-assessment - Row 285: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:43:49,776 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:43:49,776 - ERROR - ai-code-assessment - Row 286: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:43:50,780 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:43:50,780 - ERROR - ai-code-assessment - Row 287: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:46:07,256 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:46:07,258 - ERROR - ai-code-assessment - Row 88: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:46:08,297 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:46:08,298 - ERROR - ai-code-assessment - Row 220: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:46:09,349 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:46:09,352 - ERROR - ai-code-assessment - Row 266: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:46:10,581 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:46:10,761 - ERROR - ai-code-assessment - Row 276: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:46:11,993 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:46:12,045 - ERROR - ai-code-assessment - Row 277: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:46:13,578 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:46:13,639 - ERROR - ai-code-assessment - Row 278: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:46:14,745 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:46:14,745 - ERROR - ai-code-assessment - Row 279: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:46:15,747 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:46:15,747 - ERROR - ai-code-assessment - Row 280: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:46:16,754 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:46:16,754 - ERROR - ai-code-assessment - Row 281: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:46:17,758 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:46:17,758 - ERROR - ai-code-assessment - Row 282: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:46:18,760 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:46:18,762 - ERROR - ai-code-assessment - Row 283: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:46:19,766 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:46:19,766 - ERROR - ai-code-assessment - Row 284: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:46:20,770 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:46:20,770 - ERROR - ai-code-assessment - Row 285: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:46:21,772 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:46:21,772 - ERROR - ai-code-assessment - Row 286: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:46:22,775 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:46:22,777 - ERROR - ai-code-assessment - Row 287: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:47:02,667 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:47:02,667 - ERROR - ai-code-assessment - Row 88: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:47:03,716 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:47:03,718 - ERROR - ai-code-assessment - Row 220: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:47:04,746 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:47:04,746 - ERROR - ai-code-assessment - Row 266: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:47:05,750 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:47:05,751 - ERROR - ai-code-assessment - Row 276: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:47:06,754 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:47:06,754 - ERROR - ai-code-assessment - Row 277: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:47:07,759 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:47:07,762 - ERROR - ai-code-assessment - Row 278: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:47:08,766 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:47:08,767 - ERROR - ai-code-assessment - Row 279: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:47:09,769 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:47:09,769 - ERROR - ai-code-assessment - Row 280: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:47:10,778 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:47:10,778 - ERROR - ai-code-assessment - Row 281: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:47:11,781 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:47:11,781 - ERROR - ai-code-assessment - Row 282: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:47:12,785 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:47:12,785 - ERROR - ai-code-assessment - Row 283: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:47:13,799 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:47:13,827 - ERROR - ai-code-assessment - Row 284: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:47:14,830 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:47:14,830 - ERROR - ai-code-assessment - Row 285: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:47:15,833 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:47:15,833 - ERROR - ai-code-assessment - Row 286: All JSON parsing failed - No active exception to reraise
+2025-07-21 17:47:16,835 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 17:47:16,835 - ERROR - ai-code-assessment - Row 287: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:56:54,956 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:56:54,956 - ERROR - ai-code-assessment - Row 88: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:56:55,986 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:56:56,001 - ERROR - ai-code-assessment - Row 220: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:56:57,025 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:56:57,025 - ERROR - ai-code-assessment - Row 266: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:56:58,029 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:56:58,029 - ERROR - ai-code-assessment - Row 276: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:56:59,032 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:56:59,032 - ERROR - ai-code-assessment - Row 277: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:57:00,035 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:57:00,035 - ERROR - ai-code-assessment - Row 278: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:57:01,044 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:57:01,046 - ERROR - ai-code-assessment - Row 279: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:57:02,048 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:57:02,049 - ERROR - ai-code-assessment - Row 280: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:57:03,052 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:57:03,052 - ERROR - ai-code-assessment - Row 281: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:57:04,058 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:57:04,059 - ERROR - ai-code-assessment - Row 282: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:57:05,062 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:57:05,062 - ERROR - ai-code-assessment - Row 283: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:57:06,065 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:57:06,066 - ERROR - ai-code-assessment - Row 284: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:57:07,075 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:57:07,077 - ERROR - ai-code-assessment - Row 285: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:57:08,092 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:57:08,094 - ERROR - ai-code-assessment - Row 286: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:57:09,096 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:57:09,096 - ERROR - ai-code-assessment - Row 287: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:57:27,941 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:57:27,941 - ERROR - ai-code-assessment - Row 88: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:57:28,977 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:57:28,978 - ERROR - ai-code-assessment - Row 220: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:57:29,996 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:57:29,996 - ERROR - ai-code-assessment - Row 266: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:57:31,003 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:57:31,005 - ERROR - ai-code-assessment - Row 276: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:57:32,007 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:57:32,009 - ERROR - ai-code-assessment - Row 277: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:57:33,012 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:57:33,013 - ERROR - ai-code-assessment - Row 278: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:57:34,016 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:57:34,016 - ERROR - ai-code-assessment - Row 279: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:57:35,025 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:57:35,026 - ERROR - ai-code-assessment - Row 280: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:57:36,032 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:57:36,033 - ERROR - ai-code-assessment - Row 281: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:57:37,039 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:57:37,040 - ERROR - ai-code-assessment - Row 282: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:57:38,165 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:57:38,166 - ERROR - ai-code-assessment - Row 283: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:57:39,173 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:57:39,173 - ERROR - ai-code-assessment - Row 284: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:57:40,177 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:57:40,177 - ERROR - ai-code-assessment - Row 285: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:57:41,180 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:57:41,180 - ERROR - ai-code-assessment - Row 286: All JSON parsing failed - No active exception to reraise
+2025-07-21 18:57:42,197 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 18:57:42,206 - ERROR - ai-code-assessment - Row 287: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:10,559 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:10,560 - ERROR - ai-code-assessment - Row 88: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:11,592 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:11,593 - ERROR - ai-code-assessment - Row 220: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:12,606 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:12,608 - ERROR - ai-code-assessment - Row 266: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:13,612 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:13,612 - ERROR - ai-code-assessment - Row 276: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:14,616 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:14,617 - ERROR - ai-code-assessment - Row 277: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:15,620 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:15,620 - ERROR - ai-code-assessment - Row 278: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:16,623 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:16,623 - ERROR - ai-code-assessment - Row 279: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:17,633 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:17,633 - ERROR - ai-code-assessment - Row 280: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:18,651 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:18,651 - ERROR - ai-code-assessment - Row 281: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:19,655 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:19,655 - ERROR - ai-code-assessment - Row 282: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:20,658 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:20,658 - ERROR - ai-code-assessment - Row 283: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:21,661 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:21,661 - ERROR - ai-code-assessment - Row 284: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:22,667 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:22,668 - ERROR - ai-code-assessment - Row 285: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:23,670 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:23,670 - ERROR - ai-code-assessment - Row 286: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:24,674 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:24,675 - ERROR - ai-code-assessment - Row 287: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:38,530 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:38,530 - ERROR - ai-code-assessment - Row 88: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:39,565 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:39,565 - ERROR - ai-code-assessment - Row 220: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:40,629 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:40,629 - ERROR - ai-code-assessment - Row 266: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:41,638 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:41,638 - ERROR - ai-code-assessment - Row 276: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:42,642 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:42,642 - ERROR - ai-code-assessment - Row 277: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:43,645 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:43,645 - ERROR - ai-code-assessment - Row 278: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:44,650 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:44,650 - ERROR - ai-code-assessment - Row 279: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:45,657 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:45,659 - ERROR - ai-code-assessment - Row 280: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:46,667 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:46,669 - ERROR - ai-code-assessment - Row 281: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:47,672 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:47,672 - ERROR - ai-code-assessment - Row 282: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:48,675 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:48,677 - ERROR - ai-code-assessment - Row 283: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:49,684 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:49,684 - ERROR - ai-code-assessment - Row 284: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:50,688 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:50,688 - ERROR - ai-code-assessment - Row 285: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:51,693 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:51,694 - ERROR - ai-code-assessment - Row 286: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:00:52,698 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:00:52,699 - ERROR - ai-code-assessment - Row 287: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:01:06,805 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:01:06,805 - ERROR - ai-code-assessment - Row 88: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:01:07,836 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:01:07,836 - ERROR - ai-code-assessment - Row 220: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:01:08,854 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:01:08,854 - ERROR - ai-code-assessment - Row 266: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:01:09,863 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:01:09,865 - ERROR - ai-code-assessment - Row 276: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:01:10,869 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:01:10,869 - ERROR - ai-code-assessment - Row 277: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:01:11,874 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:01:11,874 - ERROR - ai-code-assessment - Row 278: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:01:12,887 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:01:12,887 - ERROR - ai-code-assessment - Row 279: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:01:13,891 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:01:13,891 - ERROR - ai-code-assessment - Row 280: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:01:14,894 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:01:14,896 - ERROR - ai-code-assessment - Row 281: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:01:15,898 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:01:15,898 - ERROR - ai-code-assessment - Row 282: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:01:16,904 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:01:16,905 - ERROR - ai-code-assessment - Row 283: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:01:17,909 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:01:17,909 - ERROR - ai-code-assessment - Row 284: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:01:18,916 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:01:18,918 - ERROR - ai-code-assessment - Row 285: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:01:19,922 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:01:19,922 - ERROR - ai-code-assessment - Row 286: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:01:20,925 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:01:20,926 - ERROR - ai-code-assessment - Row 287: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:04:56,042 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:04:56,042 - ERROR - ai-code-assessment - Row 88: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:04:57,054 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:04:57,054 - ERROR - ai-code-assessment - Row 220: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:04:58,062 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:04:58,062 - ERROR - ai-code-assessment - Row 266: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:04:59,065 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:04:59,069 - ERROR - ai-code-assessment - Row 276: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:00,070 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:00,070 - ERROR - ai-code-assessment - Row 277: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:01,073 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:01,074 - ERROR - ai-code-assessment - Row 278: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:02,079 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:02,114 - ERROR - ai-code-assessment - Row 279: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:03,120 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:03,120 - ERROR - ai-code-assessment - Row 280: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:04,123 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:04,123 - ERROR - ai-code-assessment - Row 281: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:05,125 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:05,125 - ERROR - ai-code-assessment - Row 282: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:06,127 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:06,127 - ERROR - ai-code-assessment - Row 283: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:07,142 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:07,150 - ERROR - ai-code-assessment - Row 284: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:08,152 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:08,152 - ERROR - ai-code-assessment - Row 285: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:09,154 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:09,155 - ERROR - ai-code-assessment - Row 286: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:10,157 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:10,157 - ERROR - ai-code-assessment - Row 287: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:29,424 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:29,425 - ERROR - ai-code-assessment - Row 88: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:30,447 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:30,447 - ERROR - ai-code-assessment - Row 220: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:31,453 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:31,453 - ERROR - ai-code-assessment - Row 266: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:32,460 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:32,460 - ERROR - ai-code-assessment - Row 276: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:33,462 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:33,467 - ERROR - ai-code-assessment - Row 277: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:34,476 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:34,476 - ERROR - ai-code-assessment - Row 278: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:35,485 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:35,485 - ERROR - ai-code-assessment - Row 279: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:36,487 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:36,487 - ERROR - ai-code-assessment - Row 280: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:37,490 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:37,490 - ERROR - ai-code-assessment - Row 281: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:38,493 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:38,493 - ERROR - ai-code-assessment - Row 282: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:39,496 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:39,499 - ERROR - ai-code-assessment - Row 283: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:40,510 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:40,510 - ERROR - ai-code-assessment - Row 284: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:41,516 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:41,516 - ERROR - ai-code-assessment - Row 285: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:42,518 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:42,518 - ERROR - ai-code-assessment - Row 286: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:43,522 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:43,522 - ERROR - ai-code-assessment - Row 287: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:56,219 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:56,222 - ERROR - ai-code-assessment - Row 88: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:57,257 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:57,257 - ERROR - ai-code-assessment - Row 220: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:58,265 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:58,265 - ERROR - ai-code-assessment - Row 266: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:05:59,271 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:05:59,271 - ERROR - ai-code-assessment - Row 276: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:06:00,274 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:06:00,274 - ERROR - ai-code-assessment - Row 277: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:06:01,276 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:06:01,289 - ERROR - ai-code-assessment - Row 278: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:06:02,292 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:06:02,292 - ERROR - ai-code-assessment - Row 279: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:06:03,294 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:06:03,294 - ERROR - ai-code-assessment - Row 280: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:06:04,298 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:06:04,298 - ERROR - ai-code-assessment - Row 281: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:06:05,301 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:06:05,301 - ERROR - ai-code-assessment - Row 282: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:06:06,305 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:06:06,305 - ERROR - ai-code-assessment - Row 283: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:06:07,306 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:06:07,306 - ERROR - ai-code-assessment - Row 284: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:06:08,309 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:06:08,309 - ERROR - ai-code-assessment - Row 285: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:06:09,311 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:06:09,311 - ERROR - ai-code-assessment - Row 286: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:06:10,314 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:06:10,314 - ERROR - ai-code-assessment - Row 287: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:06:27,852 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:06:27,852 - ERROR - ai-code-assessment - Row 88: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:06:28,889 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:06:28,889 - ERROR - ai-code-assessment - Row 220: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:06:29,923 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:06:29,936 - ERROR - ai-code-assessment - Row 266: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:06:30,945 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:06:30,945 - ERROR - ai-code-assessment - Row 276: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:06:31,951 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:06:31,951 - ERROR - ai-code-assessment - Row 277: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:06:32,955 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:06:32,955 - ERROR - ai-code-assessment - Row 278: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:06:33,957 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:06:33,957 - ERROR - ai-code-assessment - Row 279: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:06:34,959 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:06:34,959 - ERROR - ai-code-assessment - Row 280: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:06:35,961 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:06:35,961 - ERROR - ai-code-assessment - Row 281: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:06:36,967 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:06:36,968 - ERROR - ai-code-assessment - Row 282: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:06:37,970 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:06:37,974 - ERROR - ai-code-assessment - Row 283: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:06:38,976 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:06:38,976 - ERROR - ai-code-assessment - Row 284: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:06:39,982 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:06:39,983 - ERROR - ai-code-assessment - Row 285: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:06:40,993 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:06:40,993 - ERROR - ai-code-assessment - Row 286: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:06:41,995 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:06:41,995 - ERROR - ai-code-assessment - Row 287: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:07:27,946 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:07:27,946 - ERROR - ai-code-assessment - Row 88: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:07:29,003 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:07:29,003 - ERROR - ai-code-assessment - Row 220: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:07:30,025 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:07:30,025 - ERROR - ai-code-assessment - Row 266: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:07:31,085 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:07:31,085 - ERROR - ai-code-assessment - Row 276: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:07:32,091 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:07:32,093 - ERROR - ai-code-assessment - Row 277: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:07:33,096 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:07:33,096 - ERROR - ai-code-assessment - Row 278: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:07:34,106 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:07:34,106 - ERROR - ai-code-assessment - Row 279: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:07:35,113 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:07:35,113 - ERROR - ai-code-assessment - Row 280: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:07:36,120 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:07:36,120 - ERROR - ai-code-assessment - Row 281: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:07:37,125 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:07:37,127 - ERROR - ai-code-assessment - Row 282: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:07:38,135 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:07:38,137 - ERROR - ai-code-assessment - Row 283: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:07:39,140 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:07:39,140 - ERROR - ai-code-assessment - Row 284: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:07:40,144 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:07:40,144 - ERROR - ai-code-assessment - Row 285: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:07:41,151 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:07:41,154 - ERROR - ai-code-assessment - Row 286: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:07:42,157 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:07:42,158 - ERROR - ai-code-assessment - Row 287: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:16:47,719 - ERROR - ai-code-assessment - CSV file not found at: data/cleaned_formatted_problems.csv
+2025-07-21 19:16:47,719 - ERROR - ai-code-assessment - No questions available
+2025-07-21 19:16:47,719 - ERROR - ai-code-assessment - Error getting question: 
+2025-07-21 19:18:32,151 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:18:32,151 - ERROR - ai-code-assessment - Row 79: All JSON parsing failed - No active exception to reraise
+2025-07-21 19:18:33,273 - ERROR - ai-code-assessment - All 2 attempts failed for safe_json_loads
+2025-07-21 19:18:33,273 - ERROR - ai-code-assessment - Row 198: All JSON parsing failed - No active exception to reraise

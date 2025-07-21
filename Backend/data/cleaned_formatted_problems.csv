@@ -227,18 +227,6 @@ id,title,description,constraints,examples,difficultylevel,date-time
     ""explanation"": ""Proper divisors: 1, 2, 3; Sum = 6 = 6, not greater.""
   }
 ]",Medium,
-20,Delivery Route Optimization with input values A,B ,A delivery truck stops at numbers that are coprime with the previous stop number (GCD = 1). Check if two given stop numbers can be consecutive.,"1 ≤ A, B ≤ 1000","[
-  {
-    ""input"": ""15 16"",
-    ""output"": ""Valid"",
-    ""explanation"": ""GCD(15, 16) = 1, so they are coprime.""
-  },
-  {
-    ""input"": ""12 18"",
-    ""output"": ""Invalid"",
-    ""explanation"": ""GCD(12, 18) = 6 \u2260 1.""
-  }
-]",Medium,
 21,Festival Firework Timing,"A firework is launched at time N, if N equals the sum of its own digits each raised to the power of the number of digits. Check if a firework is launched at time N.",1 ≤ N ≤ 1000,"[
   {
     ""input"": ""153"",
@@ -362,18 +350,6 @@ Given a production code N, check if it is valid.",1 ≤ N ≤ 1000,"[
     ""input"": ""5 5 5 5"",
     ""output"": ""15"",
     ""explanation"": ""Any 3 consecutive days give 5 + 5 + 5 = 15.""
-  }
-]",Easy,
-31,Library Book Sorting,"A librarian is organizing books on a shelf, each with a unique ID. To make it easier for readers, they want to check if two books with specific IDs are present on the shelf. Given a list of book IDs and two target IDs, determine if both targets exist.",Number of books: 1 ≤ n ≤ 10^5; Book IDs: 1 ≤ ID ≤ 10^6,"[
-   {
-    "input": "3 1 4 2\n1 4",
-    "output": "Yes",
-    "explanation": "Both book IDs 1 and 4 are present in the list."
-  },
-  {
-    "input": "5 1 2 5 6 7\n5 8",
-    "output": "No",
-    "explanation": "Book ID 5 is present, but ID 8 is not."
   }
 ]",Easy,
 32,Reverse Order Delivery,"A delivery company logs packages by their delivery order, but the manager wants to process them in reverse order to prioritize newer orders. Given a list of package weights, compute the total weight of the last 3 packages delivered.",Number of packages: 3 ≤ n ≤ 10^5; Package weights: 1 ≤ weight ≤ 10^4,"[
@@ -1331,17 +1307,6 @@ Given the list of seat numbers assigned to students, determine if the seating ar
     ""output"": ""Similarity: 60% \u2192 Not Similar""
   }
 ]",Easy,
-133,Festival Lights,"A town is decorating N houses with lights for a festival. Each house has a brightness value. If the brightness of a house is more than both its neighbors, it's called a "highlighted house." Count how many houses are highlighted.,"[
-   {
-    "input": "5\n10 20 15 30 10",
-    "output": "2",
-    "explanation": "Houses 2 and 4 are brighter than neighbors."
-  },
-  {
-    "input": "4\n5 5 5 5",
-    "output": "0"
-  }
-]",Easy,
 134,Warehouse Truck Loader,You have a list of box weights to be loaded into trucks. Each truck can carry a max weight W. Find the minimum number of trucks needed. ,List of box weights and max truck weight,"[
   {
     ""input"": ""10 20 30 40\n50"",
@@ -1361,12 +1326,6 @@ Given the list of seat numbers assigned to students, determine if the seating ar
     ""explanation"": ""The path '/usr/bin/../lib/./python/' is simplified by resolving '..' to move up from 'bin' to 'usr', keeping '.' as the current directory 'lib', and removing the trailing slash, resulting in '/usr/lib/python'.""
   }
 ]",Easy,
-137,Balanced Fruit Counter,"N fruits are weighed (integer grams). If a fruit’s weight is less than the previous one but more than the next, it’s a ""balanced fruit."" Count balanced fruits ",Number of fruits and list of weights,"[
-  {
-    ""input"": "7\n100 90 80 85 70 95 60"",
-    ""output"": ""Number of balanced fruits: 1""
-  }
-]",Medium,
 138,Memory Guess Scoring,"Users are shown N numbers one after another. Each number is to be memorized, and the user guesses the number (simulated). If guessed correctly → +2 points If off by ±1 → +1 point Otherwise → 0 Give total score and number of exact matches. ","Number of values, original numbers list, guessed numbers list","[
   {
     ""input"": ""5\n5 7 3 9 6\n5 8 2 9 5"",
@@ -2869,157 +2828,3 @@ Print:
     ""explanation"": ""The prices are sorted in ascending order.""
   }
 ]",Medium,
-250,Train Seat Allotment, "In a train compartment, each seat is numbered from 1 to N. A passenger wants to know if their preferred seat is available. Given the list of occupied seats and the passenger's preferred seat number, print "Available" if the seat is free, else "Occupied"." 
-"[
-  {
-    "input": "10\n2 5 7\n4",
-    "output": "Available",
-    "explanation": "Seat 4 is not in the occupied list."
-  },
-  {
-    "input": "10\n1 2 3 4\n3",
-    "output": "Occupied",
-    "explanation": "Seat 3 is already occupied."
-  }
-]",easy,
-251,Festival Lights,"A town is decorating N houses with lights for a festival. Each house has a brightness value. If the brightness of a house is more than both its neighbors, it's called a ""highlighted house."" Count how many houses are highlighted.","[
-  {
-    ""input"": ""5\n10 20 15 30 10"",
-    ""output"": ""2"",
-    ""explanation"": ""Houses 2 and 4 are brighter than neighbors.""
-  },
-  {
-    ""input"": ""4\n5 5 5 5"",
-    ""output"": ""0""
-  }
-]",easy,
-252,Museum Guard Count,"Each room in a museum has a number of guards. The head wants to know how many rooms have at least X guards.","[
-  {
-    ""input"": ""6\n1 2 3 4 5 6\n4"",
-    ""output"": ""3"",
-    ""explanation"": ""Rooms with 4, 5, 6 guards.""
-  },
-  {
-    ""input"": ""4\n0 1 2 3\n2"",
-    ""output"": ""2""
-  }
-]",easy,
-253,Chocolate Packing,"A factory packs chocolates into boxes. Each box can hold exactly K chocolates. Given the total number of chocolates, determine how many full boxes can be packed.","[
-  {
-    ""input"": ""100 12"",
-    ""output"": ""8"",
-    ""explanation"": ""8 full boxes (96 chocolates), 4 left.""
-  },
-  {
-    ""input"": ""50 10"",
-    ""output"": ""5""
-  }
-]",easy,
-254,Library Fine Calculation,"A library charges a fine of ₹5 per day after the due date. Calculate the total fine for a book returned D days late.","[
-  {
-    ""input"": ""0"",
-    ""output"": ""₹0""
-  },
-  {
-    ""input"": ""4"",
-    ""output"": ""₹20""
-  }
-]",easy,
-255,Elevator Overload Check,"An elevator can carry up to W kg. Given the weights of people trying to enter, check whether their combined weight exceeds the limit.","[
-  {
-    ""input"": ""3\n60 80 70\n200"",
-    ""output"": ""Overload""
-  },
-  {
-    ""input"": ""2\n50 60\n150"",
-    ""output"": ""Allowed""
-  }
-]",easy,
-256,Warehouse Box Organizer,"A warehouse stores boxes with varying weights. To ensure balance, a box is considered 'unstable' if its weight is heavier than the box after it but lighter than the one before it. Count the number of unstable boxes in the list.","[
-  {
-    ""input"": ""7\n30 50 40 60 45 55 35"",
-    ""output"": ""2"",
-    ""explanation"": ""Box at index 2 (40) is heavier than 60 and lighter than 50; box at index 4 (45) is lighter than 60 and heavier than 55.""
-  },
-  {
-    ""input"": ""5\n10 20 30 40 50"",
-    ""output"": ""0""
-  }
-]",medium,
-261,Online Exam Timing Conflict,"Each student is given a start and end time for their online test. Check how many tests overlap with at least one other student’s test.","[
-  {
-    ""input"": ""3\n1 5\n4 6\n7 8"",
-    ""output"": ""2"",
-    ""explanation"": ""First and second tests overlap; third does not.""
-  },
-  {
-    ""input"": ""4\n1 2\n3 4\n5 6\n7 8"",
-    ""output"": ""0"",
-    ""explanation"": ""No tests overlap.""
-  }
-]",medium,
-262,Library Reading Challenge,"Each student logs the number of pages read daily. If a student reads fewer pages than the previous day for two consecutive days, their streak is broken. Count how many students maintain a consistent or increasing streak.","[
-  {
-    ""input"": ""2\n5\n10 20 15 25 30\n4\n8 6 5 7"",
-    ""output"": ""1"",
-    ""explanation"": ""First student has no 2-day drop; second has decreasing trend on day 2 and 3.""
-  },
-  {
-    ""input"": ""1\n3\n5 5 5"",
-    ""output"": ""1""
-  }
-]",medium,
-263,Bus Route Optimizer,"A transport company wants to remove unnecessary bus stops. If a stop has no passengers boarding or getting down, it's considered redundant. Given a list of stops with passenger counts, count how many redundant stops exist.","[
-  {
-    ""input"": ""5\n0 3 0 0 2"",
-    ""output"": ""2"",
-    ""explanation"": ""Stops 1 and 3 have no activity.""
-  },
-  {
-    ""input"": ""4\n1 1 1 1"",
-    ""output"": ""0""
-  }
-]",medium,
-264,Drone Battery Tracker,"A drone performs tasks and consumes battery differently for each task. If it crosses a threshold of 100 units of consumption, it must recharge. Count how many times the drone needs to recharge during the sequence.","[
-  {
-    ""input"": ""6\n30 40 20 10 50 60"",
-    ""output"": ""1"",
-    ""explanation"": ""After task 5, battery usage is 150, so recharge required.""
-  },
-  {
-    ""input"": ""4\n25 25 25 25"",
-    ""output"": ""0"",
-    ""explanation"": ""Battery never crosses threshold.""
-  }
-]",medium,
-266,The Lost Key,"A person lost a key and remembers a few possible locations. Given a list of locations searched and the actual key location, determine if the key was found.","[
-  {
-    ""input"": ""5\nkitchen garden sofa drawer car\nsofa"",
-    ""output"": ""Found"",
-    ""explanation"": ""The key was found in 'sofa', which is in the searched list.""
-  },
-  {
-    ""input"": ""4\nbed cupboard bathroom table\ngarage"",
-    ""output"": ""Not Found"",
-    ""explanation"": ""The key location 'garage' is not in the searched list.""
-  }
-]",easy,
-267,Cafe Menu Search,"A customer wants to check if a particular item is available in the cafe menu. Print 'Yes' if found, else 'No'.","[
-  {
-    ""input"": ""6\ncoffee tea juice sandwich burger pasta\nburger"",
-    ""output"": ""Yes"",
-    ""explanation"": ""'burger' exists in the menu list.""
-  },
-  {
-    ""input"": ""3\nsamosa kachori jalebi\npizza"",
-    ""output"": ""No""
-  }
-]",easy
-
-
-
-
-
-
-
-

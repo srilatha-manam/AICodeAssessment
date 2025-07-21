@@ -2,7 +2,7 @@ from pydantic import BaseModel
 from typing import List, Optional
 
 # This module defines the data models used for code evaluation and submission.
-
+#
 class Example(BaseModel):
     # This class represents an example input/output pair for a question
     input: str
@@ -13,6 +13,7 @@ class Example(BaseModel):
         return f"Input: {self.input}, Output: {self.output},Explanation: {self.explanation}"
 
 class Question(BaseModel):
+    # This class represents a question
     id: int
     title: str
     description: str
@@ -37,3 +38,7 @@ class EvaluationResult(BaseModel):
     status: str
     feedback: Optional[dict] = None
     full_judge_response: Optional[dict] = None
+
+class DifficultyRequest(BaseModel):
+    # This class represents a request to get questions by difficulty level
+    difficulty: str

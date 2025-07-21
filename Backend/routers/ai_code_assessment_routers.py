@@ -2,7 +2,6 @@
 
 from fastapi import APIRouter, HTTPException, Query
 from models.code_evaluation_model import CodeSubmission, EvaluationResult
-from services import load_and_evaluation_service as interview_service
 from services import code_assessment_service
 from services.gemini_evaluation_service import evaluate_code_with_gemini
 from logging_config import logger
@@ -18,7 +17,7 @@ async def get_question(difficulty: str = Query(None, description="Question diffi
     """Generate a fresh question every time - fully dynamic"""
     try:
         logger.info(f"Request for new question with difficulty: {difficulty}")
-        question = await interview_service.get_random_question(difficulty)
+        question = await code_assessment_service.get_random_question(difficulty)
         
         if not question:
             raise HTTPException(status_code=500, detail="Failed to generate question")
@@ -48,8 +47,7 @@ async def get_question(difficulty: str = Query(None, description="Question diffi
 async def evaluate_code(submission: CodeSubmission):
     """Evaluate submitted code with AI feedback"""
     try:       
-        print("contoller is called",flush=True)
-        #result = await interview_service.evaluate_submission(submission)
+        print("contoller is called",flush=True)       
         result= await code_assessment_service.evaluate_submission(submission)     
         
         return {
@@ -73,7 +71,7 @@ async def evaluate_code(submission: CodeSubmission):
 async def get_question_by_id(question_id: int):
     """Get current question by ID"""
     try:
-        question = await interview_service.get_question_by_id(question_id)
+        question = await code_assessment_service.get_question_by_id(question_id)
         if not question:
             raise HTTPException(status_code=404, detail=f"Question {question_id} not found")
         
@@ -101,6 +99,46 @@ async def get_question_by_id(question_id: int):
 async def evaluate_with_gemini_only(submission: CodeSubmission):
     return await evaluate_code_with_gemini(submission)
 
-@router.get("/health-check")
-async def health_check():
-    return {"status": "OK"}
+from models.code_evaluation_model import DifficultyRequest
+
+@router.post("/load-question-by-difficulty")
+async def load_question_from_body(req: DifficultyRequest):
+    """
+    Load a question based on difficulty level passed in the request body.
+    """
+    try:
+        # Log the POST request to load question for the given difficulty level
+        logger.info(f"POST request to load question for difficulty: {req.difficulty}")
+        # Get a random question from the interview service based on the difficulty level
+        question = await code_assessment_service.get_random_question(req.difficulty)
+
+        # If no question is found for the given difficulty level, raise an HTTPException
+        if not question:
+            raise HTTPException(status_code=404, detail="No question found for given difficulty level")
+        
+        # Return the question details in a dictionary
+        return {
+            "id": question.id,
+            "title": question.title,
+            "description": question.description,
+            "examples": [
+                {
+                    "input": example.input,
+                    "output": example.output,
+                    "explanation": example.explanation
+                }
+                for example in question.examples
+            ],
+            "difficultylevel": question.difficultylevel,
+            "generated_at": "real-time",
+            "type": "dynamic_ai_generated"
+        }
+
+    except Exception as e:
+        # Log the error if the question cannot be loaded
+        logger.error(f"Failed to load question by difficulty from body: {e}")
+        # Raise an HTTPException with the error message
+        raise HTTPException(status_code=500, detail=f"Error loading question: {str(e)}")
+
+
+
